@@ -11,7 +11,7 @@ Our paper, titled <span style="color:#003366;"><strong>"When Data is Scarce, Lea
 
 ---
 layout: post
-date: 2024-01
+date: 2024-01-30
 inline: true
 related_posts: false
 ---
