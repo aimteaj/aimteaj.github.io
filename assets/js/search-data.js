@@ -435,11 +435,11 @@ ninja.data = [{
             window.location.href = "/blog/2015/formatting-and-links/";
           
         },
-      },{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
-          title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
-          description: "",
-          section: "News",},{id: "news-our-paper-titled-securing-privacy-in-cloud-based-whiteboard-services-against-health-attribute-inference-attacks-has-been-published-in-ieee-transactions-on-artificial-intelligence",
+      },{id: "news-our-paper-titled-securing-privacy-in-cloud-based-whiteboard-services-against-health-attribute-inference-attacks-has-been-published-in-ieee-transactions-on-artificial-intelligence",
           title: 'Our paper titled “Securing Privacy in Cloud-Based Whiteboard Services Against Health Attribute Inference...',
+          description: "",
+          section: "News",},{id: "news-honored-to-receive-the-nsf-crii-grant-thanks-to-nsf-for-supporting-our-research-media-coverage-wsiu-news-siu-news",
+          title: 'Honored to receive the NSF CRII Grant. Thanks to NSF for supporting our...',
           description: "",
           section: "News",},{id: "news-our-paper-titled-when-data-is-scarce-learn-to-adapt-robust-federated-learning-via-adversarial-meta-optimization-has-been-accepted-in-the-findings-track-of-the-2026-ieee-cvf-conference-on-computer-vision-and-pattern-recognition-cvpr-2026-ranked-1-cs-conference",
           title: 'Our paper, titled “When Data is Scarce, Learn to Adapt: Robust Federated Learning...',
