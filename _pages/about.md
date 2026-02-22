@@ -7,7 +7,7 @@ subtitle: Assistant Professor, Department of Electrical Engineering and Computer
 
 profile:
   align: right
-  image: imteaj.jpg
+  image: ahmedimteaj.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>Department of Electrical Engineering and Computer Science</p>
