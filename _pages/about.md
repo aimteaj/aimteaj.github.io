@@ -23,7 +23,7 @@ social: true # includes social icons at the bottom of the page
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  limit: 20 # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: true
@@ -45,9 +45,7 @@ My work has been supported by the **National Science Foundation (NSF)**, **U.S. 
 - Distributed and Edge AI Systems
 - Quantum AI
 
-I am always interested in collaborating on research that advances secure and scalable AI systems.
-
-Write your biography here. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I am always interested in collaborating on research.
 
 Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
 
