@@ -435,16 +435,14 @@ ninja.data = [{
             window.location.href = "/blog/2015/formatting-and-links/";
           
         },
-      },{id: "news-a-long-announcement-with-details",
-          title: 'A long announcement with details',
-          description: "",
-          section: "News",handler: () => {
-              window.location.href = "/news/announcement_2/";
-            },},{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
+      },{id: "news-a-simple-inline-announcement-with-markdown-emoji-sparkles-smile",
           title: 'A simple inline announcement with Markdown emoji! :sparkles: :smile:',
           description: "",
           section: "News",},{id: "news-our-paper-titled-when-data-is-scarce-learn-to-adapt-robust-federated-learning-via-adversarial-meta-optimization-has-been-accepted-in-the-findings-track-of-the-2026-ieee-cvf-conference-on-computer-vision-and-pattern-recognition-cvpr-2026-ranked-1-cs-conference",
           title: 'Our paper, titled “When Data is Scarce, Learn to Adapt: Robust Federated Learning...',
+          description: "",
+          section: "News",},{id: "news-our-project-has-been-awarded-the-nsf-nairr-pilot-resource-allocation-grant-thanks-nsf-project-details-nairr250393-fau-i-sense-news-read-the-announcement",
+          title: 'Our project has been awarded the NSF NAIRR Pilot Resource Allocation Grant. Thanks...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
