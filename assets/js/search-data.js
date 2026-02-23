@@ -23,6 +23,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/research-highlights/";
           },
+        },{id: "nav-grants-amp-awards",
+          title: "Grants &amp; Awards",
+          description: "Research grants and academic honors",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/grants-awards/";
+          },
         },{id: "nav-teaching",
           title: "Teaching",
           description: "Courses taught and curriculum development",
