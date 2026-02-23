@@ -32,7 +32,8 @@ Awarded the **NSF National Artificial Intelligence Research Resource (NAIRR) Pil
 
 This project advances secure and reliable AI systems through unified adversarial defense frameworks.
 
-🔗 *See Project Details*
+🔗 **Project Details:**  
+[NSF NAIRR Pilot Award Page](https://nairrpilot.org/projects/awarded?_requestNumber=NAIRR250393)
 
 ---
 
@@ -48,7 +49,8 @@ Funded by **Oak Ridge Associated Universities (ORAU)**, this program supports in
 
 Awarded a competitive grant from the **U.S. Department of Homeland Security (DHS)** under the **Criminal Investigations and Network Analysis Center (CINA)** program.
 
-📣 Featured in: Southern Illinoisan News and institutional media coverage.
+📣 Featured in: - [Southern Illinoisan News](https://thesouthern.com/news/local/education/siu-carbondale-professor-artificial-intelligence/article_adba3f3e-92fb-11ee-b904-bb81335ddd06.html)  
+- [SIU Computer Science News](https://cs.siu.edu/about_us/news/dhsgrant2023.php)
 
 ---
 
