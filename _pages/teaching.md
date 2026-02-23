@@ -7,7 +7,7 @@ nav_order: 5
 description: Courses taught and curriculum development
 ---
 
-**Florida Atlantic University**
+**📍Florida Atlantic University**
 
 - **Fall 2025** – Artificial Intelligence
 - **Spring 2026** – Artificial Intelligence 
@@ -15,7 +15,7 @@ description: Courses taught and curriculum development
 
 ---
 
-## Courses Previously Taught  
+## 📚 Courses Previously Taught  
 **Southern Illinois University Carbondale**
 
 - **Fall 2022** – Machine Learning & Soft Computing 
