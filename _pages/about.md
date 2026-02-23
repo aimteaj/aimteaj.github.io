@@ -2,7 +2,7 @@
 layout: about
 title: Home
 permalink: /
-position: Assistant Professor, I-SENSE Fellow and Director of SPEED Lab
+subtitle: Assistant Professor, I-SENSE Fellow and Director of SPEED Lab
 affiliation: Florida Atlantic University, Boca Raton
 affiliation_link: https://www.fau.edu/
 
