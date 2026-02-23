@@ -49,7 +49,8 @@ Funded by **Oak Ridge Associated Universities (ORAU)**, this program supports in
 
 Awarded a competitive grant from the **U.S. Department of Homeland Security (DHS)** under the **Criminal Investigations and Network Analysis Center (CINA)** program.
 
-📣 Featured in: - [Southern Illinoisan News](https://thesouthern.com/news/local/education/siu-carbondale-professor-artificial-intelligence/article_adba3f3e-92fb-11ee-b904-bb81335ddd06.html)  
+📣 Featured in: 
+- [Southern Illinoisan News](https://thesouthern.com/news/local/education/siu-carbondale-professor-artificial-intelligence/article_adba3f3e-92fb-11ee-b904-bb81335ddd06.html)  
 - [SIU Computer Science News](https://cs.siu.edu/about_us/news/dhsgrant2023.php)
 
 ---
