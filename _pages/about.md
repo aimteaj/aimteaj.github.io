@@ -1,8 +1,8 @@
 ---
 layout: about
-title: about
+title: Home
 permalink: /
-subtitle: Assistant Professor, I-SENSE Fellow and Director of SPEED Lab
+position: Assistant Professor, I-SENSE Fellow and Director of SPEED Lab
 affiliation: Florida Atlantic University, Boca Raton
 affiliation_link: https://www.fau.edu/
 
@@ -32,7 +32,7 @@ announcements:
 #   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
 #   limit: 3 # leave blank to include all the blog posts
 ---
-I am a tenure-track Assistant Professor in the Department of Electrical Engineering and Computer Science at [Florida Atlantic University] (https://www.fau.edu/). I also serve as a Faculty Fellow at the Institute for Sensing and Embedded Network Systems Engineering (I-SENSE) at FAU. Besides that, I am the Founding Director of the **Secure Prediction, Edge AI and Multimodal LLM Lab [[SPEED Lab]](https://www.speedlab.network)**.
+I am a tenure-track Assistant Professor in the Department of Electrical Engineering and Computer Science at [Florida Atlantic University, Boca Raton](https://www.fau.edu/). I also serve as a Faculty Fellow at the Institute for Sensing and Embedded Network Systems Engineering (I-SENSE) at FAU. Besides that, I am the Founding Director of the **Secure Prediction, Edge AI and Multimodal LLM Lab [[SPEED Lab]](https://www.speedlab.network)**.
 
 My research focuses on building **robust, secure, efficient, and trustworthy AI systems**, with an emphasis on large vision-language models, agentic AI, federated learning, multimodal LLMs, and edge intelligence. I am particularly interested in control-theory of large language models and practical deployment of the frameworks in autonomous transportation, smart city, surveillance and operational intelligence for mission critical contexts, underwater and healthcare.
 
