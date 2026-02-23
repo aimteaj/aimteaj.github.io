@@ -186,7 +186,7 @@
     - name: "Abdur R Shahid"
       affiliation: "Southern Illinois University"
   description: "Federated Adversarial Learning simulation with nine heterogeneous devices with the different configurations."
-  image: "sustainability2.png"
+  image: "sustainability3.png"
   image_alt: "Research Architecture Overview"
   links:
     - name: "Paper"
@@ -206,7 +206,7 @@
     - name: "Ahmed Imteaj"
       affiliation: "Florida Atlantic University"    
   description: ""
-  image: "securecps.png"
+  image: "securecps2.png"
   image_alt: "Research Architecture Overview"
   links:
     - name: "Paper"
