@@ -15,14 +15,13 @@ contact_note: >
   Email is the best way to reach me.
 
 description: >
-  I am an Assistant Professor at Florida Atlantic University and Director of the Secure Prediction, Edge AI and Multimodal LLM (SPEED) Lab.
+  I am an Assistant Professor and I-SENSE Fellow at Florida Atlantic University and Director of the Secure Prediction, Edge AI and Multimodal LLM (SPEED) Lab.
   My research focuses on robust and secure AI, federated learning, vision language models, multimodal large language models, and efficient edge AI.
 
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a>.
   Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
 
-keywords: federated learning, vision-language models, multimodal llm, edge ai, robust ai, ai security, cybersecurity, machine learning
+keywords: Large Vision-Language Models, Multimodal LLM, Federated learning, Edge AI, Robust AI, Cybersecurity, Trustworthy and Quantum AI
 lang: en
 icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -106,10 +105,10 @@ lsi: false # produce an index for related posts
 
 # Pagination
 pagination:
-  enabled: true
+  enabled: false
 
 related_blog_posts:
-  enabled: true
+  enabled: false
   max_related: 5
 
 # Giscus comments (RECOMMENDED)
