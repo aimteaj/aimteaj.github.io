@@ -5,6 +5,8 @@ inline: true
 related_posts: false
 ---
 
-Serving as the <strong>Faculty Advisor</strong> for the <strong>Google Developer Group (GDG)</strong> at Florida Atlantic University.
+<span style="color:#6a1b9a; font-weight:700;">October 2025 — Leadership Role</span>
 
-🔗 <a href="[Link]" target="_blank">Learn more</a>
+Appointed as the <span style="color:#1b5e20; font-weight:600;">Faculty Advisor</span> of the <span style="color:#003366; font-weight:600;">Google Developer Group (GDG)</span> at Florida Atlantic University.
+
+🔗 <a href="[Link]" target="_blank"><span style="color:#b71c1c; font-weight:600;">Learn more</span></a>
