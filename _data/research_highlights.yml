@@ -26,7 +26,7 @@
     - name: "Video"
       url: "#"
       icon: "fa-video"
-  venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025"
+  venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025 [Ranked #1 CS Conference]"
   status: "Published"
   importance: 1
 
@@ -48,7 +48,7 @@
     - name: "Video"
       url: "#"
       icon: "fa-video"
-  venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026"
+  venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 [Ranked #1 CS Conference]"
   status: "Accepted"
   importance: 2
 
@@ -77,7 +77,7 @@
     - name: "Poster"
       url: "#"
       icon: "fa-image"
-  venue: "Proceedings of IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025"
+  venue: "Proceedings of IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025 [Ranked #1 CS Conference]"
   status: "Published"
   importance: 3
 
@@ -129,8 +129,8 @@
     - name: "Poster"
       url: "#"
       icon: "fa-image"
-  venue: "IEEE Transactions on Artificial Intelligence"
-  status: "Published (Q1 Journal)"
+  venue: "IEEE Transactions on Artificial Intelligence (Q1 Journal), Mobiquitous, IEEE Internet of Things Journal (Q1 Journal)"
+  status: "Published"
   importance: 5
 
 - title: "Securing Vision-Language Models Against Jailbreak and Adversarial Attacks"
@@ -205,7 +205,7 @@
       affiliation: "Southern Illinois University"
     - name: "Ahmed Imteaj"
       affiliation: "Florida Atlantic University"    
-  description: ""
+  description: "Securing Privacy in Cloud-Based Whiteboard Services Against Health Attribute Inference Attacks."
   image: "securecps2.jpg"
   image_alt: "Research Architecture Overview"
   links:
@@ -243,7 +243,7 @@
       affiliation: "Southern Illinois University"
     - name: "Ahmed Imteaj"
       affiliation: "Florida Atlantic University"   
-  description: ""
+  description: "Overview of experimental process: learning from hand drawing dataset, real-time drawings from DP-WhiteBoard tool, and recognizing shape and inference via transfer learning models."
   image: "parkinson.png"
   image_alt: "Research Architecture Overview"
   links:
@@ -253,7 +253,7 @@
     - name: "Video"
       url: "#"
       icon: "fa-video"
-  venue: "IEEE Transaction on Artificial Intelligence"
+  venue: "IEEE Transaction on Artificial Intelligence, SMARTCOMP"
   status: "Published"
   importance: 11
 
@@ -261,7 +261,7 @@
   authors:
     - name: "Ahmed Imteaj"
       affiliation: "Florida Atlantic University"   
-  description: ""
+  description: "Visualization of fire and hurricane occurrence event on map (H: Hurricane F: Wildfire)."
   image: "infra.png"
   image_alt: "Research Architecture Overview"
   links:
