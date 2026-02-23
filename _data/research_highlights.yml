@@ -51,7 +51,7 @@
       icon: "fa-image"
   venue: "arXiv preprint arXiv:2407.14971"
   status: "Under Review in IEEE Transactions on Big Data"
-  importance: 5
+  importance: 3
 
 - title: "Blockchain-Empowered Cyber-Secure Federated Learning for Trustworthy Edge Computing"
   authors:
@@ -80,7 +80,7 @@
       icon: "fa-image"
   venue: "IEEE Transactions on Artificial Intelligence"
   status: "Published (Q1 Journal)"
-  importance: 3
+  importance: 4
 
 - title: "Securing Vision-Language Models Against Jailbreak and Adversarial Attacks"
   authors:
@@ -103,7 +103,7 @@
       icon: "fa-image"
   venue: "IEEE International Conference on Big Data (BigData) 2024"
   status: "Published"
-  importance: 4
+  importance: 5
 
 - title: "Towards Trustworthy Autonomous Vehicles with Vision-Language Models Under Adversarial Attacks"
   authors:
@@ -131,6 +131,70 @@
       url: "#"
       icon: "fa-image"
   venue: "Proceedings of IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025"
-  status: "Florida Atlantic Universit"
+  status: "Published"
   importance: 2
+
+  - title: "SLADE: Shielding against Dual Exploits in Large Vision-Language Models"
+  authors:
+    - name: "Md Zarif Hossain"
+      affiliation: "Florida Atlantic University"
+    - name: "Ahmed Imteaj"
+      affiliation: "Florida Atlantic University"
+  description: "Our novel defense mechanism protects Vision-Language Models against dual exploits through robust encoding and adversarial training techniques."
+  image: "fig1cvpr.png"
+  image_alt: "Research Architecture Overview"
+  links:
+    - name: "Paper"
+      url: "#"
+      icon: "fa-file-pdf"
+    - name: "Supp"
+      url: "#"
+      icon: "fa-file-alt"
+    - name: "Code"
+      url: "#"
+      icon: "fa-code"
+    - name: "Poster"
+      url: "#"
+      icon: "fa-image"
+    - name: "Slides"
+      url: "#"
+      icon: "fa-presentation"
+    - name: "Video"
+      url: "#"
+      icon: "fa-video"
+  venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025"
+  status: "Published"
+  importance: 6
+
+  - title: "SLADE: Shielding against Dual Exploits in Large Vision-Language Models"
+  authors:
+    - name: "Md Zarif Hossain"
+      affiliation: "Florida Atlantic University"
+    - name: "Ahmed Imteaj"
+      affiliation: "Florida Atlantic University"
+  description: "Our novel defense mechanism protects Vision-Language Models against dual exploits through robust encoding and adversarial training techniques."
+  image: "fig1cvpr.png"
+  image_alt: "Research Architecture Overview"
+  links:
+    - name: "Paper"
+      url: "#"
+      icon: "fa-file-pdf"
+    - name: "Supp"
+      url: "#"
+      icon: "fa-file-alt"
+    - name: "Code"
+      url: "#"
+      icon: "fa-code"
+    - name: "Poster"
+      url: "#"
+      icon: "fa-image"
+    - name: "Slides"
+      url: "#"
+      icon: "fa-presentation"
+    - name: "Video"
+      url: "#"
+      icon: "fa-video"
+  venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025"
+  status: "Published"
+  importance: 7
 
