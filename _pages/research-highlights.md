@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Research Highlights
+title: Research Projects
 permalink: /research-highlights/
 description: Selected research highlights and publications
 nav: true
