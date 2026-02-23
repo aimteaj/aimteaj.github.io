@@ -567,35 +567,28 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%7A%61%72%69%66%68%34%39%33@%67%6D%61%69%6C.%63%6F%6D", "_blank");
-        },
-      },{
-        id: 'social-github',
-        title: 'GitHub',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://github.com/hossainzarif", "_blank");
+          window.open("mailto:%61%69%6D%74%65%61%6A@%66%61%75.%65%64%75", "_blank");
         },
       },{
         id: 'social-linkedin',
         title: 'LinkedIn',
         section: 'Socials',
         handler: () => {
-          window.open("https://www.linkedin.com/in/md-zarif-hossain-7a2635202", "_blank");
+          window.open("https://www.linkedin.com/in/ahmed-imteaj-a13343a3", "_blank");
         },
       },{
         id: 'social-orcid',
         title: 'ORCID',
         section: 'Socials',
         handler: () => {
-          window.open("https://orcid.org/0009-0007-0180-6371", "_blank");
+          window.open("https://orcid.org/0000-0002-6975-3997", "_blank");
         },
       },{
         id: 'social-scholar',
         title: 'Google Scholar',
         section: 'Socials',
         handler: () => {
-          window.open("https://scholar.google.com/citations?user=mXN9-XwAAAAJ", "_blank");
+          window.open("https://scholar.google.com/citations?user=I5IZ4GQAAAAJ", "_blank");
         },
       },{
       id: 'light-theme',
