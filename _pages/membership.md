@@ -8,10 +8,8 @@ description: Mentorship and advising
 ---
 
 ### PhD Students
-- **Md Zarif Hossain** (PhD Fellow)
+- **Md Zarif Hossain** (PhD Candidate)
 - **Awal Ahmed Fime** (PhD Student)
-- **Ebrahim Maghsoudlou Nima** (Co-Advising)
-- **Alex Towell** (Co-Advising)
 
 ### 📚 Graduated MS Thesis and Project Students
 - **Dina Famouri** – Human Activity Recognition with Keypoint Analysis
@@ -35,14 +33,11 @@ description: Mentorship and advising
 
 ## 🧑‍🏫 Program Mentorship
 
-# NSF–DoD REU Site Mentor (FIU)
+### NSF–DoD REU Site Mentor
 Mentored **Raghad Alabagi** and **Meileik Hyman**.
 
-# NSF–DoD RET Site Mentor (FIU)
+#/33 NSF–DoD RET Site Mentor 
 Mentored **Marisa Behar** and **Yoandra Abad**.
-
-# Undergraduate Senior Design and Final Year Project Mentor
-Mentored **Glenda Gonzalez** and **Ricardo Boetto**.
 
 ---
 
