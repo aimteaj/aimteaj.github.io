@@ -1,9 +1,9 @@
 - title: "SLADE: Shielding against Dual Exploits in Large Vision-Language Models"
   authors:
     - name: "Md Zarif Hossain"
-      affiliation: "Southern Illinois University"
+      affiliation: "Florida Atlantic University"
     - name: "Ahmed Imteaj"
-      affiliation: "Southern Illinois University"
+      affiliation: "Florida Atlantic University"
   description: "Our novel defense mechanism protects Vision-Language Models against dual exploits through robust encoding and adversarial training techniques."
   image: "fig1cvpr.png"
   image_alt: "Research Architecture Overview"
@@ -27,15 +27,15 @@
       url: "#"
       icon: "fa-video"
   venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025"
-  status: "Accepted"
+  status: "Published"
   importance: 1
 
 - title: "Sim-CLIP: Unsupervised Siamese Adversarial Fine-Tuning for Robust Vision-Language Models"
   authors:
     - name: "Md Zarif Hossain"
-      affiliation: "Southern Illinois University"
+      affiliation: "Florida Atlantic University"
     - name: "Ahmed Imteaj"
-      affiliation: "Southern Illinois University"
+      affiliation: "Florida Atlantic Universit"
   description: "Unsupervised approach to enhance Vision-Language Models through Siamese adversarial fine-tuning for improved robustness and semantic richness."
   image: "simclip.png"
   image_alt: "Research Architecture Overview"
@@ -51,20 +51,20 @@
       icon: "fa-image"
   venue: "arXiv preprint arXiv:2407.14971"
   status: "Under Review in IEEE Transactions on Big Data"
-  importance: 2
+  importance: 5
 
 - title: "Blockchain-Empowered Cyber-Secure Federated Learning for Trustworthy Edge Computing"
   authors:
     - name: "Moore, E."
-      affiliation: "Southern Illinois University"
+      affiliation: "Florida International University"
     - name: "Imteaj, A."
-      affiliation: "Southern Illinois University"
+      affiliation: "Florida Atlantic University"
     - name: "Md Zarif Hossain"
-      affiliation: "Southern Illinois University"
+      affiliation: "Florida International University"
     - name: "Rezapour, S."
-      affiliation: "Southern Illinois University"
+      affiliation: "Florida International University"
     - name: "Amini, M. H."
-      affiliation: "Southern Illinois University"
+      affiliation: "Florida International University"
   description: "Blockchain-enhanced framework ensuring privacy and security in distributed machine learning across edge computing environments."
   image: "blockchain.png"
   image_alt: "Research Architecture Overview"
@@ -130,7 +130,7 @@
     - name: "Poster"
       url: "#"
       icon: "fa-image"
-  venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshop 2025"
-  status: "Accepted"
-  importance: 5
+  venue: "Proceedings of IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025"
+  status: "Florida Atlantic Universit"
+  importance: 2
 
