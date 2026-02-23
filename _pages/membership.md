@@ -7,22 +7,18 @@ nav_order: 6
 description: Mentorship and advising
 ---
 
-## 🌟 Mentorship Experience
-
-### 🎓 PhD Students
+### PhD Students
 - **Md Zarif Hossain** (PhD Fellow)
 - **Awal Ahmed Fime** (PhD Student)
 - **Ebrahim Maghsoudlou Nima** (Co-Advising)
 - **Alex Towell** (Co-Advising)
 
-### 📚 Current MS Students
+### 📚 Graduated MS Thesis and Project Students
 - **Dina Famouri** – Human Activity Recognition with Keypoint Analysis
 - **Oleksandr Jockusch** – Federated Meta-Learning for Emotion and Sentiment-Aware Multi-modal Complaint Identification
 - **Revathi Gajjala** – Physics-Informed Neural Networks
 - **Veerendra Reddy Ayaluri** – Federated Learning Testbed for Mobile Agents
 - **Sai Sandhiptha Bayya** – Ensuring Fairness in Federated Learning for Healthcare Systems
-
-### 🎓 Graduated MS Thesis and Project Students
 - **Mark Sidhom** – Fine-Tuned LLM for Healthcare
 - **Prince Duo** – Hallucination Attacks and Impacts on Large-Language Models
 - **Venkata Gnana Prakash Paruchuri** – Topic Modeling on Research Articles using BERT
@@ -39,13 +35,13 @@ description: Mentorship and advising
 
 ## 🧑‍🏫 Program Mentorship
 
-### NSF–DoD REU Site Mentor (FIU)
+# NSF–DoD REU Site Mentor (FIU)
 Mentored **Raghad Alabagi** and **Meileik Hyman**.
 
-### NSF–DoD RET Site Mentor (FIU)
+# NSF–DoD RET Site Mentor (FIU)
 Mentored **Marisa Behar** and **Yoandra Abad**.
 
-### Undergraduate Senior Design and Final Year Project Mentor
+# Undergraduate Senior Design and Final Year Project Mentor
 Mentored **Glenda Gonzalez** and **Ricardo Boetto**.
 
 ---
