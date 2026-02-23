@@ -45,7 +45,7 @@ nav_order: 3
 
       <div class="architecture-container-large">
         <div class="architecture-image-large">
-          <img src="assets/img/{{ project.image }}" alt="{{ project.image_alt }}" class="img-fluid architecture-img">
+          <img src="{{ site.baseurl }}/assets/img/{{ project.image }}" alt="{{ project.image_alt }}" class="img-fluid architecture-img">
         </div>
         <div class="architecture-caption-large">
           <strong>{{ project.image_alt }}:</strong> {{ project.description }}
