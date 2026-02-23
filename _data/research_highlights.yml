@@ -151,7 +151,7 @@
     - name: "Paper"
       url: "#"
       icon: "fa-file-pdf"
-  venue: "Extended Version"
+  venue: "ICMLA"
   status: "Published"
   importance: 6
 
@@ -176,3 +176,47 @@
   venue: "IEEE Trsansations on Sustainable Computing"
   status: "Published"
   importance: 7
+  
+- title: "When Data is Scarce, Learn to Adapt: Robust Federated Learning via Adversarial Meta-Optimization"
+  authors:
+    - name: "Md Zarif Hossain"
+      affiliation: "Florida Atlantic University"
+    - name: "Awal Ahmed Fime"
+      affiliation: "Florida Atlantic University"    
+    - name: "Ahmed Imteaj"
+      affiliation: "Florida Atlantic University"
+  description: "We propose FAML, the first FAT framework that leverages meta-learning with adversarial training to enhance robustness in federated learning and address the challenges posed by data scarcity in heterogeneous (non-IID) client distributions."
+  image: "FAML2.png"
+  image_alt: "Research Architecture Overview"
+  links:
+    - name: "Paper"
+      url: "#"
+      icon: "fa-file-powerpoint"
+    - name: "Video"
+      url: "#"
+      icon: "fa-video"
+  venue: "IEEE Trsansations on Sustainable Computing"
+  status: "Published"
+  importance: 8
+
+- title: "Quantifying Robustness and Sustainability Trade-off in Federated Adversarial Learning for Cyber-Physical Systems"
+  authors:
+    - name: "Syed Mhamudul Hasan"
+      affiliation: "Southern Illinois University"
+    - name: "Ahmed Imteaj"
+      affiliation: "Florida Atlantic University"    
+    - name: "Abdur R Shahid"
+      affiliation: "Southern Illinois University"
+  description: "Federated Adversarial Learning simulation with nine heterogeneous devices with the different configurations."
+  image: "sustainability.png"
+  image_alt: "Research Architecture Overview"
+  links:
+    - name: "Paper"
+      url: "#"
+      icon: "fa-file-powerpoint"
+    - name: "Video"
+      url: "#"
+      icon: "fa-video"
+  venue: "IEEE Trsansations on Sustainable Computing"
+  status: "Published"
+  importance: 9
