@@ -7,9 +7,6 @@ nav_order: 5
 description: Courses taught and curriculum development
 ---
 
-## 🎓 Teaching
-
-### 📍 Current Institution  
 **Florida Atlantic University**
 
 - **Fall 2025** – Artificial Intelligence
@@ -18,7 +15,7 @@ description: Courses taught and curriculum development
 
 ---
 
-## 📚 Courses Previously Taught  
+## Courses Previously Taught  
 **Southern Illinois University Carbondale**
 
 - **Fall 2022** – Machine Learning & Soft Computing 
