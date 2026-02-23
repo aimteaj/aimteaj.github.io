@@ -151,22 +151,24 @@
   status: "Published"
   importance: 6
 
-- title: "SLADE: Shielding against Dual Exploits in Large Vision-Language Models"
+- title: "Quantifying Robustness and Sustainability Trade-off in Federated Adversarial Learning for Cyber-Physical Systems"
   authors:
-    - name: "Md Zarif Hossain"
-      affiliation: "Florida Atlantic University"
+    - name: "Syed Mhamudul Hasan"
+      affiliation: "Southern Illinois University"
     - name: "Ahmed Imteaj"
-      affiliation: "Florida Atlantic University"
+      affiliation: "Florida Atlantic University"    
+    - name: "Abdur R Shahid"
+      affiliation: "Southern Illinois University"
   description: "Invited talk and demo presentation of SLADE framework."
-  image: "fig1cvpr.png"
+  image: "sustainability.png"
   image_alt: "Research Architecture Overview"
   links:
-    - name: "Slides"
+    - name: "Paper"
       url: "#"
       icon: "fa-file-powerpoint"
     - name: "Video"
       url: "#"
       icon: "fa-video"
   venue: "Invited Presentation"
-  status: "Presented"
+  status: "Published"
   importance: 7
