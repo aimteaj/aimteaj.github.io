@@ -436,7 +436,7 @@ ninja.data = [{
           
         },
       },{id: "news-our-paper-titled-securing-privacy-in-cloud-based-whiteboard-services-against-health-attribute-inference-attacks-has-been-published-in-ieee-transactions-on-artificial-intelligence",
-          title: 'Our paper titled “Securing Privacy in Cloud-Based Whiteboard Services Against Health Attribute Inference...',
+          title: 'Our paper, titled “Securing Privacy in Cloud-Based Whiteboard Services Against Health Attribute Inference...',
           description: "",
           section: "News",},{id: "news-awarded-the-dhs-cina-grant-thank-you-to-the-u-s-department-of-homeland-security-media-coverage-the-southern-illinoisan",
           title: 'Awarded the DHS CINA Grant. Thank you to the U.S. Department of Homeland...',
