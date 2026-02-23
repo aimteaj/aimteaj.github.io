@@ -23,19 +23,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/research-highlights/";
           },
+        },{id: "nav-teaching",
+          title: "Teaching",
+          description: "Courses taught and curriculum development",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/teaching/";
+          },
         },{id: "nav-mentorship",
           title: "Mentorship",
           description: "Mentorship and advising",
           section: "Navigation",
           handler: () => {
             window.location.href = "/mentorship/";
-          },
-        },{id: "nav-teaching",
-          title: "teaching",
-          description: "Course materials, schedules, and resources for classes taught.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/teaching/";
           },
         },{id: "dropdown-bookshelf",
               title: "bookshelf",
