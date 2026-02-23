@@ -117,7 +117,7 @@
     - name: "Amini, M. H."
       affiliation: "Florida International University"
   description: "Blockchain-enhanced framework ensuring privacy and security in distributed machine learning across edge computing environments."
-  image: "blockchain.png"
+  image: "bc.png"
   image_alt: "Research Architecture Overview"
   links:
     - name: "Paper"
@@ -218,3 +218,59 @@
   venue: "AAAI'25 Workshop, ICMLA'25, COMPSAC'25"
   status: "Published"
   importance: 9
+
+- title: "Distributed AI for Interdependent Cyber-Physical-Societal Networks"
+  authors:
+    - name: "Ahmed Imteaj"
+      affiliation: "Southern Illinois University"   
+  description: ""
+  image: "interdependent.png"
+  image_alt: "Research Architecture Overview"
+  links:
+    - name: "Paper"
+      url: "#"
+      icon: "fa-file-powerpoint"
+    - name: "Video"
+      url: "#"
+      icon: "fa-video"
+  venue: "NSF Grant"
+  status: "Awarded"
+  importance: 10
+
+- title: "Secure and Trustworthy AI for Wearable Tech: Privacy-Preserving Sensor Intelligence"
+  authors:
+    - name: "Abdur R Shahid"
+      affiliation: "Southern Illinois University"
+    - name: "Ahmed Imteaj"
+      affiliation: "Florida Atlantic University"   
+  description: ""
+  image: "parkinson.png"
+  image_alt: "Research Architecture Overview"
+  links:
+    - name: "Paper"
+      url: "#"
+      icon: "fa-file-powerpoint"
+    - name: "Video"
+      url: "#"
+      icon: "fa-video"
+  venue: "IEEE Transaction on Artificial Intelligence"
+  status: "Published"
+  importance: 11
+
+- title: "Towards Resilient Critical Infrastructure Operations against Natural Calamity"
+  authors:
+    - name: "Ahmed Imteaj"
+      affiliation: "Florida Atlantic University"   
+  description: ""
+  image: "infra.png"
+  image_alt: "Research Architecture Overview"
+  links:
+    - name: "Paper"
+      url: "#"
+      icon: "fa-file-powerpoint"
+    - name: "Video"
+      url: "#"
+      icon: "fa-video"
+  venue: "🔒Security of Cyber-Physical Systems, 📡ICC, 🌱SusTech, ⚡PES GM 📱IEEE Consumer Electronics"
+  status: "Published"
+  importance: 12
