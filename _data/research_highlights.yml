@@ -38,7 +38,7 @@
       affiliation: "Florida Atlantic University"    
     - name: "Ahmed Imteaj"
       affiliation: "Florida Atlantic University"
-  description: "We propose FAML, the first FAT framework that leverages meta-learning with adversarial training to enhance robustness in federated learning and address the challenges posed by data scarcity in heterogeneous (non-IID) client distributions."
+  description: "We propose FAML, the first and robust FAT framework that leverages meta-learning to enhance robustness in federated learning and address the challenges posed by data scarcity in heterogeneous clients."
   image: "FAML2.jpg"
   image_alt: "Research Architecture Overview"
   links:
@@ -48,8 +48,8 @@
     - name: "Video"
       url: "#"
       icon: "fa-video"
-  venue: "IEEE Trsansations on Sustainable Computing"
-  status: "Published"
+  venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026"
+  status: "Accepted"
   importance: 2
 
 - title: "Towards Trustworthy Autonomous Vehicles with Vision-Language Models Under Adversarial Attacks"
@@ -186,7 +186,7 @@
     - name: "Abdur R Shahid"
       affiliation: "Southern Illinois University"
   description: "Federated Adversarial Learning simulation with nine heterogeneous devices with the different configurations."
-  image: "sustainability.png"
+  image: "sustainability2.png"
   image_alt: "Research Architecture Overview"
   links:
     - name: "Paper"
@@ -199,16 +199,14 @@
   status: "Published"
   importance: 8
 
-- title: "Quantifying Robustness and Sustainability Trade-off in Federated Adversarial Learning for Cyber-Physical Systems"
+- title: "Leveraging Language Models for Trustworthy Cyber-Physical Intelligence"
   authors:
-    - name: "Syed Mhamudul Hasan"
+    - name: "Abdur R Shahid"
       affiliation: "Southern Illinois University"
     - name: "Ahmed Imteaj"
       affiliation: "Florida Atlantic University"    
-    - name: "Abdur R Shahid"
-      affiliation: "Southern Illinois University"
-  description: "Federated Adversarial Learning simulation with nine heterogeneous devices with the different configurations."
-  image: "sustainability.png"
+  description: ""
+  image: "securecps.png"
   image_alt: "Research Architecture Overview"
   links:
     - name: "Paper"
@@ -217,6 +215,6 @@
     - name: "Video"
       url: "#"
       icon: "fa-video"
-  venue: "IEEE Trsansations on Sustainable Computing"
+  venue: "AAAI'25 Workshop, ICMLA'25, COMPSAC'25"
   status: "Published"
   importance: 9
