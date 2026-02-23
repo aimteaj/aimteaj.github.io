@@ -3,7 +3,7 @@ layout: page
 title: Research Highlights
 permalink: /research-highlights/
 description: Selected research highlights and publications
-nav: false
+nav: true
 nav_order: 3
 ---
 
