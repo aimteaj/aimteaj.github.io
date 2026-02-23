@@ -12,7 +12,6 @@ nav_order: 3
     <div class="row">
       <div class="col-lg-12">
         <h1 class="research-title">Research Highlights</h1>
-        <p class="research-subtitle">Discover our innovative approaches to building robust and secure AI systems</p>
       </div>
     </div>
 
