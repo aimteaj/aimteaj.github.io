@@ -30,80 +30,27 @@
   status: "Published"
   importance: 1
 
-- title: "Sim-CLIP: Unsupervised Siamese Adversarial Fine-Tuning for Robust Vision-Language Models"
+- title: "When Data is Scarce, Learn to Adapt: Robust Federated Learning via Adversarial Meta-Optimization"
   authors:
     - name: "Md Zarif Hossain"
       affiliation: "Florida Atlantic University"
+    - name: "Awal Ahmed Fime"
+      affiliation: "Florida Atlantic University"    
     - name: "Ahmed Imteaj"
       affiliation: "Florida Atlantic University"
-  description: "Unsupervised approach to enhance Vision-Language Models through Siamese adversarial fine-tuning for improved robustness and semantic richness."
-  image: "simclip.png"
-  image_alt: "Research Architecture Overview"
-  links:
-    - name: "Paper"
-      url: "https://arxiv.org/abs/2407.14971"
-      icon: "fa-file-pdf"
-    - name: "Code"
-      url: "#"
-      icon: "fa-code"
-    - name: "Poster"
-      url: "#"
-      icon: "fa-image"
-  venue: "arXiv preprint arXiv:2407.14971"
-  status: "Under Review in IEEE Transactions on Big Data"
-  importance: 3
-
-- title: "Blockchain-Empowered Cyber-Secure Federated Learning for Trustworthy Edge Computing"
-  authors:
-    - name: "Moore, E."
-      affiliation: "Florida International University"
-    - name: "Imteaj, A."
-      affiliation: "Florida Atlantic University"
-    - name: "Md Zarif Hossain"
-      affiliation: "Florida International University"
-    - name: "Rezapour, S."
-      affiliation: "Florida International University"
-    - name: "Amini, M. H."
-      affiliation: "Florida International University"
-  description: "Blockchain-enhanced framework ensuring privacy and security in distributed machine learning across edge computing environments."
-  image: "blockchain.png"
+  description: "We propose FAML, the first FAT framework that leverages meta-learning with adversarial training to enhance robustness in federated learning and address the challenges posed by data scarcity in heterogeneous (non-IID) client distributions."
+  image: "FAML2.jpg"
   image_alt: "Research Architecture Overview"
   links:
     - name: "Paper"
       url: "#"
-      icon: "fa-file-pdf"
-    - name: "Code"
+      icon: "fa-file-powerpoint"
+    - name: "Video"
       url: "#"
-      icon: "fa-code"
-    - name: "Poster"
-      url: "#"
-      icon: "fa-image"
-  venue: "IEEE Transactions on Artificial Intelligence"
-  status: "Published (Q1 Journal)"
-  importance: 4
-
-- title: "Securing Vision-Language Models Against Jailbreak and Adversarial Attacks"
-  authors:
-    - name: "Md Zarif Hossain"
-      affiliation: "Southern Illinois University"
-    - name: "Ahmed Imteaj"
-      affiliation: "Southern Illinois University"
-  description: "Comprehensive defense mechanism for Vision-Language Models focusing on robust encoding techniques against various attack vectors."
-  image: "jailbreak.png"
-  image_alt: "Research Architecture Overview"
-  links:
-    - name: "Paper"
-      url: "#"
-      icon: "fa-file-pdf"
-    - name: "Code"
-      url: "#"
-      icon: "fa-code"
-    - name: "Poster"
-      url: "#"
-      icon: "fa-image"
-  venue: "IEEE International Conference on Big Data (BigData) 2024"
+      icon: "fa-video"
+  venue: "IEEE Trsansations on Sustainable Computing"
   status: "Published"
-  importance: 5
+  importance: 2
 
 - title: "Towards Trustworthy Autonomous Vehicles with Vision-Language Models Under Adversarial Attacks"
   authors:
@@ -132,7 +79,82 @@
       icon: "fa-image"
   venue: "Proceedings of IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025"
   status: "Published"
-  importance: 2
+  importance: 3
+
+- title: "Sim-CLIP: Unsupervised Siamese Adversarial Fine-Tuning for Robust Vision-Language Models"
+  authors:
+    - name: "Md Zarif Hossain"
+      affiliation: "Florida Atlantic University"
+    - name: "Ahmed Imteaj"
+      affiliation: "Florida Atlantic University"
+  description: "Unsupervised approach to enhance Vision-Language Models through Siamese adversarial fine-tuning for improved robustness and semantic richness."
+  image: "simclip.png"
+  image_alt: "Research Architecture Overview"
+  links:
+    - name: "Paper"
+      url: "https://arxiv.org/abs/2407.14971"
+      icon: "fa-file-pdf"
+    - name: "Code"
+      url: "#"
+      icon: "fa-code"
+    - name: "Poster"
+      url: "#"
+      icon: "fa-image"
+  venue: "arXiv preprint arXiv:2407.14971"
+  status: "Under Review in IEEE Transactions on Big Data"
+  importance: 4
+
+- title: "Blockchain-Empowered Cyber-Secure Federated Learning for Trustworthy Edge Computing"
+  authors:
+    - name: "Moore, E."
+      affiliation: "Florida International University"
+    - name: "Imteaj, A."
+      affiliation: "Florida Atlantic University"
+    - name: "Md Zarif Hossain"
+      affiliation: "Florida International University"
+    - name: "Rezapour, S."
+      affiliation: "Florida International University"
+    - name: "Amini, M. H."
+      affiliation: "Florida International University"
+  description: "Blockchain-enhanced framework ensuring privacy and security in distributed machine learning across edge computing environments."
+  image: "blockchain.png"
+  image_alt: "Research Architecture Overview"
+  links:
+    - name: "Paper"
+      url: "#"
+      icon: "fa-file-pdf"
+    - name: "Code"
+      url: "#"
+      icon: "fa-code"
+    - name: "Poster"
+      url: "#"
+      icon: "fa-image"
+  venue: "IEEE Transactions on Artificial Intelligence"
+  status: "Published (Q1 Journal)"
+  importance: 5
+
+- title: "Securing Vision-Language Models Against Jailbreak and Adversarial Attacks"
+  authors:
+    - name: "Md Zarif Hossain"
+      affiliation: "Southern Illinois University"
+    - name: "Ahmed Imteaj"
+      affiliation: "Southern Illinois University"
+  description: "Comprehensive defense mechanism for Vision-Language Models focusing on robust encoding techniques against various attack vectors."
+  image: "jailbreak.png"
+  image_alt: "Research Architecture Overview"
+  links:
+    - name: "Paper"
+      url: "#"
+      icon: "fa-file-pdf"
+    - name: "Code"
+      url: "#"
+      icon: "fa-code"
+    - name: "Poster"
+      url: "#"
+      icon: "fa-image"
+  venue: "IEEE International Conference on Big Data (BigData) 2024"
+  status: "Published"
+  importance: 6
 
 - title: "TriplePlay: Enhancing Federated Learning with CLIP for Non-IID Data and Resource Efficiency"
   authors:
@@ -153,7 +175,7 @@
       icon: "fa-file-pdf"
   venue: "ICMLA"
   status: "Published"
-  importance: 6
+  importance: 7
 
 - title: "Quantifying Robustness and Sustainability Trade-off in Federated Adversarial Learning for Cyber-Physical Systems"
   authors:
@@ -165,28 +187,6 @@
       affiliation: "Southern Illinois University"
   description: "Federated Adversarial Learning simulation with nine heterogeneous devices with the different configurations."
   image: "sustainability.png"
-  image_alt: "Research Architecture Overview"
-  links:
-    - name: "Paper"
-      url: "#"
-      icon: "fa-file-powerpoint"
-    - name: "Video"
-      url: "#"
-      icon: "fa-video"
-  venue: "IEEE Trsansations on Sustainable Computing"
-  status: "Published"
-  importance: 7
-  
-- title: "When Data is Scarce, Learn to Adapt: Robust Federated Learning via Adversarial Meta-Optimization"
-  authors:
-    - name: "Md Zarif Hossain"
-      affiliation: "Florida Atlantic University"
-    - name: "Awal Ahmed Fime"
-      affiliation: "Florida Atlantic University"    
-    - name: "Ahmed Imteaj"
-      affiliation: "Florida Atlantic University"
-  description: "We propose FAML, the first FAT framework that leverages meta-learning with adversarial training to enhance robustness in federated learning and address the challenges posed by data scarcity in heterogeneous (non-IID) client distributions."
-  image: "FAML2.png"
   image_alt: "Research Architecture Overview"
   links:
     - name: "Paper"
