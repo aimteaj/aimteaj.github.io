@@ -134,14 +134,18 @@
   status: "Published"
   importance: 2
 
-- title: "SLADE: Shielding against Dual Exploits in Large Vision-Language Models"
+- title: "TriplePlay: Enhancing Federated Learning with CLIP for Non-IID Data and Resource Efficiency"
   authors:
-    - name: "Md Zarif Hossain"
-      affiliation: "Florida Atlantic University"
     - name: "Ahmed Imteaj"
       affiliation: "Florida Atlantic University"
-  description: "Extended version with ablation analysis and cross-architecture validation."
-  image: "fig1cvpr.png"
+    - name: "Md Zarif Hossain"
+      affiliation: "Florida Atlantic University"
+    - name: "Saika Zaman"
+      affiliation: "Florida Atlantic University"
+    - name: "Abdur R Shahid"
+      affiliation: "Southern Illinois University"
+  description: " TriplePlay, a framework that tailors CLIP foundation model as an adapter to strengthen FL model’s performance and adaptability across heterogeneous data distributions among the clients. "
+  image: "tripleplay.png"
   image_alt: "Research Architecture Overview"
   links:
     - name: "Paper"
@@ -159,7 +163,7 @@
       affiliation: "Florida Atlantic University"    
     - name: "Abdur R Shahid"
       affiliation: "Southern Illinois University"
-  description: "Invited talk and demo presentation of SLADE framework."
+  description: "Federated Adversarial Learning simulation with nine heterogeneous devices with the different configurations."
   image: "sustainability.png"
   image_alt: "Research Architecture Overview"
   links:
@@ -169,6 +173,6 @@
     - name: "Video"
       url: "#"
       icon: "fa-video"
-  venue: "Invited Presentation"
+  venue: "IEEE Trsansations on Sustainable Computing"
   status: "Published"
   importance: 7
