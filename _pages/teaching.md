@@ -14,7 +14,7 @@ description: Courses taught and curriculum development
 
 - **Fall 2025** – Artificial Intelligence
 - **Spring 2026** – Artificial Intelligence 
-- **Fall 2026** – Large Language Models 
+- **Fall 2026** – Large Language Models (New course)
 
 ---
 
