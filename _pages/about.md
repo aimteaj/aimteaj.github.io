@@ -12,18 +12,18 @@ profile:
   image: ahmedimteaj.jpg
   image_circular: false # crops the image to make it circular
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 
 announcements:
   enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  scrollable: false # adds a vertical scroll bar if there are more than 3 news items
   limit: 30 # leave blank to include all the news in the `_news` folder
 
 # latest_posts:
 #   enabled: true
-#   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+#   scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
 #   limit: 3 # leave blank to include all the blog posts
 ---
 I am a tenure-track Assistant Professor in the Department of Electrical Engineering and Computer Science at [Florida Atlantic University, Boca Raton](https://www.fau.edu/). I also serve as a Faculty Fellow at the Institute for Sensing and Embedded Network Systems Engineering (I-SENSE) at FAU. Besides that, I am the Founding Director of the **Secure Prediction, Edge AI and Multimodal LLM Lab [[SPEED Lab]](https://www.speedlab.network)**.
