@@ -36,7 +36,7 @@ description: Mentorship and advising
 ### NSF–DoD REU Site Mentor
 Mentored **Raghad Alabagi** and **Meileik Hyman**.
 
-#/33 NSF–DoD RET Site Mentor 
+### NSF–DoD RET Site Mentor 
 Mentored **Marisa Behar** and **Yoandra Abad**.
 
 ---
