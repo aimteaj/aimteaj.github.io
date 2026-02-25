@@ -412,7 +412,7 @@ _cookie_consent: false # s GDPR-compliant cookie consent dialog (https://github.
 _masonry: true # s automatic project cards arrangement
 _math: true # s math typesetting (uses MathJax)
 _tooltips: false # s automatic tooltip links generated for each section titles on pages and posts
-_darkmode: false # enables switching between light/dark modes
+_darkmode: true # enables switching between light/dark modes
 enable_navbar_social: false # enables displaying social links in the navbar on the about page
 enable_project_categories: true # enables categorization of projects into multiple categories
 enable_medium_zoom: true # enables image zoom feature (as on medium.com)
