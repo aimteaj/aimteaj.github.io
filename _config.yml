@@ -312,7 +312,7 @@ scholar:
 
 # Display different badges withs stats for your publications
 # Customize badge behavior in _layouts/bib.liquid
-_publication_badges:
+enable_publication_badges:
   altmetric: true # Altmetric badge (Customization options: https://badge-docs.altmetric.com/index.html)
   dimensions: true # Dimensions badge (Customization options: https://badge.dimensions.ai/)
   google_scholar: true # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
@@ -332,14 +332,10 @@ filtered_bibtex_keywords:
     bibtex_show,
     blog,
     code,
-    dimensions,
-    eprint,
     google_scholar_id,
-    hal,
     html,
     inspirehep_id,
     pdf,
-    pmid,
     poster,
     preview,
     selected,
@@ -353,8 +349,8 @@ filtered_bibtex_keywords:
 max_author_limit: 3 # leave blank to always show all authors
 more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
 
-# s publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
-_publication_thumbnails: true
+# Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
+enable_publication_thumbnails: true
 
 # -----------------------------------------------------------------------------
 # Jekyll Link Attributes
@@ -362,7 +358,7 @@ _publication_thumbnails: true
 
 # These are the defaults
 external_links:
-  d: true
+  enabled: true
   rel: external nofollow noopener
   target: _blank
   exclude:
@@ -374,7 +370,7 @@ external_links:
 # MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
 #   convert -version
 imagemagick:
-  d: true # s responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
+  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
   widths:
     - 480
     - 800
@@ -388,15 +384,15 @@ imagemagick:
     - ".tiff"
     - ".gif"
   output_formats:
-    webp: "-auto-orient -quality 85"
+    webp: "-quality 85"
 
 # Lazy loading images
-#   If you  lazy loading, all images will add the loading="lazy" attribute.
+#   If you enable lazy loading, all images will add the loading="lazy" attribute.
 #   This will make your site load faster, but it may not be supported in all browsers.
 #   You can also set loading="" to other values for specific images to override the default behavior.
 #   Options: "auto", "eager", "lazy"
 #   See https://web.dev/browser-level-image-lazy-loading/ for more information.
-lazy_loading_images: true # s lazy loading of images (recommended)
+lazy_loading_images: true # enables lazy loading of images (recommended)
 
 # -----------------------------------------------------------------------------
 # Optional Features
@@ -411,7 +407,7 @@ enable_bing_verification: false # enables bing site verification
 enable_masonry: true # enables automatic project cards arrangement
 enable_math: true # enables math typesetting (uses MathJax)
 enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
-enable_darkmode: false # enables switching between light/dark modes
+enable_darkmode: true # enables switching between light/dark modes
 enable_navbar_social: false # enables displaying social links in the navbar on the about page
 enable_project_categories: true # enables categorization of projects into multiple categories
 enable_medium_zoom: true # enables image zoom feature (as on medium.com)
@@ -614,14 +610,6 @@ third_party_libraries:
     url:
       js: "https://cdn.jsdelivr.net/npm/swiper@11.1.0/swiper-element-bundle.min.js.map"
     version: "11.0.5"
-  vanilla-cookieconsent:
-    integrity:
-      css: "sha256-ygRrixsQlBByBZiOcJamh7JByO9fP+/l5UPtKNJmRsE="
-      js: "sha256-vG4vLmOB/AJbJ6awr7Wg4fxonG+fxAp4cIrbIFTvRXU="
-    url:
-      css: "https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@{{version}}/dist/cookieconsent.css"
-      js: "https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@{{version}}/dist/cookieconsent.umd.js"
-    version: "3.1.0"
   vega:
     integrity:
       js: "sha256-Yot/cfgMMMpFwkp/5azR20Tfkt24PFqQ6IQS+80HIZs="
@@ -676,3 +664,5 @@ jsonresume:
   - languages
   - interests
   - references
+
+
