@@ -101,8 +101,8 @@ ninja.data = [{
           section: "News",},{id: "news-recognized-among-the-top-2-scientists-worldwide-by-stanford-university-for-research-impact-i-sense-news-coverage-our-special-session-proposal-deep-neural-networks-and-generative-ai-for-multi-agent-smart-vehicle-perceptron-learning-automation-and-optimization-co-organized-with-zhen-ni-and-hepeng-li-has-been-accepted-for-inclusion-in-the-ieee-wcci-2026-the-world-s-largest-technical-event-on-computational-intelligence",
           title: 'Recognized among the Top 2% Scientists Worldwide by Stanford University for research impact....',
           description: "",
-          section: "News",},{id: "news-awarded-the-nsf-nairr-pilot-resource-allocation-grant-supporting-advanced-research-in-secure-and-robust-ai-systems-project-details-nairr250393-fau-i-sense-news-coverage",
-          title: 'Awarded the NSF NAIRR Pilot Resource Allocation Grant, supporting advanced research in secure...',
+          section: "News",},{id: "news-awarded-the-nsf-nairr-pilot-resource-allocation-grant-supporting-advanced-research-in-secure-and-robust-ai-systems-through-the-national-artificial-intelligence-research-resource-nairr-pilot-project-details-nairr250393-amp-nbsp-amp-nbsp-media-coverage-fau-i-sense-news",
+          title: 'Awarded the NSF NAIRR Pilot Resource Allocation Grant Supporting advanced research in secure...',
           description: "",
           section: "News",},{id: "news-organized-a-special-session-on-robustness-and-security-of-large-language-models-rose-llm-2025-as-the-session-chair-along-with-dr-m-hadi-amini-fiu-at-the-24th-ieee-international-conference-on-machine-learning-and-applications-icmla-2025",
           title: 'Organized a Special Session on Robustness and Security of Large Language Models (ROSE-LLM...',
@@ -171,30 +171,4 @@ ninja.data = [{
           description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
           section: "Teachings",handler: () => {
               window.location.href = "/teachings/introduction-to-machine-learning/";
-            },},{
-      id: 'light-theme',
-      title: 'Change theme to light',
-      description: 'Change the theme of the site to Light',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("light");
-      },
-    },
-    {
-      id: 'dark-theme',
-      title: 'Change theme to dark',
-      description: 'Change the theme of the site to Dark',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("dark");
-      },
-    },
-    {
-      id: 'system-theme',
-      title: 'Use system default theme',
-      description: 'Change the theme of the site to System Default',
-      section: 'Theme',
-      handler: () => {
-        setThemeSetting("system");
-      },
-    },];
+            },},];
