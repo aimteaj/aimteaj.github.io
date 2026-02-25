@@ -23,7 +23,7 @@ footer_text: >
 
 keywords: Large Vision-Language Models, Multimodal LLM, Federated learning, Edge AI, Robust AI, Cybersecurity, Trustworthy and Quantum AI
 lang: en
-icon: logo.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: ⚛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://aimteaj.github.io # the base hostname & protocol for your site
 baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
