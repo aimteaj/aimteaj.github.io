@@ -39,9 +39,11 @@ Our research has been supported by
 ## Research Interests
 
 - Large Vision-Language Models and Multimodal LLMs
-- Federated Learning and Distributed Inference
-- Agentic and Trustworthy AI
-- Adversarial Robustness and AI Security  
+- Federated Learning (FL) for Edge-Devices
+- Trustworthy AI, Agentic AI and Cybersecurity
+- Robustness and Security of LLMs and FL  
 - Distributed and Edge AI Systems
 - Quantum AI
+- Applications in Surveillance, Autonomous Vehicles and Transportation, Ocean Research, Healthcare, and Agriculture.
+
 
