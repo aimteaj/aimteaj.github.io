@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-03-04'
+  last_updated: '2026-03-09'
 papers:
   I5IZ4GQAAAAJ:-f6ydRqryjwC:
     citations: 85
     title: Leveraging asynchronous federated learning to predict customers financial distress
     year: '2022'
   I5IZ4GQAAAAJ:2P1L_qKh6hAC:
-    citations: 3
+    citations: 4
     title: 'WatchOverGPT: A framework for real-time crime detection and response using wearable camera and large language model'
     year: '2024'
   I5IZ4GQAAAAJ:3fE2CSJIrl8C:
@@ -94,7 +94,7 @@ papers:
     title: Securing Privacy in Cloud-Based Whiteboard Services Against Health Attribute Inference Attacks
     year: '2024'
   I5IZ4GQAAAAJ:KlAtU1dfN6UC:
-    citations: 100
+    citations: 101
     title: 'FedAR: Activity and Resource-Aware Federated Learning Model for Distributed Mobile Robots'
     year: '2020'
   I5IZ4GQAAAAJ:LkGwnXOMwfcC:
@@ -102,7 +102,7 @@ papers:
     title: 'RoboFI: Autonomous Path Follower Robot for Human Body Detection and Geolocalization for Search and Rescue Missions using Computer Vision and IoT'
     year: '2019'
   I5IZ4GQAAAAJ:M05iB0D1s5AC:
-    citations: 10
+    citations: 11
     title: 'TriplePlay: Enhancing Federated Learning with CLIP for Non-IID Data and Resource Efficiency'
     year: '2024'
   I5IZ4GQAAAAJ:M3ejUd6NZC8C:
@@ -242,7 +242,7 @@ papers:
     title: 'A Comprehensive Survey of Large Language Models for Human Activity Recognition: Opportunities, Challenges, and Future Directions'
     year: '2025'
   I5IZ4GQAAAAJ:blknAaTinKkC:
-    citations: 52
+    citations: 53
     title: 'A Survey on Secure and Private Federated Learning Using Blockchain: Theory and Application in Resource-constrained Computing'
     year: '2023'
   I5IZ4GQAAAAJ:cFHS6HbyZ2cC:
@@ -254,7 +254,7 @@ papers:
     title: 'Segmentation analysis on magnetic resonance imaging (MRI) with different clustering techniques: Wavelet and BEMD'
     year: '2016'
   I5IZ4GQAAAAJ:dfsIfKJdRG4C:
-    citations: 2
+    citations: 3
     title: Towards Trustworthy Autonomous Vehicles with Vision-Language Models Under Targeted and Untargeted Adversarial Attacks
     year: '2025'
   I5IZ4GQAAAAJ:dhFuZR0502QC:
@@ -262,7 +262,7 @@ papers:
     title: 'Fedresilience: A federated learning application to improve resilience of resource-constrained critical infrastructures'
     year: '2021'
   I5IZ4GQAAAAJ:eQOLeE2rZwMC:
-    citations: 40
+    citations: 41
     title: A smartphone based application to improve the health care system of Bangladesh
     year: '2016'
   I5IZ4GQAAAAJ:fPk4N6BV_jEC:
@@ -322,7 +322,7 @@ papers:
     title: Exploring Audio Editing Features as User-Centric Privacy Defenses Against Large Language Model (LLM) Based Emotion Inference Attacks
     year: '2025'
   I5IZ4GQAAAAJ:qUcmZB5y_30C:
-    citations: 905
+    citations: 908
     title: A survey on federated learning for resource-constrained IoT devices
     year: '2021'
   I5IZ4GQAAAAJ:qjMakFHDy7sC:
