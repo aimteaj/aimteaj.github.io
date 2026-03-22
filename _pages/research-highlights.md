@@ -10,7 +10,6 @@ nav_order: 3
 <div class="research-highlights-page">
 
   <div class="rh-hero">
-    <h1>Research Projects</h1>
     <p>
       Selected research highlights spanning robust artificial intelligence, vision-language models, federated learning, multimodal systems, and trustworthy machine intelligence.
     </p>
