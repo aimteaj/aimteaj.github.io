@@ -268,13 +268,20 @@ description:
 
   <div class="ga-card ga-blue">
     <h3>💡 NSF CISE CRII Grant | $167,500 | Sole PI</h3>
-    <p>
-      Awarded the prestigious <strong>National Science Foundation CISE Research Initiation Initiative (CRII)</strong> grant as the
-      <strong>Sole Principal Investigator</strong>.
-    </p>
-    <p>
-      This award supported foundational research in robust and efficient AI systems and has led to strong scholarly outcomes.
-    </p>
+      <p>
+    Awarded the prestigious <strong>National Science Foundation CISE Research Initiation Initiative (CRII)</strong> grant supporting foundational research in distributed and robust AI systems.
+  </p>
+
+  <p style="margin-top: 0.6rem;">
+    <strong>Project Title:</strong><br>
+    <span style="color:#1d4ed8; font-weight:600;">
+      CRII: RI: Federated Meta-Learning for Cross-Network Crime Analytics in Interdependent Environments
+    </span>
+  </p>
+
+  <a class="ga-link-btn" href="https://www.nsf.gov/awardsearch/show-award?AWD_ID=2553868" target="_blank">
+    View NSF Award Page
+  </a>
 
     <p><strong>📚 Publications from this Grant</strong></p>
     <div class="ga-badges">
