@@ -4,7 +4,7 @@ title: Grants and Awards
 permalink: /grants-awards/
 nav: true
 nav_order: 4
-description: Recent Grants and Awards
+description: ""
 ---
 
 
