@@ -13,7 +13,7 @@ Awarded the <strong style="color:#0b3d91;">DHS CINA Grant</strong>
 
 <br><br>
 
-🇺🇸 Grateful to the <strong style="color:#1b5e20;">U.S. Department of Homeland Security (DHS)</strong> for supporting our research in AI-driven security and criminal activity recognition.
+Grateful to the <strong style="color:#1b5e20;">U.S. Department of Homeland Security (DHS)</strong> for supporting our research in AI-driven security and criminal activity recognition.
 
 <br><br>
 
