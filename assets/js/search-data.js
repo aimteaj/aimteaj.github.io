@@ -119,12 +119,7 @@ ninja.data = [{
           section: "News",},{id: "news-ijcnn-2026-paper-accepted-our-paper-sim-clip-unsupervised-siamese-adversarial-fine-tuning-for-robust-and-semantically-rich-vision-language-models-has-been-accepted-in-the-main-track-of-the-ieee-international-joint-conference-on-neural-networks-ijcnn-2026-ranked-a-cs-conference-project-page",
           title: 'IJCNN 2026 Paper Accepted! Our paper, “Sim-CLIP: Unsupervised Siamese Adversarial Fine-Tuning for Robust...',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/1_project/";
-            },},{id: "projects-project-2",
+          section: "News",},{id: "projects-project-2",
           title: 'project 2',
           description: "a project with a background image and giscus comments",
           section: "Projects",handler: () => {
