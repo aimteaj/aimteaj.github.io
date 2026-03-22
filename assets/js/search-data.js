@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-grants-amp-awards",
           title: "Grants &amp; Awards",
-          description: "Research grants and academic honors",
+          description: "Research grants, honors, and academic recognitions",
           section: "Navigation",
           handler: () => {
             window.location.href = "/grants-awards/";
