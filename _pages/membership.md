@@ -295,10 +295,8 @@ description: Mentorship and advising
 </style>
 
 <div class="mentor-hero">
-  <h1>Mentorship</h1>
   <p>
-    A record of student advising, research mentorship, and academic guidance across doctoral, master’s, undergraduate, and community-centered programs, with a focus on developing strong researchers in
-    <strong>artificial intelligence</strong>, <strong>machine learning</strong>, <strong>federated learning</strong>, and <strong>vision-language models</strong>.
+    A record of student advising, research mentorship, and academic guidance across doctoral, master’s, undergraduate, and community-centered programs.
   </p>
 </div>
 
