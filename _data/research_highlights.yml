@@ -117,7 +117,7 @@
     - name: "Amini, M. H."
       affiliation: "Florida International University"
   description: "Blockchain-enhanced framework ensuring privacy and security in distributed machine learning across edge computing environments."
-  image: "bc.png"
+  image: "Figure4.png"
   image_alt: "Research Architecture Overview"
   links:
     - name: "Paper"
