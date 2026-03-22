@@ -28,7 +28,7 @@
       icon: "fa-video"
   venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025 [Ranked #1 CS Conference]"
   status: "Published"
-  importance: 1
+  importance: 2
 
 - title: "When Data is Scarce, Learn to Adapt: Robust Federated Learning via Adversarial Meta-Optimization"
   authors:
@@ -40,8 +40,11 @@
       affiliation: "Florida Atlantic University"
   description: "We propose FAML, the first and robust FAT framework that leverages meta-learning to enhance robustness in federated learning and address the challenges posed by data scarcity in heterogeneous clients."
   image: "FAML2.jpg"
-  image_alt: "Research Architecture Overview"
+  image_alt: "FAML"
   links:
+    - name: "Project Page"
+      url: "https://speedlab-git.github.io/FAML-CVPR/"
+      icon: "fa-globe"
     - name: "Paper"
       url: "#"
       icon: "fa-file-powerpoint"
@@ -50,7 +53,7 @@
       icon: "fa-video"
   venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 [Ranked #1 CS Conference]"
   status: "Accepted"
-  importance: 2
+  importance: 1
 
 - title: "Towards Trustworthy Autonomous Vehicles with Vision-Language Models Under Adversarial Attacks"
   authors:
@@ -79,7 +82,7 @@
       icon: "fa-image"
   venue: "Proceedings of IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025 [Ranked #1 CS Conference]"
   status: "Published"
-  importance: 3
+  importance: 4
 
 - title: "Sim-CLIP: Unsupervised Siamese Adversarial Fine-Tuning for Robust Vision-Language Models"
   authors:
@@ -91,6 +94,9 @@
   image: "simclip.png"
   image_alt: "Research Architecture Overview"
   links:
+    - name: "Project Page"
+      url: "https://speedlab-git.github.io/Sim-CLIP/"
+      icon: "fa-globe"
     - name: "Paper"
       url: "https://arxiv.org/abs/2407.14971"
       icon: "fa-file-pdf"
@@ -101,8 +107,8 @@
       url: "#"
       icon: "fa-image"
   venue: "arXiv preprint arXiv:2407.14971"
-  status: "Under Review in IEEE Transactions on Big Data"
-  importance: 4
+  status: "IEEE International Joint Conference on Neural Networks (IJCNN 2026)"
+  importance: 3
 
 - title: "Blockchain-Empowered Cyber-Secure Federated Learning for Trustworthy Edge Computing"
   authors:
