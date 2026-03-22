@@ -25,14 +25,14 @@ ninja.data = [{
           },
         },{id: "nav-grants-and-awards",
           title: "Grants and Awards",
-          description: "Recent Grants and Awards",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/grants-awards/";
           },
         },{id: "nav-teaching",
           title: "Teaching",
-          description: "Courses taught and curriculum development",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
