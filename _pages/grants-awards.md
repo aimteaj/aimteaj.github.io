@@ -268,7 +268,7 @@ description: Research grants and academic honors
 <div class="ga-grid">
 
   <div class="ga-card ga-blue">
-    <h3> NSF CISE CRII Grant | $167,500 | Sole PI</h3>
+    <h3>💡 NSF CISE CRII Grant | $167,500 | Sole PI</h3>
     <p>
       Awarded the prestigious <strong>National Science Foundation CISE Research Initiation Initiative (CRII)</strong> grant as the
       <strong>Sole Principal Investigator</strong>.
@@ -277,7 +277,7 @@ description: Research grants and academic honors
       This award supported foundational research in robust and efficient AI systems and has led to strong scholarly outcomes.
     </p>
 
-    <p><strong> Publications from this Grant</strong></p>
+    <p><strong>📚 Publications from this Grant</strong></p>
     <div class="ga-badges">
       <span class="ga-badge">🧠 CVPR 2025 | 2 papers</span>
       <span class="ga-badge">🌱 IEEE T-SUSC | 1 paper</span>
@@ -290,7 +290,7 @@ description: Research grants and academic honors
   </div>
 
   <div class="ga-card ga-purple">
-    <h3> NSF NAIRR Pilot Grant | Sole PI</h3>
+    <h3>🚀 NSF NAIRR Pilot Grant | Sole PI</h3>
     <p>
       Awarded the <strong>NSF National Artificial Intelligence Research Resource (NAIRR) Pilot</strong> grant for the project:
     </p>
@@ -306,7 +306,7 @@ description: Research grants and academic honors
   </div>
 
   <div class="ga-card ga-green">
-    <h3> ORAU Research Innovation Partnership Grant | Lead PI</h3>
+    <h3>🌟 ORAU Research Innovation Partnership Grant | Lead PI</h3>
     <p>
       Received the <strong>ORAU Research Innovation Partnership Grant</strong> as <strong>Lead PI</strong>.
     </p>
@@ -317,7 +317,7 @@ description: Research grants and academic honors
   </div>
 
   <div class="ga-card ga-orange">
-    <h3>DHS CINA Grant | Collaboration with FIU | SIU PI</h3>
+    <h3>🛡️ DHS CINA Grant | Collaboration with FIU | SIU PI</h3>
     <p>
       Awarded a competitive grant from the <strong>U.S. Department of Homeland Security (DHS)</strong> under the
       <strong>Criminal Investigations and Network Analysis Center (CINA)</strong> program.
@@ -340,7 +340,7 @@ description: Research grants and academic honors
 <div class="ga-grid">
 
   <div class="ga-card ga-red">
-    <h3>Outstanding Teacher of the Year Award | 2024</h3>
+    <h3>🏆 Outstanding Teacher of the Year Award | 2024</h3>
     <p>
       Recipient of the <strong>Outstanding Teacher of the Year Award</strong> from the School of Computing at
       <strong>Southern Illinois University</strong>, recognizing excellence in teaching, mentorship, and curriculum development.
@@ -366,7 +366,7 @@ description: Research grants and academic honors
   </div>
 
   <div class="ga-card ga-gold">
-    <h3> University-Wide Outstanding Master’s Degree Graduate Award</h3>
+    <h3>🏅 University-Wide Outstanding Master’s Degree Graduate Award</h3>
     <p>
       Recipient of the <strong>University-Wide Outstanding Master’s Degree Graduate Award</strong>, presented to one master’s graduate in recognition of exceptional academic achievement, impactful research contributions, and dedicated service.
     </p>
