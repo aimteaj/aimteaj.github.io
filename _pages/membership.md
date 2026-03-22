@@ -4,7 +4,7 @@ title: Mentorship
 permalink: /mentorship/
 nav: true
 nav_order: 6
-description: Mentorship and advising
+description: ""
 ---
 
 <style>
