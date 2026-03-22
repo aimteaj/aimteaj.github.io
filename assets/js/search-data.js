@@ -48,7 +48,7 @@ ninja.data = [{
           title: 'Our paper, titled “Securing Privacy in Cloud-Based Whiteboard Services Against Health Attribute Inference...',
           description: "",
           section: "News",},{id: "news-awarded-the-dhs-cina-grant-grateful-to-the-u-s-department-of-homeland-security-dhs-for-supporting-our-research-in-ai-driven-security-and-criminal-activity-recognition-media-coverage-the-southern-illinoisan",
-          title: 'Awarded the DHS CINA Grant 🇺🇸 Grateful to the U.S. Department of Homeland...',
+          title: 'Awarded the DHS CINA Grant Grateful to the U.S. Department of Homeland Security...',
           description: "",
           section: "News",},{id: "news-received-the-outstanding-teacher-of-the-year-award-honored-and-grateful-to-the-school-of-computing-southern-illinois-university-for-this-meaningful-recognition-of-teaching-excellence-and-curriculum-innovation-social-media-post-linkedin-announcement",
           title: 'Received the Outstanding Teacher of the Year Award Honored and grateful to the...',
