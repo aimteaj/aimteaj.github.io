@@ -1,11 +1,12 @@
 ---
 layout: page
-title: Grants & Awards
+title: Grants and Awards
 permalink: /grants-awards/
 nav: true
 nav_order: 4
-description: 
+description: Recent Grants and Awards
 ---
+
 
 <style>
   .ga-hero {
