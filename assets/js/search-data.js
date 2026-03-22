@@ -107,7 +107,7 @@ ninja.data = [{
           section: "News",},{id: "news-organized-a-special-session-on-robustness-and-security-of-large-language-models-rose-llm-2025-as-the-session-chair-along-with-dr-m-hadi-amini-fiu-at-the-24th-ieee-international-conference-on-machine-learning-and-applications-icmla-2025",
           title: 'Organized a Special Session on Robustness and Security of Large Language Models (ROSE-LLM...',
           description: "",
-          section: "News",},{id: "news-our-paper-quantifying-robustness-and-sustainability-trade-off-in-federated-adversarial-learning-for-cyber-physical-systems-has-been-accepted-in-ieee-transactions-on-sustainable-computing",
+          section: "News",},{id: "news-our-paper-quantifying-robustness-and-sustainability-trade-off-in-federated-adversarial-learning-for-cyber-physical-systems-has-been-published-in-ieee-transactions-on-sustainable-computing",
           title: 'Our paper, “Quantifying Robustness and Sustainability Trade-off in Federated Adversarial Learning for Cyber-Physical...',
           description: "",
           section: "News",},{id: "news-our-project-proposal-presentation-and-project-demo-have-been-accepted-for-the-2026-nairr-annual-meeting-i-will-present-our-research-and-md-zarif-hossain-phd-student-will-present-the-project-demonstration-in-arlington-virginia-grateful-to-the-nsf-for-travel-support",
