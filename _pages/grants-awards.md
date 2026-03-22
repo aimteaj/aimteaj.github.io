@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Grants & Awards
+title: 
 permalink: /grants-awards/
 nav: true
 nav_order: 4
-description: Research grants and academic honors
+description: 
 ---
 
 <style>
@@ -258,8 +258,7 @@ description: Research grants and academic honors
 <div class="ga-hero">
   <h1>Grants & Awards</h1>
   <p>
-    A curated overview of externally funded research grants, academic honors, and scholarly recognitions reflecting contributions to
-    <strong>artificial intelligence</strong>, <strong>federated learning</strong>, <strong>vision language models</strong>, and <strong>secure intelligent systems</strong>.
+    An overview of externally funded research grants, academic honors, and scholarly recognitions reflecting contributions to Advanced AI, federated learning, multimodal LLMs and cybersecurity.
   </p>
 </div>
 
@@ -280,7 +279,7 @@ description: Research grants and academic honors
     <p><strong>📚 Publications from this Grant</strong></p>
     <div class="ga-badges">
       <span class="ga-badge">🧠 CVPR 2025 | 2 papers</span>
-      <span class="ga-badge">🌱 IEEE T-SUSC | 1 paper</span>
+      <span class="ga-badge">🌱 IEEE Transations on Sustanaible Computing | 1 paper</span>
       <span class="ga-badge">🎥 ICCV-W 2025 | 1 paper</span>
       <span class="ga-badge">🌐 ICDCS 2024 | 1 paper</span>
       <span class="ga-badge">💻 COMPSAC 2024 | 1 paper</span>
