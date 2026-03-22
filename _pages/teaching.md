@@ -289,7 +289,7 @@ description: Courses taught and curriculum development
   <h1>Teaching</h1>
   <p>
     A snapshot of courses taught, curriculum development efforts, and teaching recognition across undergraduate and graduate education in
-    <strong>artificial intelligence</strong>, <strong>machine learning</strong>, <strong>data structures</strong>, and <strong>large language models</strong>.
+    artificial intelligence, machine learning, data structures, and large language models.
   </p>
 </div>
 
