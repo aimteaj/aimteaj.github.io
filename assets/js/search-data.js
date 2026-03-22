@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-grants-and-awards",
           title: "Grants and Awards",
-          description: "",
+          description: "Recent Grants and Awards",
           section: "Navigation",
           handler: () => {
             window.location.href = "/grants-awards/";
