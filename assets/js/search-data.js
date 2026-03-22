@@ -117,7 +117,7 @@ ninja.data = [{
           title: 'CVPR 2026 Paper Accepted! Our paper, “When Data is Scarce, Learn to Adapt:...',
           description: "",
           section: "News",},{id: "news-ijcnn-2026-paper-accepted-our-paper-sim-clip-unsupervised-siamese-adversarial-fine-tuning-for-robust-and-semantically-rich-vision-language-models-has-been-accepted-in-the-main-track-of-the-ieee-international-joint-conference-on-neural-networks-ijcnn-2026-ranked-a-cs-conference-project-page",
-          title: 'IJCNN 2026 Paper Accepted Our paper, “Sim-CLIP: Unsupervised Siamese Adversarial Fine-Tuning for Robust...',
+          title: 'IJCNN 2026 Paper Accepted! Our paper, “Sim-CLIP: Unsupervised Siamese Adversarial Fine-Tuning for Robust...',
           description: "",
           section: "News",},{id: "projects-project-1",
           title: 'project 1',
