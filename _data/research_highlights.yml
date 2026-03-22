@@ -9,7 +9,7 @@
   image_alt: "Research Architecture Overview"
   links:
     - name: "Paper"
-      url: "#"
+      url: "https://openaccess.thecvf.com/content/CVPR2025/papers/Hossain_SLADE_Shielding_against_Dual_Exploits_in_Large_Vision-Language_Models_CVPR_2025_paper.pdf"
       icon: "fa-file-pdf"
     - name: "Supp"
       url: "#"
@@ -20,12 +20,6 @@
     - name: "Poster"
       url: "#"
       icon: "fa-image"
-    - name: "Slides"
-      url: "#"
-      icon: "fa-file-powerpoint"
-    - name: "Video"
-      url: "#"
-      icon: "fa-video"
   venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025 [Ranked #1 CS Conference]"
   status: "Published"
   importance: 2
@@ -48,9 +42,6 @@
     - name: "Paper"
       url: "#"
       icon: "fa-file-powerpoint"
-    - name: "Video"
-      url: "#"
-      icon: "fa-video"
   venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 [Ranked #1 CS Conference]"
   status: "Accepted"
   importance: 1
@@ -72,14 +63,11 @@
   image_alt: "Research Architecture Overview"
   links:
     - name: "Paper"
-      url: "#"
+      url: "https://nsfpar.research.gov/services/metadata/file/10671486"
       icon: "fa-file-pdf"
     - name: "Code"
       url: "#"
       icon: "fa-code"
-    - name: "Poster"
-      url: "#"
-      icon: "fa-image"
   venue: "Proceedings of IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025 [Ranked #1 CS Conference]"
   status: "Published"
   importance: 4
@@ -101,13 +89,13 @@
       url: "https://arxiv.org/abs/2407.14971"
       icon: "fa-file-pdf"
     - name: "Code"
-      url: "#"
+      url: "https://github.com/speedlab-git/SimCLIP.git"
       icon: "fa-code"
     - name: "Poster"
       url: "#"
       icon: "fa-image"
-  venue: "arXiv preprint arXiv:2407.14971"
-  status: "IEEE International Joint Conference on Neural Networks (IJCNN 2026)"
+  venue: "IEEE International Joint Conference on Neural Networks (IJCNN 2026)"
+  status: "Accepted"
   importance: 3
 
 - title: "Blockchain-Empowered Cyber-Secure Federated Learning for Trustworthy Edge Computing"
@@ -127,14 +115,11 @@
   image_alt: "Research Architecture Overview"
   links:
     - name: "Paper"
-      url: "#"
+      url: "https://ieeexplore.ieee.org/abstract/document/10876211"
       icon: "fa-file-pdf"
     - name: "Code"
       url: "#"
       icon: "fa-code"
-    - name: "Poster"
-      url: "#"
-      icon: "fa-image"
   venue: "IEEE Transactions on Artificial Intelligence (Q1 Journal), Mobiquitous, IEEE Internet of Things Journal (Q1 Journal)"
   status: "Published"
   importance: 5
@@ -150,7 +135,7 @@
   image_alt: "Research Architecture Overview"
   links:
     - name: "Paper"
-      url: "#"
+      url: "https://arxiv.org/pdf/2409.07353"
       icon: "fa-file-pdf"
     - name: "Code"
       url: "#"
@@ -196,11 +181,8 @@
   image_alt: "Research Architecture Overview"
   links:
     - name: "Paper"
-      url: "#"
+      url: "https://par.nsf.gov/servlets/purl/10671483"
       icon: "fa-file-powerpoint"
-    - name: "Video"
-      url: "#"
-      icon: "fa-video"
   venue: "IEEE Trsansations on Sustainable Computing"
   status: "Published"
   importance: 8
@@ -254,7 +236,7 @@
   image_alt: "Research Architecture Overview"
   links:
     - name: "Paper"
-      url: "#"
+      url: "https://ieeexplore.ieee.org/abstract/document/10391058"
       icon: "fa-file-powerpoint"
     - name: "Video"
       url: "#"
@@ -274,9 +256,6 @@
     - name: "Paper"
       url: "#"
       icon: "fa-file-powerpoint"
-    - name: "Video"
-      url: "#"
-      icon: "fa-video"
   venue: "🔒Security of Cyber-Physical Systems, 📡ICC, 🌱SusTech, ⚡PES GM 📱IEEE Consumer Electronics"
   status: "Published"
   importance: 12
