@@ -15,10 +15,11 @@ nav_order: 3
     </p>
 
     <div class="rh-hero-badges">
-      <span class="rh-hero-badge">AI Research</span>
       <span class="rh-hero-badge">Vision-Language Models</span>
       <span class="rh-hero-badge">Federated Learning</span>
-      <span class="rh-hero-badge">Research Highlights</span>
+      <span class="rh-hero-badge">Robust, Efficient and Secure AI</span>
+      <span class="rh-hero-badge">Trustworthy AI, Agentic AI and Cybersecurity</span>
+      <span class="rh-hero-badge">Real-World Applications</span>
     </div>
   </div>
 
