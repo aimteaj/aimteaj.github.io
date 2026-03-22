@@ -257,7 +257,6 @@ description: Recent Grants and Awards
 </style>
 
 <div class="ga-hero">
-  <h1>Grants & Awards</h1>
   <p>
     An overview of externally funded research grants, academic honors, and scholarly recognitions reflecting contributions to Advanced AI, federated learning, multimodal LLMs and cybersecurity.
   </p>
