@@ -25,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-grants-and-awards",
           title: "Grants and Awards",
-          description: "Recent Grants and Awards",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/grants-awards/";
@@ -39,7 +39,7 @@ ninja.data = [{
           },
         },{id: "nav-mentorship",
           title: "Mentorship",
-          description: "Mentorship and advising",
+          description: "",
           section: "Navigation",
           handler: () => {
             window.location.href = "/mentorship/";
