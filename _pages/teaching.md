@@ -4,7 +4,7 @@ title: Teaching
 permalink: /teaching/
 nav: true
 nav_order: 5
-description: Courses taught and curriculum development
+description: ""
 ---
 
 <style>
