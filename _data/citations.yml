@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-03-09'
+  last_updated: '2026-03-25'
 papers:
   I5IZ4GQAAAAJ:-f6ydRqryjwC:
-    citations: 85
+    citations: 87
     title: Leveraging asynchronous federated learning to predict customers financial distress
     year: '2022'
   I5IZ4GQAAAAJ:2P1L_qKh6hAC:
@@ -14,7 +14,7 @@ papers:
     title: Distributed machine learning for resilient operation of electric systems
     year: '2020'
   I5IZ4GQAAAAJ:3s1wT3WcHBgC:
-    citations: 16
+    citations: 18
     title: Blockchain-Empowered Cyber-Secure Federated Learning for Trustworthy Edge Computing
     year: '2025'
   I5IZ4GQAAAAJ:4DMP91E08xMC:
@@ -26,7 +26,7 @@ papers:
     title: Leveraging blockchain interoperability for interdependent networks
     year: '2023'
   I5IZ4GQAAAAJ:4OULZ7Gr8RgC:
-    citations: 21
+    citations: 22
     title: 'Distributed LLMs and Multimodal Large Language Models: A Survey on Advances, Challenges, and Future Directions'
     year: '2025'
   I5IZ4GQAAAAJ:5nxA0vEk-isC:
@@ -94,7 +94,7 @@ papers:
     title: Securing Privacy in Cloud-Based Whiteboard Services Against Health Attribute Inference Attacks
     year: '2024'
   I5IZ4GQAAAAJ:KlAtU1dfN6UC:
-    citations: 101
+    citations: 103
     title: 'FedAR: Activity and Resource-Aware Federated Learning Model for Distributed Mobile Robots'
     year: '2020'
   I5IZ4GQAAAAJ:LkGwnXOMwfcC:
@@ -130,7 +130,7 @@ papers:
     title: Context-Aware Spatiotemporal Poisoning Attacks on Wearable-Based Activity Recognition
     year: '2024'
   I5IZ4GQAAAAJ:QIV2ME_5wuYC:
-    citations: 56
+    citations: 57
     title: 'Data analytics to evaluate the impact of infectious disease on economy: Case study of COVID-19 pandemic'
     year: '2021'
   I5IZ4GQAAAAJ:R3hNpaxXUhUC:
@@ -150,7 +150,7 @@ papers:
     title: 'SkyWatch: Advancing Real-time Crime Detection via Semi-Federated Meta Learning'
     year: '2024'
   I5IZ4GQAAAAJ:Se3iqnhoufwC:
-    citations: 21
+    citations: 22
     title: Quantifying location privacy in permissioned blockchain-based internet of things (iot)
     year: '2019'
   I5IZ4GQAAAAJ:SeFeTyx0c_EC:
@@ -190,7 +190,7 @@ papers:
     title: 'Foundations of blockchain: theory and applications'
     year: '2021'
   I5IZ4GQAAAAJ:Y0pCki6q_DkC:
-    citations: 128
+    citations: 129
     title: An IoT based fire alarming and authentication system for workhouse using Raspberry Pi 3
     year: '2017'
   I5IZ4GQAAAAJ:YFjsv_pBGBYC:
@@ -242,7 +242,7 @@ papers:
     title: 'A Comprehensive Survey of Large Language Models for Human Activity Recognition: Opportunities, Challenges, and Future Directions'
     year: '2025'
   I5IZ4GQAAAAJ:blknAaTinKkC:
-    citations: 53
+    citations: 54
     title: 'A Survey on Secure and Private Federated Learning Using Blockchain: Theory and Application in Resource-constrained Computing'
     year: '2023'
   I5IZ4GQAAAAJ:cFHS6HbyZ2cC:
@@ -254,7 +254,7 @@ papers:
     title: 'Segmentation analysis on magnetic resonance imaging (MRI) with different clustering techniques: Wavelet and BEMD'
     year: '2016'
   I5IZ4GQAAAAJ:dfsIfKJdRG4C:
-    citations: 3
+    citations: 4
     title: Towards Trustworthy Autonomous Vehicles with Vision-Language Models Under Targeted and Untargeted Adversarial Attacks
     year: '2025'
   I5IZ4GQAAAAJ:dhFuZR0502QC:
@@ -302,7 +302,7 @@ papers:
     title: 'Vertical Federated Learning: Principles, Applications, and Future Frontiers'
     year: '2024'
   I5IZ4GQAAAAJ:ldfaerwXgEUC:
-    citations: 9
+    citations: 10
     title: 'FedAVO: Improving Communication Efficiency in Federated Learning with African Vultures Optimizer'
     year: '2024'
   I5IZ4GQAAAAJ:mB3voiENLucC:
@@ -314,7 +314,7 @@ papers:
     title: Blockchain Interoperability from the Perspective of Interdependent Networks
     year: '2021'
   I5IZ4GQAAAAJ:pqnbT2bcN3wC:
-    citations: 24
+    citations: 26
     title: Securing vision-language models with a robust encoder against jailbreak and adversarial attacks
     year: '2024'
   I5IZ4GQAAAAJ:pyW8ca7W8N0C:
@@ -322,7 +322,7 @@ papers:
     title: Exploring Audio Editing Features as User-Centric Privacy Defenses Against Large Language Model (LLM) Based Emotion Inference Attacks
     year: '2025'
   I5IZ4GQAAAAJ:qUcmZB5y_30C:
-    citations: 908
+    citations: 917
     title: A survey on federated learning for resource-constrained IoT devices
     year: '2021'
   I5IZ4GQAAAAJ:qjMakFHDy7sC:
@@ -338,7 +338,7 @@ papers:
     title: Exploring Audio Editing Features as User-Centric Privacy Defenses Against Emotion Inference Attacks
     year: '2025'
   I5IZ4GQAAAAJ:roLk4NBRz8UC:
-    citations: 19
+    citations: 20
     title: An IoT based interactive speech recognizable robot with distance control using Raspberry Pi
     year: '2018'
   I5IZ4GQAAAAJ:u-x6o8ySG0sC:
@@ -346,7 +346,7 @@ papers:
     title: 'Remote phone controller: An application to control smart phone'
     year: '2014'
   I5IZ4GQAAAAJ:u_35RYKgDlwC:
-    citations: 0
+    citations: 1
     title: 'SLADE: Shielding against Dual Exploits in Large Vision-Language Models'
     year: '2025'
   I5IZ4GQAAAAJ:ufrVoPGSRksC:
@@ -354,9 +354,9 @@ papers:
     title: Unmanned Multiple Railway Gates Controlling and Bi-directional Train Tracking with Alarming System using Principles of IoT
     year: '2018'
   I5IZ4GQAAAAJ:vV6vV6tmYwMC:
-    citations: 23
+    citations: 25
     title: 'Sim-clip: Unsupervised siamese adversarial fine-tuning for robust and semantically-rich vision-language models'
-    year: '2024'
+    year: '2026'
   I5IZ4GQAAAAJ:xtRiw3GOFMkC:
     citations: 0
     title: 'Breaking and Securing Vision-Language Models: An Adversarial Robustness Study'
