@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Serving as a <span style="color:#1b5e20; font-weight:800;">Reviewer</span> for <span style="color:#0d47a1; font-weight:700;">NeurIPS 2026</span> and <span style="color:#6a1b9a; font-weight:700;">ECCV 2026</span>, and <span style="color:#1565c0; font-weight:700;">served as Reviewer</span> for <span style="color:#1565c0; font-weight:700;">CVPR 2026</span>.
+Serving as a <span style="color:#1b5e20; font-weight:800;">Reviewer</span> for <span style="color:#0d47a1; font-weight:700;">NeurIPS 2026</span> and <span style="color:#6a1b9a; font-weight:700;">ECCV 2026</span>, and <span style="color:#1565c0; font-weight:700;">served as a Reviewer</span> for <span style="color:#1565c0; font-weight:700;">CVPR 2026</span>.
