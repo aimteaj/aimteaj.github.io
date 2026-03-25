@@ -101,7 +101,7 @@ ninja.data = [{
           section: "News",},{id: "news-our-special-session-proposal-deep-neural-networks-and-generative-ai-for-multi-agent-smart-vehicle-perceptron-learning-automation-and-optimization-co-organized-with-zhen-ni-and-hepeng-li-has-been-accepted-for-inclusion-in-the-ieee-wcci-2026-the-world-s-largest-technical-event-on-computational-intelligence",
           title: 'Our special session proposal, “Deep Neural Networks and Generative AI for Multi-Agent Smart...',
           description: "",
-          section: "News",},{id: "news-recognized-among-the-top-2-scientists-worldwide-by-stanford-university-for-research-impact-i-sense-news-coverage-our-special-session-proposal-deep-neural-networks-and-generative-ai-for-multi-agent-smart-vehicle-perceptron-learning-automation-and-optimization-co-organized-with-zhen-ni-and-hepeng-li-has-been-accepted-for-inclusion-in-the-ieee-wcci-2026-the-world-s-largest-technical-event-on-computational-intelligence",
+          section: "News",},{id: "news-recognized-among-the-top-2-scientists-worldwide-by-stanford-university-for-research-impact-i-sense-news-coverage",
           title: 'Recognized among the Top 2% Scientists Worldwide by Stanford University for research impact....',
           description: "",
           section: "News",},{id: "news-awarded-the-nsf-nairr-pilot-resource-allocation-grant-supporting-advanced-research-in-secure-and-robust-ai-systems-through-the-national-artificial-intelligence-research-resource-nairr-pilot-project-details-nairr250393-amp-nbsp-amp-nbsp-media-coverage-fau-i-sense-news",
