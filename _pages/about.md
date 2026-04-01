@@ -10,7 +10,7 @@ affiliation_link: https://www.fau.edu/
 profile:
   align: left
   image: Imteaj-Headshot.png
-  image_circular: true # crops the image to make it circular
+  image_circular: false # crops the image to make it circular
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -41,7 +41,7 @@ Our research has been supported by
 - Large Vision-Language Models and Multimodal LLMs
 - Federated Learning (FL) for Edge-Devices
 - Trustworthy AI, Agentic AI and Cybersecurity
-- Robustness and Security of LLMs and FL  
+- Robustness and Security of VLMs and FL  
 - Distributed and Edge AI Systems
 - Quantum AI
 - Applications in Surveillance, Autonomous Vehicles and Transportation, Ocean Research, Healthcare, and Agriculture.
