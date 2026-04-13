@@ -1,12 +1,16 @@
 metadata:
-  last_updated: '2026-03-25'
+  last_updated: '2026-04-13'
 papers:
   I5IZ4GQAAAAJ:-f6ydRqryjwC:
-    citations: 87
+    citations: 88
     title: Leveraging asynchronous federated learning to predict customers financial distress
     year: '2022'
+  I5IZ4GQAAAAJ:1sJd4Hv_s6UC:
+    citations: 0
+    title: 'Breaking Sensor-Text Alignment: Cross-Modal Attack on Contrastive Multimodal Human Activity Recognition'
+    year: '2026'
   I5IZ4GQAAAAJ:2P1L_qKh6hAC:
-    citations: 4
+    citations: 5
     title: 'WatchOverGPT: A framework for real-time crime detection and response using wearable camera and large language model'
     year: '2024'
   I5IZ4GQAAAAJ:3fE2CSJIrl8C:
@@ -30,7 +34,7 @@ papers:
     title: 'Distributed LLMs and Multimodal Large Language Models: A Survey on Advances, Challenges, and Future Directions'
     year: '2025'
   I5IZ4GQAAAAJ:5nxA0vEk-isC:
-    citations: 130
+    citations: 131
     title: 'Federated learning for resource-constrained iot devices: Panoramas and state of the art'
     year: '2022'
   I5IZ4GQAAAAJ:70eg2SAEIzsC:
@@ -74,11 +78,11 @@ papers:
     title: 'Towards Sustainable SecureML: Quantifying Carbon Footprint of Adversarial Machine Learning'
     year: '2024'
   I5IZ4GQAAAAJ:HDshCWvjkbEC:
-    citations: 23
+    citations: 25
     title: 'Examining mental disorder/psychological chaos through various ML and DL techniques: a critical review'
     year: '2022'
   I5IZ4GQAAAAJ:HoB7MX3m0LUC:
-    citations: 3
+    citations: 4
     title: 'Flamingo: Adaptive and resilient federated meta-learning against adversarial attacks'
     year: '2024'
   I5IZ4GQAAAAJ:IWHjjKOFINEC:
@@ -114,7 +118,7 @@ papers:
     title: A novel block cipher based on randomly shuffled key strings
     year: '2020'
   I5IZ4GQAAAAJ:NMxIlDl6LWMC:
-    citations: 3
+    citations: 4
     title: 'The Environmental Price of Intelligence: Evaluating the Social Cost of Carbon in Machine Learning'
     year: '2024'
   I5IZ4GQAAAAJ:NaGl4SEjCO4C:
@@ -129,6 +133,10 @@ papers:
     citations: 6
     title: Context-Aware Spatiotemporal Poisoning Attacks on Wearable-Based Activity Recognition
     year: '2024'
+  I5IZ4GQAAAAJ:P5F9QuxV20EC:
+    citations: 0
+    title: "Secure Yet Fragile: Adversarial Vulnerabilities of Federated Vision\u2013Language Models in Medical AI"
+    year: '2026'
   I5IZ4GQAAAAJ:QIV2ME_5wuYC:
     citations: 57
     title: 'Data analytics to evaluate the impact of infectious disease on economy: Case study of COVID-19 pandemic'
@@ -194,7 +202,7 @@ papers:
     title: An IoT based fire alarming and authentication system for workhouse using Raspberry Pi 3
     year: '2017'
   I5IZ4GQAAAAJ:YFjsv_pBGBYC:
-    citations: 5
+    citations: 6
     title: 'From Early Adoption to Ethical Adoption: A Diffusion of Innovation Perspective on ChatGPT and Large Language Models in the Classroom'
     year: '2024'
   I5IZ4GQAAAAJ:YsMSGLbcyi4C:
@@ -214,11 +222,11 @@ papers:
     title: Label Flipping Data Poisoning Attack Against Wearable Human Activity Recognition System
     year: '2022'
   I5IZ4GQAAAAJ:_kc_bZDykSQC:
-    citations: 10
+    citations: 11
     title: Cascaded Solid State Transformer Structure to Power Fast EV Charging Stations from Medium Voltage Transmission Lines
     year: '2020'
   I5IZ4GQAAAAJ:_xSYboBqXhAC:
-    citations: 0
+    citations: 1
     title: Adaptive and Robust Data Poisoning Detection and Sanitization in Wearable IoT Systems using Large Language Models
     year: '2025'
   I5IZ4GQAAAAJ:a0OBvERweLwC:
@@ -230,7 +238,7 @@ papers:
     title: 'Pose to Protect: Federated Skeleton-Based Anomaly Detection for Privacy-Conscious Video Surveillance'
     year: '2025'
   I5IZ4GQAAAAJ:aqlVkmm33-oC:
-    citations: 8
+    citations: 9
     title: Introduction to Blockchain technology
     year: '2021'
   I5IZ4GQAAAAJ:b0M2c_1WBrUC:
@@ -274,7 +282,7 @@ papers:
     title: Evaluating Sustainability and Social Costs of Adversarial Training in Machine Learning
     year: '2024'
   I5IZ4GQAAAAJ:hFOr9nPyWt4C:
-    citations: 66
+    citations: 68
     title: Federated deep learning for heterogeneous edge computing
     year: '2021'
   I5IZ4GQAAAAJ:hMod-77fHWUC:
@@ -322,7 +330,7 @@ papers:
     title: Exploring Audio Editing Features as User-Centric Privacy Defenses Against Large Language Model (LLM) Based Emotion Inference Attacks
     year: '2025'
   I5IZ4GQAAAAJ:qUcmZB5y_30C:
-    citations: 917
+    citations: 932
     title: A survey on federated learning for resource-constrained IoT devices
     year: '2021'
   I5IZ4GQAAAAJ:qjMakFHDy7sC:
