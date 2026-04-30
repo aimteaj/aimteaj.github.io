@@ -7,7 +7,7 @@ related_posts: false
 
 <div style="padding: 16px 20px; border-left: 6px solid #1b5e20; background: linear-gradient(135deg, #f3fbf5, #e8f5e9); border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
 
-<span style="font-size: 1.15rem; font-weight: 600;">
+<span style="font-size: 1.05rem;">
 Recognized among the<span style="color:#1b5e20;"> Top 2% Scientists Worldwide</span> by <span style="color:#2e7d32;">Stanford University</span> for research impact.
 </span>
 
