@@ -11,14 +11,14 @@ related_posts: false
 Awarded the <span style="color:#1b5e20;">2026 NSF CISE REU Grant</span> through <span style="color:#2e7d32;">Computing Research Association (CRA).</span> Thanks CRA!
 </span>
 
-<br><br>
+<br>
 
 <span style="font-size: 1.05rem;">
 I am currently looking for <strong style="color:#0d47a1;">1 motivated undergraduate student</strong> to join an exciting research project on 
 <span style="color:#1b5e20; font-weight:600;">Vision-Language Models</span>.
 </span>
 
-<br><br>
+<br>
 
 <span style="font-size: 1.02rem;">
 <strong>Competitive stipend</strong> and <strong>conference travel support</strong> provided.
