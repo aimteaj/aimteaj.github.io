@@ -137,7 +137,7 @@ ninja.data = [{
           section: "News",},{id: "news-our-paper-no-innocence-in-styling-discovery-of-privacy-protection-capabilities-and-security-risks-in-consumer-generative-ai-writing-assistants-has-been-accepted-in-the-64th-annual-meeting-of-the-association-for-computational-linguistics-acl-2026-industry-track",
           title: 'Our paper, “No Innocence in Styling: Discovery of Privacy Protection Capabilities and Security...',
           description: "",
-          section: "News",},{id: "news-awarded-the-2026-nsf-cise-reu-grant-through-computing-research-association-cra-thanks-cra-i-am-currently-looking-for-1-motivated-undergraduate-student-to-join-an-exciting-research-project-on-vision-language-models-competitive-stipend-and-conference-travel-support-provided",
+          section: "News",},{id: "news-awarded-the-2026-nsf-cise-reu-grant-through-computing-research-association-cra-thanks-cra-i-am-currently-looking-for-1-motivated-undergraduate-student-to-join-an-exciting-research-project-on-vision-language-models-competitive-stipend-fully-supported-conference-travel",
           title: 'Awarded the 2026 NSF CISE REU Grant through Computing Research Association (CRA). Thanks...',
           description: "",
           section: "News",},{id: "projects-project-2",
