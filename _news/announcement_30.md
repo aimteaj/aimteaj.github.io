@@ -5,7 +5,7 @@ inline: true
 related_posts: false
 ---
 
-<div style="padding: 16px 20px; border-left: 6px solid #1b5e20; background: linear-gradient(135deg, #f3fbf5, #e8f5e9); border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+<div style="padding: 14px 18px; border-left: 5px solid #2e7d32; background-color: #f3fbf5; border-radius: 6px;">
 
 <span style="font-size: 1.05rem;">
 Awarded the <span style="color:#1b5e20;">2026 NSF CISE REU Grant</span> through <span style="color:#2e7d32;">Computing Research Association (CRA).</span> Thanks CRA!
