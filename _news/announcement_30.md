@@ -11,7 +11,7 @@ related_posts: false
 Awarded the <span style="color:#1b5e20;">2026 NSF CISE REU Grant</span> through <span style="color:#2e7d32;">Computing Research Association (CRA).</span> Thanks CRA!
 </span>
 
-<br>
+<br><br>
 
 <span style="font-size: 1.05rem;">
 I am currently looking for <strong style="color:#0d47a1;">1 motivated undergraduate student</strong> to join an exciting research project on 
@@ -20,8 +20,8 @@ I am currently looking for <strong style="color:#0d47a1;">1 motivated undergradu
 
 <br>
 
-<span style="font-size: 1.02rem;">
-<strong>Competitive stipend</strong> and <strong>conference travel support</strong> provided.
+<span style="display:inline-block; margin-top:10px; padding:10px 14px; border-radius:10px; background:linear-gradient(135deg,#fff3e0,#e8f5e9); font-size:1.05rem; font-weight:600; color:#1b5e20;">
+🚀 Competitive stipend + fully supported conference travel
 </span>
 
 </div>
