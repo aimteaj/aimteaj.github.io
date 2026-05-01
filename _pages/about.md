@@ -33,7 +33,8 @@ My research focuses on building **robust, secure, efficient, and trustworthy AI 
 Our research has been supported by
 <span style="color:#0d47a1; font-weight:700;">National Science Foundation (NSF)</span>, 
 <span style="color:#1b5e20; font-weight:700;">U.S. Department of Homeland Security (DHS)</span>, 
-<span style="color:#6a1b9a; font-weight:700;">National Artificial Intelligence Research Resource (NAIRR) Pilot</span>, and 
+<span style="color:#6a1b9a; font-weight:700;">National Artificial Intelligence Research Resource (NAIRR) Pilot</span>, 
+<span style="color:#c62828; font-weight:700;">Computing Research Association (CRA)</span>, and 
 <span style="color:#ef6c00; font-weight:700;">ORAU Research Innovation Partnership Grant</span>. Our research has been published in leading venues including CVPR, ACL, ICCV, AAAI, BigData, ICDCS, SenSys, Mobiquitous, ICMLA, COMPSAC, Nature, IEEE Transactions, etc.
 
 ## Research Interests
@@ -41,9 +42,9 @@ Our research has been supported by
 - Large Vision-Language Models and Multimodal LLMs
 - Federated Learning (FL) for Edge-Devices
 - Trustworthy AI, Agentic AI and Cybersecurity
-- Robustness and Security of VLMs and FL  
-- Distributed and Edge AI Systems
-- Quantum AI
+- Robustness and Security of VLMs and FL
+- Quantum AI and Post-Quantum Security
+- Computer Vision, 3D Models and Digital Twin
 - Applications in Surveillance, Autonomous Vehicles and Transportation, Ocean Research, Healthcare, and Agriculture.
 
 
