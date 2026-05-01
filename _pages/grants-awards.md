@@ -318,12 +318,16 @@ description: ""
   <div class="ga-card ga-green">
     <h3>🌟 ORAU Research Innovation Partnership Grant | Lead PI</h3>
     <p>
-      Received the <strong>ORAU Research Innovation Partnership Grant</strong> as <strong>Lead PI</strong>.
+      Received the <strong>ORAU Research Innovation Partnership Grant</strong> as <strong>Lead PI</strong> for my proposal, titled "Large Language Models (LLM) Nexus: Bridging Technical Innovation and Ethical Horizons".
     </p>
     <p>
       Funded by <strong>Oak Ridge Associated Universities (ORAU)</strong>, this program supports innovative initiatives that foster
       interdisciplinary collaboration among university members and domain experts.
     </p>
+        <a class="ga-link-btn" href="https://www.orau.org/news/releases/2025/innovation-partnerships-grant-program-strengthens-research-education-and-workforce-capacity-building.html" target="_blank">
+      View View Details
+    </a>
+    
   </div>
 
   <div class="ga-card ga-orange">
