@@ -313,8 +313,80 @@ description: ""
     </a>
   </div>
 
-  <div class="ga-card ga-purple">
-  <h3> NSF CISE REU Student Funding Award</h3>
+<style>
+.ga-card.ga-purple {
+  background: linear-gradient(135deg, #0f2027, #2c5364, #6a11cb, #2575fc);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.ga-card.ga-purple::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255,255,255,0.2), transparent 70%);
+  border-radius: 50%;
+}
+
+.ga-card.ga-purple::after {
+  content: "";
+  position: absolute;
+  bottom: -60px;
+  left: -60px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(0,255,255,0.2), transparent 70%);
+  border-radius: 50%;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.ga-card h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: #ffdf6c;
+  letter-spacing: 0.5px;
+}
+
+.ga-card p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #f1f1f1;
+}
+
+.ga-link-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.ga-link-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+</style>
+
+<div class="ga-card ga-purple">
+  <h3>🚀 NSF CISE REU Student Funding Award</h3>
   <p>
     Supported by the <strong>NSF CISE Research Experiences for Undergraduates (REU)</strong> program through the Computing Research Association (CRA).
   </p>
@@ -327,7 +399,7 @@ description: ""
   <p>
     Full details are in the flyer below. Please feel free to share with students who may be interested.
   </p>
-  <a class="ga-link-btn" href="[https://aimteaj.github.io](https://www.linkedin.com/posts/ahmed-imteaj-a13343a3_ai-machinelearning-computervision-activity-7455762744701722624-j4SU?utm_source=share&utm_medium=member_desktop&rcm=ACoAABXw8e8Br6ZOZ5DwthMPGadrL_YVfuOsh7I)" target="_blank">
+  <a class="ga-link-btn" href="https://www.linkedin.com/posts/ahmed-imteaj-a13343a3_ai-machinelearning-computervision-activity-7455762744701722624-j4SU?utm_source=share&utm_medium=member_desktop&rcm=ACoAABXw8e8Br6ZOZ5DwthMPGadrL_YVfuOsh7I" target="_blank">
     Learn More & Apply
   </a>
 </div>
