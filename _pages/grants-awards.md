@@ -285,9 +285,11 @@ description: ""
 
     <p><strong>📚 Publications from this Grant</strong></p>
     <div class="ga-badges">
-      <span class="ga-badge">🧠 CVPR 2025 | 2 papers</span>
+      <span class="ga-badge">🧠 CVPR 2025 and CVPR-W | 2 papers</span>
+      <span class="ga-badge">🧠 CVPR 2026 and CVPR-W 2026 | 2 papers</span>
+      <span class="ga-badge">📑 ACL 2026 | 1 paper</span>
       <span class="ga-badge">🌱 IEEE Transations on Sustanaible Computing | 1 paper</span>
-      <span class="ga-badge">🎥 ICCV-W 2025 | 1 paper</span>
+      <span class="ga-badge">🎥 ICCV 2025 | 1 paper</span>
       <span class="ga-badge">🌐 ICDCS 2024 | 1 paper</span>
       <span class="ga-badge">💻 COMPSAC 2024 | 1 paper</span>
       <span class="ga-badge">🤖 ICMLA 2025 | 1 paper</span>
@@ -310,6 +312,25 @@ description: ""
       View Project Details
     </a>
   </div>
+
+  <div class="ga-card ga-purple">
+  <h3> NSF CISE REU Student Funding Award</h3>
+  <p>
+    Supported by the <strong>NSF CISE Research Experiences for Undergraduates (REU)</strong> program through the Computing Research Association (CRA).
+  </p>
+  <p>
+    <strong>Summer Research Opportunity: Vision-Language Models (VLMs) for Context-Aware Scene Understanding</strong>
+  </p>
+  <p>
+    This opportunity includes mentorship, a competitive NSF-supported stipend, and support for conference travel to present your work.
+  </p>
+  <p>
+    Full details are in the flyer below. Please feel free to share with students who may be interested.
+  </p>
+  <a class="ga-link-btn" href="[https://aimteaj.github.io](https://www.linkedin.com/posts/ahmed-imteaj-a13343a3_ai-machinelearning-computervision-activity-7455762744701722624-j4SU?utm_source=share&utm_medium=member_desktop&rcm=ACoAABXw8e8Br6ZOZ5DwthMPGadrL_YVfuOsh7I)" target="_blank">
+    Learn More & Apply
+  </a>
+</div>
 
   <div class="ga-card ga-green">
     <h3>🌟 ORAU Research Innovation Partnership Grant | Lead PI</h3>
