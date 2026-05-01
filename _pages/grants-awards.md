@@ -325,7 +325,7 @@ description: ""
       interdisciplinary collaboration among university members and domain experts.
     </p>
         <a class="ga-link-btn" href="https://www.orau.org/news/releases/2025/innovation-partnerships-grant-program-strengthens-research-education-and-workforce-capacity-building.html" target="_blank">
-      View View Details
+      View Details
     </a>
     
   </div>
