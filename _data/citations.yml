@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-05-18'
+  last_updated: '2026-05-29'
 papers:
   I5IZ4GQAAAAJ:-f6ydRqryjwC:
     citations: 92
@@ -18,7 +18,7 @@ papers:
     title: Distributed machine learning for resilient operation of electric systems
     year: '2020'
   I5IZ4GQAAAAJ:3s1wT3WcHBgC:
-    citations: 18
+    citations: 20
     title: Blockchain-Empowered Cyber-Secure Federated Learning for Trustworthy Edge Computing
     year: '2025'
   I5IZ4GQAAAAJ:4DMP91E08xMC:
@@ -34,7 +34,7 @@ papers:
     title: 'Distributed LLMs and Multimodal Large Language Models: A Survey on Advances, Challenges, and Future Directions'
     year: '2025'
   I5IZ4GQAAAAJ:5nxA0vEk-isC:
-    citations: 136
+    citations: 137
     title: 'Federated learning for resource-constrained iot devices: Panoramas and state of the art'
     year: '2022'
   I5IZ4GQAAAAJ:70eg2SAEIzsC:
@@ -106,7 +106,7 @@ papers:
     title: 'RoboFI: Autonomous Path Follower Robot for Human Body Detection and Geolocalization for Search and Rescue Missions using Computer Vision and IoT'
     year: '2019'
   I5IZ4GQAAAAJ:M05iB0D1s5AC:
-    citations: 11
+    citations: 12
     title: 'TriplePlay: Enhancing Federated Learning with CLIP for Non-IID Data and Resource Efficiency'
     year: '2024'
   I5IZ4GQAAAAJ:M3ejUd6NZC8C:
@@ -174,7 +174,7 @@ papers:
     title: 'SmartTravel: An approach to redolant Transportation Guiding Application in context of Bangladesh using OpenStreetMap'
     year: '2015'
   I5IZ4GQAAAAJ:ULOm3_A8WrAC:
-    citations: 45
+    citations: 46
     title: 'FedPARL: Client activity and resource-oriented lightweight federated learning model for resource-constrained heterogeneous IoT environment'
     year: '2021'
   I5IZ4GQAAAAJ:UeHWp8X0CEIC:
@@ -286,7 +286,7 @@ papers:
     title: Federated deep learning for heterogeneous edge computing
     year: '2021'
   I5IZ4GQAAAAJ:hMod-77fHWUC:
-    citations: 13
+    citations: 14
     title: 'FLID: Intrusion Attack and Defense Mechanism for Federated Learning Empowered Connected Autonomous Vehicles (CAVs) Application'
     year: '2023'
   I5IZ4GQAAAAJ:hqOjcs7Dif8C:
@@ -334,7 +334,7 @@ papers:
     title: Exploring Audio Editing Features as User-Centric Privacy Defenses Against Large Language Model (LLM) Based Emotion Inference Attacks
     year: '2025'
   I5IZ4GQAAAAJ:qUcmZB5y_30C:
-    citations: 964
+    citations: 971
     title: A survey on federated learning for resource-constrained IoT devices
     year: '2021'
   I5IZ4GQAAAAJ:qjMakFHDy7sC:
@@ -358,7 +358,7 @@ papers:
     title: 'Remote phone controller: An application to control smart phone'
     year: '2014'
   I5IZ4GQAAAAJ:u_35RYKgDlwC:
-    citations: 2
+    citations: 3
     title: 'SLADE: Shielding against Dual Exploits in Large Vision-Language Models'
     year: '2025'
   I5IZ4GQAAAAJ:ufrVoPGSRksC:
