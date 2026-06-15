@@ -1,14 +1,10 @@
 metadata:
-  last_updated: '2026-05-29'
+  last_updated: '2026-06-15'
 papers:
   I5IZ4GQAAAAJ:-f6ydRqryjwC:
-    citations: 92
+    citations: 94
     title: Leveraging asynchronous federated learning to predict customers financial distress
     year: '2022'
-  I5IZ4GQAAAAJ:1sJd4Hv_s6UC:
-    citations: 0
-    title: 'Breaking Sensor-Text Alignment: Cross-Modal Attack on Contrastive Multimodal Human Activity Recognition'
-    year: '2026'
   I5IZ4GQAAAAJ:2P1L_qKh6hAC:
     citations: 7
     title: 'WatchOverGPT: A framework for real-time crime detection and response using wearable camera and large language model'
@@ -34,7 +30,7 @@ papers:
     title: 'Distributed LLMs and Multimodal Large Language Models: A Survey on Advances, Challenges, and Future Directions'
     year: '2025'
   I5IZ4GQAAAAJ:5nxA0vEk-isC:
-    citations: 137
+    citations: 139
     title: 'Federated learning for resource-constrained iot devices: Panoramas and state of the art'
     year: '2022'
   I5IZ4GQAAAAJ:70eg2SAEIzsC:
@@ -50,7 +46,7 @@ papers:
     title: 'Interdependent networks: A data science perspective'
     year: '2020'
   I5IZ4GQAAAAJ:9ZlFYXVOiuMC:
-    citations: 9
+    citations: 10
     title: Toward smart contract and consensus mechanisms of Blockchain
     year: '2021'
   I5IZ4GQAAAAJ:9yKSN-GCB0IC:
@@ -64,10 +60,6 @@ papers:
   I5IZ4GQAAAAJ:CHSYGLWDkRkC:
     citations: 0
     title: Privacy-Preserving Multimodal Stress Detection from Wearables with Attention Fusion and Federated Learning
-    year: '2025'
-  I5IZ4GQAAAAJ:D03iK_w7-QYC:
-    citations: 0
-    title: Digital Forensic Investigation of the ChatGPT Windows Application
     year: '2025'
   I5IZ4GQAAAAJ:EUQCXRtRnyEC:
     citations: 0
@@ -101,6 +93,10 @@ papers:
     citations: 104
     title: 'FedAR: Activity and Resource-Aware Federated Learning Model for Distributed Mobile Robots'
     year: '2020'
+  I5IZ4GQAAAAJ:KxtntwgDAa4C:
+    citations: 0
+    title: 'Breaking Sensor-Text Alignment: Cross-Modal Attack on Contrastive Multimodal Human Activity Recognition'
+    year: '2026'
   I5IZ4GQAAAAJ:LkGwnXOMwfcC:
     citations: 12
     title: 'RoboFI: Autonomous Path Follower Robot for Human Body Detection and Geolocalization for Search and Rescue Missions using Computer Vision and IoT'
@@ -178,7 +174,7 @@ papers:
     title: 'FedPARL: Client activity and resource-oriented lightweight federated learning model for resource-constrained heterogeneous IoT environment'
     year: '2021'
   I5IZ4GQAAAAJ:UeHWp8X0CEIC:
-    citations: 83
+    citations: 84
     title: IoT based autonomous percipient irrigation system using raspberry Pi
     year: '2016'
   I5IZ4GQAAAAJ:UebtZRa9Y70C:
@@ -218,7 +214,7 @@ papers:
     title: Depiction of an interactive prevarication system during exigency situation
     year: '2016'
   I5IZ4GQAAAAJ:_Qo2XoVZTnwC:
-    citations: 31
+    citations: 32
     title: Label Flipping Data Poisoning Attack Against Wearable Human Activity Recognition System
     year: '2022'
   I5IZ4GQAAAAJ:_kc_bZDykSQC:
@@ -226,7 +222,7 @@ papers:
     title: Cascaded Solid State Transformer Structure to Power Fast EV Charging Stations from Medium Voltage Transmission Lines
     year: '2020'
   I5IZ4GQAAAAJ:_xSYboBqXhAC:
-    citations: 1
+    citations: 2
     title: Adaptive and Robust Data Poisoning Detection and Sanitization in Wearable IoT Systems using Large Language Models
     year: '2025'
   I5IZ4GQAAAAJ:a0OBvERweLwC:
@@ -250,7 +246,7 @@ papers:
     title: 'A Comprehensive Survey of Large Language Models for Human Activity Recognition: Opportunities, Challenges, and Future Directions'
     year: '2025'
   I5IZ4GQAAAAJ:blknAaTinKkC:
-    citations: 57
+    citations: 59
     title: 'A Survey on Secure and Private Federated Learning Using Blockchain: Theory and Application in Resource-constrained Computing'
     year: '2023'
   I5IZ4GQAAAAJ:cFHS6HbyZ2cC:
@@ -269,6 +265,10 @@ papers:
     citations: 25
     title: 'Fedresilience: A federated learning application to improve resilience of resource-constrained critical infrastructures'
     year: '2021'
+  I5IZ4GQAAAAJ:dshw04ExmUIC:
+    citations: 0
+    title: 'When Data is Scarce, Learn to Adapt: Robust Federated Learning via Adversarial Meta-Optimization'
+    year: Unknown Year
   I5IZ4GQAAAAJ:eQOLeE2rZwMC:
     citations: 41
     title: A smartphone based application to improve the health care system of Bangladesh
@@ -282,7 +282,7 @@ papers:
     title: Evaluating Sustainability and Social Costs of Adversarial Training in Machine Learning
     year: '2024'
   I5IZ4GQAAAAJ:hFOr9nPyWt4C:
-    citations: 69
+    citations: 70
     title: Federated deep learning for heterogeneous edge computing
     year: '2021'
   I5IZ4GQAAAAJ:hMod-77fHWUC:
@@ -294,7 +294,7 @@ papers:
     title: 'Distributed sensing using smart end-user devices: Pathway to federated learning for autonomous IoT'
     year: '2019'
   I5IZ4GQAAAAJ:isC4tDSrTZIC:
-    citations: 16
+    citations: 17
     title: Assessing wearable human activity recognition systems against data poisoning attacks in differentially-private federated learning
     year: '2023'
   I5IZ4GQAAAAJ:j3f4tGmQtD8C:
@@ -302,15 +302,15 @@ papers:
     title: 'FedMDP: A Federated Learning Framework to Handle System and Model Heterogeneity in Resource-Constrained Environments'
     year: '2023'
   I5IZ4GQAAAAJ:kNdYIx-mwKoC:
-    citations: 3
+    citations: 4
     title: 'Distributed machine learning for collaborative mobile robots: Phd forum abstract'
     year: '2020'
   I5IZ4GQAAAAJ:lSLTfruPkqcC:
-    citations: 3
+    citations: 4
     title: 'Vertical Federated Learning: Principles, Applications, and Future Frontiers'
     year: '2024'
   I5IZ4GQAAAAJ:ldfaerwXgEUC:
-    citations: 11
+    citations: 12
     title: 'FedAVO: Improving Communication Efficiency in Federated Learning with African Vultures Optimizer'
     year: '2024'
   I5IZ4GQAAAAJ:mB3voiENLucC:
@@ -326,7 +326,7 @@ papers:
     title: 'No Innocence in Styling: Discovery of Privacy Protection Capabilities and Security Risks in Consumer Generative AI Writing Assistants'
     year: '2026'
   I5IZ4GQAAAAJ:pqnbT2bcN3wC:
-    citations: 30
+    citations: 31
     title: Securing vision-language models with a robust encoder against jailbreak and adversarial attacks
     year: '2024'
   I5IZ4GQAAAAJ:pyW8ca7W8N0C:
@@ -334,7 +334,7 @@ papers:
     title: Exploring Audio Editing Features as User-Centric Privacy Defenses Against Large Language Model (LLM) Based Emotion Inference Attacks
     year: '2025'
   I5IZ4GQAAAAJ:qUcmZB5y_30C:
-    citations: 971
+    citations: 983
     title: A survey on federated learning for resource-constrained IoT devices
     year: '2021'
   I5IZ4GQAAAAJ:qjMakFHDy7sC:
@@ -350,7 +350,7 @@ papers:
     title: Exploring Audio Editing Features as User-Centric Privacy Defenses Against Emotion Inference Attacks
     year: '2025'
   I5IZ4GQAAAAJ:roLk4NBRz8UC:
-    citations: 20
+    citations: 21
     title: An IoT based interactive speech recognizable robot with distance control using Raspberry Pi
     year: '2018'
   I5IZ4GQAAAAJ:u-x6o8ySG0sC:
@@ -366,7 +366,7 @@ papers:
     title: Unmanned Multiple Railway Gates Controlling and Bi-directional Train Tracking with Alarming System using Principles of IoT
     year: '2018'
   I5IZ4GQAAAAJ:vV6vV6tmYwMC:
-    citations: 29
+    citations: 30
     title: 'Sim-clip: Unsupervised siamese adversarial fine-tuning for robust and semantically-rich vision-language models'
     year: '2026'
   I5IZ4GQAAAAJ:xtRiw3GOFMkC:
