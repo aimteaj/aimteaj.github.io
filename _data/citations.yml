@@ -1,8 +1,8 @@
 metadata:
-  last_updated: '2026-06-22'
+  last_updated: '2026-07-06'
 papers:
   I5IZ4GQAAAAJ:-f6ydRqryjwC:
-    citations: 95
+    citations: 99
     title: Leveraging asynchronous federated learning to predict customers financial distress
     year: '2022'
   I5IZ4GQAAAAJ:2P1L_qKh6hAC:
@@ -14,7 +14,7 @@ papers:
     title: Distributed machine learning for resilient operation of electric systems
     year: '2020'
   I5IZ4GQAAAAJ:3s1wT3WcHBgC:
-    citations: 20
+    citations: 21
     title: Blockchain-Empowered Cyber-Secure Federated Learning for Trustworthy Edge Computing
     year: '2025'
   I5IZ4GQAAAAJ:4DMP91E08xMC:
@@ -62,19 +62,19 @@ papers:
     title: Privacy-Preserving Multimodal Stress Detection from Wearables with Attention Fusion and Federated Learning
     year: '2025'
   I5IZ4GQAAAAJ:EUQCXRtRnyEC:
-    citations: 0
+    citations: 1
     title: Quantifying Robustness and Sustainability Trade-off in Federated Adversarial Learning for Cyber-Physical Systems
     year: '2026'
   I5IZ4GQAAAAJ:GnPB-g6toBAC:
-    citations: 10
+    citations: 11
     title: 'Towards Sustainable SecureML: Quantifying Carbon Footprint of Adversarial Machine Learning'
     year: '2024'
   I5IZ4GQAAAAJ:HDshCWvjkbEC:
-    citations: 26
+    citations: 27
     title: 'Examining mental disorder/psychological chaos through various ML and DL techniques: a critical review'
     year: '2022'
   I5IZ4GQAAAAJ:HoB7MX3m0LUC:
-    citations: 6
+    citations: 7
     title: 'Flamingo: Adaptive and resilient federated meta-learning against adversarial attacks'
     year: '2024'
   I5IZ4GQAAAAJ:IWHjjKOFINEC:
@@ -142,7 +142,7 @@ papers:
     title: Distributed Network Optimization for Secure Operation of Interdependent Complex Networks
     year: '2021'
   I5IZ4GQAAAAJ:RGFaLdJalmkC:
-    citations: 3
+    citations: 4
     title: "Sticks and Stones May Break My Bones, But Words Will Never Hurt Me! \u2014 Navigating the Cybersecurity Risks of Generative AI"
     year: '2024'
   I5IZ4GQAAAAJ:RHpTSmoSYBkC:
@@ -153,6 +153,10 @@ papers:
     citations: 0
     title: 'SkyWatch: Advancing Real-time Crime Detection via Semi-Federated Meta Learning'
     year: '2024'
+  I5IZ4GQAAAAJ:SP6oXDckpogC:
+    citations: 0
+    title: 'Breaking Sensor-Text Alignment: Cross-Modal Attack on Contrastive Multimodal Human Activity Recognition'
+    year: Unknown Year
   I5IZ4GQAAAAJ:Se3iqnhoufwC:
     citations: 22
     title: Quantifying location privacy in permissioned blockchain-based internet of things (iot)
@@ -170,17 +174,21 @@ papers:
     title: 'SmartTravel: An approach to redolant Transportation Guiding Application in context of Bangladesh using OpenStreetMap'
     year: '2015'
   I5IZ4GQAAAAJ:ULOm3_A8WrAC:
-    citations: 46
+    citations: 47
     title: 'FedPARL: Client activity and resource-oriented lightweight federated learning model for resource-constrained heterogeneous IoT environment'
     year: '2021'
   I5IZ4GQAAAAJ:UeHWp8X0CEIC:
-    citations: 84
+    citations: 85
     title: IoT based autonomous percipient irrigation system using raspberry Pi
     year: '2016'
   I5IZ4GQAAAAJ:UebtZRa9Y70C:
     citations: 28
     title: Leveraging decentralized artificial intelligence to enhance resilience of energy networks
     year: '2020'
+  I5IZ4GQAAAAJ:UxriW0iASnsC:
+    citations: 0
+    title: 'No Innocence in Styling: Discovery of Privacy Protection Capabilities and Security Risks in Consumer Generative AI Writing Assistants'
+    year: '2026'
   I5IZ4GQAAAAJ:W7OEmFMy1HYC:
     citations: 32
     title: 'Dissipation of waste using dynamic perception and alarming system: A smart city application'
@@ -222,7 +230,7 @@ papers:
     title: Cascaded Solid State Transformer Structure to Power Fast EV Charging Stations from Medium Voltage Transmission Lines
     year: '2020'
   I5IZ4GQAAAAJ:_xSYboBqXhAC:
-    citations: 2
+    citations: 3
     title: Adaptive and Robust Data Poisoning Detection and Sanitization in Wearable IoT Systems using Large Language Models
     year: '2025'
   I5IZ4GQAAAAJ:a0OBvERweLwC:
@@ -321,10 +329,6 @@ papers:
     citations: 1
     title: Blockchain Interoperability from the Perspective of Interdependent Networks
     year: '2021'
-  I5IZ4GQAAAAJ:nb7KW1ujOQ8C:
-    citations: 0
-    title: 'No Innocence in Styling: Discovery of Privacy Protection Capabilities and Security Risks in Consumer Generative AI Writing Assistants'
-    year: '2026'
   I5IZ4GQAAAAJ:pqnbT2bcN3wC:
     citations: 31
     title: Securing vision-language models with a robust encoder against jailbreak and adversarial attacks
@@ -334,7 +338,7 @@ papers:
     title: Exploring Audio Editing Features as User-Centric Privacy Defenses Against Large Language Model (LLM) Based Emotion Inference Attacks
     year: '2025'
   I5IZ4GQAAAAJ:qUcmZB5y_30C:
-    citations: 986
+    citations: 998
     title: A survey on federated learning for resource-constrained IoT devices
     year: '2021'
   I5IZ4GQAAAAJ:qjMakFHDy7sC:
@@ -362,7 +366,7 @@ papers:
     title: 'SLADE: Shielding against Dual Exploits in Large Vision-Language Models'
     year: '2025'
   I5IZ4GQAAAAJ:ufrVoPGSRksC:
-    citations: 13
+    citations: 14
     title: Unmanned Multiple Railway Gates Controlling and Bi-directional Train Tracking with Alarming System using Principles of IoT
     year: '2018'
   I5IZ4GQAAAAJ:vV6vV6tmYwMC:
