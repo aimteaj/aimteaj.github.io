@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-06'
+  last_updated: '2026-07-13'
 papers:
   I5IZ4GQAAAAJ:-f6ydRqryjwC:
     citations: 99
@@ -102,7 +102,7 @@ papers:
     title: 'RoboFI: Autonomous Path Follower Robot for Human Body Detection and Geolocalization for Search and Rescue Missions using Computer Vision and IoT'
     year: '2019'
   I5IZ4GQAAAAJ:M05iB0D1s5AC:
-    citations: 12
+    citations: 13
     title: 'TriplePlay: Enhancing Federated Learning with CLIP for Non-IID Data and Resource Efficiency'
     year: '2024'
   I5IZ4GQAAAAJ:M3ejUd6NZC8C:
@@ -174,7 +174,7 @@ papers:
     title: 'SmartTravel: An approach to redolant Transportation Guiding Application in context of Bangladesh using OpenStreetMap'
     year: '2015'
   I5IZ4GQAAAAJ:ULOm3_A8WrAC:
-    citations: 47
+    citations: 48
     title: 'FedPARL: Client activity and resource-oriented lightweight federated learning model for resource-constrained heterogeneous IoT environment'
     year: '2021'
   I5IZ4GQAAAAJ:UeHWp8X0CEIC:
@@ -338,7 +338,7 @@ papers:
     title: Exploring Audio Editing Features as User-Centric Privacy Defenses Against Large Language Model (LLM) Based Emotion Inference Attacks
     year: '2025'
   I5IZ4GQAAAAJ:qUcmZB5y_30C:
-    citations: 998
+    citations: 1006
     title: A survey on federated learning for resource-constrained IoT devices
     year: '2021'
   I5IZ4GQAAAAJ:qjMakFHDy7sC:
