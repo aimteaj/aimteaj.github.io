@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-13'
+  last_updated: '2026-07-20'
 papers:
   I5IZ4GQAAAAJ:-f6ydRqryjwC:
     citations: 99
@@ -30,7 +30,7 @@ papers:
     title: 'Distributed LLMs and Multimodal Large Language Models: A Survey on Advances, Challenges, and Future Directions'
     year: '2025'
   I5IZ4GQAAAAJ:5nxA0vEk-isC:
-    citations: 139
+    citations: 140
     title: 'Federated learning for resource-constrained iot devices: Panoramas and state of the art'
     year: '2022'
   I5IZ4GQAAAAJ:70eg2SAEIzsC:
@@ -90,7 +90,7 @@ papers:
     title: Securing Privacy in Cloud-Based Whiteboard Services Against Health Attribute Inference Attacks
     year: '2024'
   I5IZ4GQAAAAJ:KlAtU1dfN6UC:
-    citations: 104
+    citations: 105
     title: 'FedAR: Activity and Resource-Aware Federated Learning Model for Distributed Mobile Robots'
     year: '2020'
   I5IZ4GQAAAAJ:KxtntwgDAa4C:
@@ -174,7 +174,7 @@ papers:
     title: 'SmartTravel: An approach to redolant Transportation Guiding Application in context of Bangladesh using OpenStreetMap'
     year: '2015'
   I5IZ4GQAAAAJ:ULOm3_A8WrAC:
-    citations: 48
+    citations: 49
     title: 'FedPARL: Client activity and resource-oriented lightweight federated learning model for resource-constrained heterogeneous IoT environment'
     year: '2021'
   I5IZ4GQAAAAJ:UeHWp8X0CEIC:
@@ -222,7 +222,7 @@ papers:
     title: Depiction of an interactive prevarication system during exigency situation
     year: '2016'
   I5IZ4GQAAAAJ:_Qo2XoVZTnwC:
-    citations: 32
+    citations: 33
     title: Label Flipping Data Poisoning Attack Against Wearable Human Activity Recognition System
     year: '2022'
   I5IZ4GQAAAAJ:_kc_bZDykSQC:
@@ -254,7 +254,7 @@ papers:
     title: 'A Comprehensive Survey of Large Language Models for Human Activity Recognition: Opportunities, Challenges, and Future Directions'
     year: '2025'
   I5IZ4GQAAAAJ:blknAaTinKkC:
-    citations: 60
+    citations: 61
     title: 'A Survey on Secure and Private Federated Learning Using Blockchain: Theory and Application in Resource-constrained Computing'
     year: '2023'
   I5IZ4GQAAAAJ:cFHS6HbyZ2cC:
@@ -338,7 +338,7 @@ papers:
     title: Exploring Audio Editing Features as User-Centric Privacy Defenses Against Large Language Model (LLM) Based Emotion Inference Attacks
     year: '2025'
   I5IZ4GQAAAAJ:qUcmZB5y_30C:
-    citations: 1006
+    citations: 1007
     title: A survey on federated learning for resource-constrained IoT devices
     year: '2021'
   I5IZ4GQAAAAJ:qjMakFHDy7sC:
