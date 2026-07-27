@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-07-20'
+  last_updated: '2026-07-27'
 papers:
   I5IZ4GQAAAAJ:-f6ydRqryjwC:
     citations: 99
@@ -14,7 +14,7 @@ papers:
     title: Distributed machine learning for resilient operation of electric systems
     year: '2020'
   I5IZ4GQAAAAJ:3s1wT3WcHBgC:
-    citations: 21
+    citations: 22
     title: Blockchain-Empowered Cyber-Secure Federated Learning for Trustworthy Edge Computing
     year: '2025'
   I5IZ4GQAAAAJ:4DMP91E08xMC:
@@ -26,13 +26,13 @@ papers:
     title: Leveraging blockchain interoperability for interdependent networks
     year: '2023'
   I5IZ4GQAAAAJ:4OULZ7Gr8RgC:
-    citations: 23
+    citations: 24
     title: 'Distributed LLMs and Multimodal Large Language Models: A Survey on Advances, Challenges, and Future Directions'
     year: '2025'
   I5IZ4GQAAAAJ:5nxA0vEk-isC:
     citations: 140
-    title: 'Federated learning for resource-constrained iot devices: Panoramas and state of the art'
-    year: '2022'
+    title: 'Federated learning for resource-constrained iot devices: Panoramas and state-of-the-art'
+    year: '2020'
   I5IZ4GQAAAAJ:70eg2SAEIzsC:
     citations: 1
     title: Enhancing Road Safety Through Cost-Effective, Real-Time Monitoring of Driver Awareness with Resource-Constrained IoT Devices
@@ -90,7 +90,7 @@ papers:
     title: Securing Privacy in Cloud-Based Whiteboard Services Against Health Attribute Inference Attacks
     year: '2024'
   I5IZ4GQAAAAJ:KlAtU1dfN6UC:
-    citations: 105
+    citations: 106
     title: 'FedAR: Activity and Resource-Aware Federated Learning Model for Distributed Mobile Robots'
     year: '2020'
   I5IZ4GQAAAAJ:KxtntwgDAa4C:
@@ -238,7 +238,7 @@ papers:
     title: Digital Forensic Investigation of the ChatGPT Windows Application
     year: '2025'
   I5IZ4GQAAAAJ:abG-DnoFyZgC:
-    citations: 0
+    citations: 1
     title: 'Pose to Protect: Federated Skeleton-Based Anomaly Detection for Privacy-Conscious Video Surveillance'
     year: '2025'
   I5IZ4GQAAAAJ:aqlVkmm33-oC:
@@ -266,7 +266,7 @@ papers:
     title: 'Segmentation analysis on magnetic resonance imaging (MRI) with different clustering techniques: Wavelet and BEMD'
     year: '2016'
   I5IZ4GQAAAAJ:dfsIfKJdRG4C:
-    citations: 6
+    citations: 8
     title: Towards Trustworthy Autonomous Vehicles with Vision-Language Models Under Targeted and Untargeted Adversarial Attacks
     year: '2025'
   I5IZ4GQAAAAJ:dhFuZR0502QC:
@@ -290,7 +290,7 @@ papers:
     title: Evaluating Sustainability and Social Costs of Adversarial Training in Machine Learning
     year: '2024'
   I5IZ4GQAAAAJ:hFOr9nPyWt4C:
-    citations: 70
+    citations: 69
     title: Federated deep learning for heterogeneous edge computing
     year: '2021'
   I5IZ4GQAAAAJ:hMod-77fHWUC:
@@ -302,7 +302,7 @@ papers:
     title: 'Distributed sensing using smart end-user devices: Pathway to federated learning for autonomous IoT'
     year: '2019'
   I5IZ4GQAAAAJ:isC4tDSrTZIC:
-    citations: 17
+    citations: 18
     title: Assessing wearable human activity recognition systems against data poisoning attacks in differentially-private federated learning
     year: '2023'
   I5IZ4GQAAAAJ:j3f4tGmQtD8C:
@@ -314,7 +314,7 @@ papers:
     title: 'Distributed machine learning for collaborative mobile robots: Phd forum abstract'
     year: '2020'
   I5IZ4GQAAAAJ:lSLTfruPkqcC:
-    citations: 5
+    citations: 4
     title: 'Vertical Federated Learning: Principles, Applications, and Future Frontiers'
     year: '2024'
   I5IZ4GQAAAAJ:ldfaerwXgEUC:
@@ -338,7 +338,7 @@ papers:
     title: Exploring Audio Editing Features as User-Centric Privacy Defenses Against Large Language Model (LLM) Based Emotion Inference Attacks
     year: '2025'
   I5IZ4GQAAAAJ:qUcmZB5y_30C:
-    citations: 1007
+    citations: 1015
     title: A survey on federated learning for resource-constrained IoT devices
     year: '2021'
   I5IZ4GQAAAAJ:qjMakFHDy7sC:
@@ -370,7 +370,7 @@ papers:
     title: Unmanned Multiple Railway Gates Controlling and Bi-directional Train Tracking with Alarming System using Principles of IoT
     year: '2018'
   I5IZ4GQAAAAJ:vV6vV6tmYwMC:
-    citations: 30
+    citations: 31
     title: 'Sim-clip: Unsupervised siamese adversarial fine-tuning for robust and semantically-rich vision-language models'
     year: '2026'
   I5IZ4GQAAAAJ:xtRiw3GOFMkC:
