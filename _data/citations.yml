@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-03'
+  last_updated: '2026-08-05'
 papers:
   I5IZ4GQAAAAJ:-f6ydRqryjwC:
     citations: 98
@@ -30,7 +30,7 @@ papers:
     title: 'Distributed LLMs and Multimodal Large Language Models: A Survey on Advances, Challenges, and Future Directions'
     year: '2025'
   I5IZ4GQAAAAJ:5nxA0vEk-isC:
-    citations: 133
+    citations: 134
     title: 'Federated learning for resource-constrained iot devices: Panoramas and state of the art'
     year: '2022'
   I5IZ4GQAAAAJ:70eg2SAEIzsC:
@@ -42,7 +42,7 @@ papers:
     title: Human motion recognition using zero-shot learning
     year: '2021'
   I5IZ4GQAAAAJ:8k81kl-MbHgC:
-    citations: 31
+    citations: 32
     title: 'Interdependent networks: A data science perspective'
     year: '2020'
   I5IZ4GQAAAAJ:9ZlFYXVOiuMC:
@@ -258,7 +258,7 @@ papers:
     title: 'A Survey on Secure and Private Federated Learning Using Blockchain: Theory and Application in Resource-constrained Computing'
     year: '2023'
   I5IZ4GQAAAAJ:cFHS6HbyZ2cC:
-    citations: 3
+    citations: 4
     title: Benchmarking large-language models for resource-efficient medical AI for edge deployment
     year: '2025'
   I5IZ4GQAAAAJ:d1gkVwhDpl0C:
@@ -334,11 +334,11 @@ papers:
     title: Securing vision-language models with a robust encoder against jailbreak and adversarial attacks
     year: '2024'
   I5IZ4GQAAAAJ:qUcmZB5y_30C:
-    citations: 1009
+    citations: 1013
     title: A survey on federated learning for resource-constrained IoT devices
     year: '2021'
   I5IZ4GQAAAAJ:qjMakFHDy7sC:
-    citations: 6
+    citations: 7
     title: Automated Expedient Watering System For Small Plants And Acquaintance About Deficit In Water Supply
     year: '2017'
   I5IZ4GQAAAAJ:qxL8FJ1GzNcC:
