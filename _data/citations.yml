@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-05'
+  last_updated: '2026-08-10'
 papers:
   I5IZ4GQAAAAJ:-f6ydRqryjwC:
     citations: 98
@@ -26,11 +26,11 @@ papers:
     title: Leveraging blockchain interoperability for interdependent networks
     year: '2023'
   I5IZ4GQAAAAJ:4OULZ7Gr8RgC:
-    citations: 24
+    citations: 25
     title: 'Distributed LLMs and Multimodal Large Language Models: A Survey on Advances, Challenges, and Future Directions'
     year: '2025'
   I5IZ4GQAAAAJ:5nxA0vEk-isC:
-    citations: 134
+    citations: 135
     title: 'Federated learning for resource-constrained iot devices: Panoramas and state of the art'
     year: '2022'
   I5IZ4GQAAAAJ:70eg2SAEIzsC:
@@ -78,7 +78,7 @@ papers:
     title: 'Flamingo: Adaptive and resilient federated meta-learning against adversarial attacks'
     year: '2024'
   I5IZ4GQAAAAJ:IWHjjKOFINEC:
-    citations: 6
+    citations: 7
     title: An enhanced method of initial cluster center selection for K-means algorithm
     year: '2021'
   I5IZ4GQAAAAJ:IjCSPb-OGe4C:
@@ -234,7 +234,7 @@ papers:
     title: Adaptive and Robust Data Poisoning Detection and Sanitization in Wearable IoT Systems using Large Language Models
     year: '2025'
   I5IZ4GQAAAAJ:a0OBvERweLwC:
-    citations: 2
+    citations: 3
     title: Digital Forensic Investigation of the ChatGPT Windows Application
     year: '2025'
   I5IZ4GQAAAAJ:abG-DnoFyZgC:
@@ -278,7 +278,7 @@ papers:
     title: 'When Data is Scarce, Learn to Adapt: Robust Federated Learning via Adversarial Meta-Optimization'
     year: Unknown Year
   I5IZ4GQAAAAJ:eQOLeE2rZwMC:
-    citations: 41
+    citations: 42
     title: A smartphone based application to improve the health care system of Bangladesh
     year: '2016'
   I5IZ4GQAAAAJ:fPk4N6BV_jEC:
@@ -334,7 +334,7 @@ papers:
     title: Securing vision-language models with a robust encoder against jailbreak and adversarial attacks
     year: '2024'
   I5IZ4GQAAAAJ:qUcmZB5y_30C:
-    citations: 1013
+    citations: 1020
     title: A survey on federated learning for resource-constrained IoT devices
     year: '2021'
   I5IZ4GQAAAAJ:qjMakFHDy7sC:
@@ -370,7 +370,7 @@ papers:
     title: Unmanned Multiple Railway Gates Controlling and Bi-directional Train Tracking with Alarming System using Principles of IoT
     year: '2018'
   I5IZ4GQAAAAJ:vV6vV6tmYwMC:
-    citations: 30
+    citations: 31
     title: 'Sim-clip: Unsupervised siamese adversarial fine-tuning for robust and semantically-rich vision-language models'
     year: '2026'
   I5IZ4GQAAAAJ:xtRiw3GOFMkC:
