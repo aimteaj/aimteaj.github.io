@@ -1,5 +1,5 @@
 metadata:
-  last_updated: '2026-08-10'
+  last_updated: '2026-08-14'
 papers:
   I5IZ4GQAAAAJ:-f6ydRqryjwC:
     citations: 98
@@ -30,7 +30,7 @@ papers:
     title: 'Distributed LLMs and Multimodal Large Language Models: A Survey on Advances, Challenges, and Future Directions'
     year: '2025'
   I5IZ4GQAAAAJ:5nxA0vEk-isC:
-    citations: 135
+    citations: 136
     title: 'Federated learning for resource-constrained iot devices: Panoramas and state of the art'
     year: '2022'
   I5IZ4GQAAAAJ:70eg2SAEIzsC:
@@ -174,7 +174,7 @@ papers:
     title: 'SmartTravel: An approach to redolant Transportation Guiding Application in context of Bangladesh using OpenStreetMap'
     year: '2015'
   I5IZ4GQAAAAJ:ULOm3_A8WrAC:
-    citations: 48
+    citations: 49
     title: 'FedPARL: Client activity and resource-oriented lightweight federated learning model for resource-constrained heterogeneous IoT environment'
     year: '2021'
   I5IZ4GQAAAAJ:UeHWp8X0CEIC:
@@ -334,7 +334,7 @@ papers:
     title: Securing vision-language models with a robust encoder against jailbreak and adversarial attacks
     year: '2024'
   I5IZ4GQAAAAJ:qUcmZB5y_30C:
-    citations: 1020
+    citations: 1024
     title: A survey on federated learning for resource-constrained IoT devices
     year: '2021'
   I5IZ4GQAAAAJ:qjMakFHDy7sC:
