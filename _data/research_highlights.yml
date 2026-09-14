@@ -7,7 +7,7 @@
     - name: "Ahmed Imteaj"
       affiliation: "Florida Atlantic University"
   description: "We introduce a trajectory-based framework for estimating whether a Large Vision-Language Model's response is correct using internal reasoning dynamics from a single forward pass, enabling efficient correctness estimation without repeated model queries."
-  image: "emnlp-trajectory.png"
+  image: "emnlp-trajectory.png.gif"
   image_alt: "Trajectory-Based Correctness Estimation for Large Vision-Language Models"
   links:
     - name: "Paper"
