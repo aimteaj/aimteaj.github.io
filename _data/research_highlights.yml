@@ -1,3 +1,72 @@
+- title: "Do LVLMs Know When They Are Wrong? Trajectory-Based Correctness Estimation from a Single Forward Pass"
+  authors:
+    - name: "Awal Ahmed Fime"
+      affiliation: "Florida Atlantic University"
+    - name: "Md Zarif Hossain"
+      affiliation: "Florida Atlantic University"
+    - name: "Ahmed Imteaj"
+      affiliation: "Florida Atlantic University"
+  description: "We introduce a trajectory-based framework for estimating whether a Large Vision-Language Model's response is correct using internal reasoning dynamics from a single forward pass, enabling efficient correctness estimation without repeated model queries."
+  image: "emnlp-trajectory.png"
+  image_alt: "Trajectory-Based Correctness Estimation for Large Vision-Language Models"
+  links:
+    - name: "Paper"
+      url: "#"
+      icon: "fa-file-pdf"
+  venue: "EMNLP 2026 Main Conference [CORE A* | Ranked #2 in Computational Linguistics]"
+  status: "Accepted"
+  importance: 1
+
+
+- title: "Edits in the Wild: A Multilingual Benchmark for Localizing On-Device Generative Image Edits on Consumer Platforms"
+  authors:
+    - name: "Mohd. Farhan Israk Soumik"
+    - name: "Awal Ahmed Fime"
+      affiliation: "Florida Atlantic University"
+    - name: "Malithi Mithsara"
+    - name: "Arun Babu Aryal"
+    - name: "Hoda Joudi"
+    - name: "Bibek Koirala"
+    - name: "Ahmed Imteaj"
+      affiliation: "Florida Atlantic University"
+    - name: "Abdur Rahman Bin Shahid"
+  description: "We introduce a multilingual benchmark for identifying and localizing generative image edits performed on consumer platforms, supporting the evaluation of AI systems for real-world image authenticity and manipulation detection."
+  image: "emnlp-edits.png"
+  image_alt: "Multilingual Benchmark for Localizing Generative Image Edits"
+  links:
+    - name: "Paper"
+      url: "#"
+      icon: "fa-file-pdf"
+  venue: "EMNLP 2026 Main Conference [CORE A* | Ranked #2 in Computational Linguistics]"
+  status: "Accepted"
+  importance: 4
+
+
+- title: "From Benchmarks to Real-World Use: Evaluating the Robustness of Vision-Language Models for Chart Understanding"
+  authors:
+    - name: "Awal Ahmed Fime"
+      affiliation: "Florida Atlantic University"
+    - name: "Mohammed Saidul Islam"
+    - name: "Md Tahmid Rahman Laskar"
+    - name: "Md Zarif Hossain"
+      affiliation: "Florida Atlantic University"
+    - name: "Ridwan Mahbub"
+    - name: "Mir Tafseer Nayeem"
+    - name: "Mizanur Rahman"
+    - name: "Ahmed Imteaj"
+      affiliation: "Florida Atlantic University"
+    - name: "Enamul Hoque Prince"
+  description: "We systematically evaluate the robustness of Vision-Language Models for chart understanding, examining how models that perform well on standard benchmarks behave under realistic variations and challenging real-world conditions."
+  image: "emnlp-chart.png"
+  image_alt: "Robustness Evaluation of Vision-Language Models for Chart Understanding"
+  links:
+    - name: "Paper"
+      url: "#"
+      icon: "fa-file-pdf"
+  venue: "EMNLP 2026 Industry Track [CORE A* | Ranked #2 in Computational Linguistics]"
+  status: "Accepted"
+  importance: 5
+
 - title: "SLADE: Shielding against Dual Exploits in Large Vision-Language Models"
   authors:
     - name: "Md Zarif Hossain"
@@ -22,7 +91,7 @@
       icon: "fa-image"
   venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025 [Ranked #1 CS Conference]"
   status: "Published"
-  importance: 2
+  importance: 3
 
 - title: "When Data is Scarce, Learn to Adapt: Robust Federated Learning via Adversarial Meta-Optimization"
   authors:
@@ -43,8 +112,8 @@
       url: "#"
       icon: "fa-file-powerpoint"
   venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 [Ranked #1 CS Conference]"
-  status: "Accepted"
-  importance: 1
+  status: "Published"
+  importance: 2
 
 - title: "Towards Trustworthy Autonomous Vehicles with Vision-Language Models Under Adversarial Attacks"
   authors:
@@ -70,7 +139,7 @@
       icon: "fa-code"
   venue: "Proceedings of IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025 [Ranked #1 CS Conference]"
   status: "Published"
-  importance: 4
+  importance: 7
 
 - title: "Sim-CLIP: Unsupervised Siamese Adversarial Fine-Tuning for Robust Vision-Language Models"
   authors:
@@ -96,7 +165,7 @@
       icon: "fa-image"
   venue: "IEEE International Joint Conference on Neural Networks (IJCNN 2026)"
   status: "Accepted"
-  importance: 3
+  importance: 6
 
 - title: "Blockchain-Empowered Cyber-Secure Federated Learning for Trustworthy Edge Computing"
   authors:
@@ -122,7 +191,7 @@
       icon: "fa-code"
   venue: "IEEE Transactions on Artificial Intelligence (Q1 Journal), Mobiquitous, IEEE Internet of Things Journal (Q1 Journal)"
   status: "Published"
-  importance: 5
+  importance: 8
 
 - title: "Securing Vision-Language Models Against Jailbreak and Adversarial Attacks"
   authors:
@@ -145,7 +214,7 @@
       icon: "fa-image"
   venue: "IEEE International Conference on Big Data (BigData) 2024"
   status: "Published"
-  importance: 6
+  importance: 9
 
 - title: "TriplePlay: Enhancing Federated Learning with CLIP for Non-IID Data and Resource Efficiency"
   authors:
@@ -166,7 +235,7 @@
       icon: "fa-file-pdf"
   venue: "ICMLA"
   status: "Published"
-  importance: 7
+  importance: 10
 
 - title: "Quantifying Robustness and Sustainability Trade-off in Federated Adversarial Learning for Cyber-Physical Systems"
   authors:
@@ -185,7 +254,7 @@
       icon: "fa-file-powerpoint"
   venue: "IEEE Trsansations on Sustainable Computing"
   status: "Published"
-  importance: 8
+  importance: 11
 
 - title: "Designing Lightweight Language Models for Trustworthy Cyber-Physical Intelligence"
   authors:
@@ -205,7 +274,7 @@
       icon: "fa-video"
   venue: "AAAI'25 Workshop, ICMLA'25, COMPSAC'25"
   status: "Published"
-  importance: 9
+  importance: 12
 
 - title: "Distributed AI for Interdependent Cyber-Physical-Societal Networks"
   authors:
@@ -223,7 +292,7 @@
       icon: "fa-video"
   venue: "NSF Grant"
   status: "Awarded"
-  importance: 10
+  importance: 13
 
 - title: "Secure and Trustworthy AI for Wearable Tech: Privacy-Preserving Sensor Intelligence"
   authors:
@@ -243,7 +312,7 @@
       icon: "fa-video"
   venue: "IEEE Transaction on Artificial Intelligence, SMARTCOMP"
   status: "Published"
-  importance: 11
+  importance: 14
 
 - title: "Towards Resilient Critical Infrastructure Operations against Natural Calamity"
   authors:
@@ -258,4 +327,4 @@
       icon: "fa-file-powerpoint"
   venue: "🔒Security of Cyber-Physical Systems, 📡ICC, 🌱SusTech, ⚡PES GM 📱IEEE Consumer Electronics"
   status: "Published"
-  importance: 12
+  importance: 15
