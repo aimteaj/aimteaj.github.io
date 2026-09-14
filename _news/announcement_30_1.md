@@ -5,11 +5,10 @@ inline: true
 related_posts: false
 ---
 
-🧬 <span style="color:#7b1fa2; font-weight:800;"></span>
+🧬 <span style="color:#7b1fa2; font-weight:800;">Our work on secure and trustworthy healthcare AI has been published in Nature Scientific Reports! </span>
 
-Our paper titled, <strong>“Secure yet fragile: adversarial vulnerabilities of federated vision–language models in medical AI”</strong> has been published in Nature Scientific Reports!</span>
-
-The study examines <span style="color:#0d47a1; font-weight:700;">federated Vision-Language Models for medical AI</span> and demonstrates how adversarial perturbations introduced at one participating site can propagate through collaborative training and substantially degrade the shared model’s performance.
+Our paper titled, <strong>“Secure yet fragile: adversarial vulnerabilities of federated vision–language models in medical AI”</strong></span>
+examines <span style="color:#0d47a1; font-weight:700;">federated Vision-Language Models for medical AI</span> and demonstrates how adversarial perturbations introduced at one participating site can propagate through collaborative training and substantially degrade the shared model’s performance.
 
 <br>
 
