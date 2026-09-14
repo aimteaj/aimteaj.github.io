@@ -21,7 +21,7 @@ related_posts: false
 
 <br><br>
 
-🔗 <a href="https://lnkd.in/gBetSF_r" target="_blank">
+🔗 <a href="https://scholar.google.com/citations?view_op=top_venues&hl=en&vq=eng_computationallinguistics" target="_blank">
 <span style="background-color:#e7f1ff; color:#0d47a1; padding:4px 8px; border-radius:4px; font-weight:700;">Ranking Details</span>
 </a>
 
