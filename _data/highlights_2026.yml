@@ -18,7 +18,7 @@
   title: Do LVLMs Know When They Are Wrong? Trajectory-Based Correctness Estimation from a Single Forward Pass
   key: fime2026trajectory
   authors: Awal Ahmed Fime, Md Zarif Hossain and Ahmed Imteaj
-  image: emnlp-trajectory.png.gif
+  image: trajectory-lens-2026.png
   rank: CORE A*
   kind: conference
 - venue: EMNLP 2026

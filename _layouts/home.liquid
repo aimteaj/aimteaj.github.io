@@ -33,7 +33,13 @@ layout: default
   {% assign hl = site.data.highlights_2026 %}
   <section class="hm-sec hm-hl">
     <h2 class="hm-h2">2026 at top AI venues</h2>
-    <p class="hm-hl-sub">{{ hl.size }} SPEED Lab papers this year at leading AI conferences and journals.</p>
+    {% assign n_astar = hl | where: "rank", "CORE A*" | size %}
+    {% assign hl_venues = hl | map: "venue" | uniq %}
+    <p class="hm-hl-sub">
+      <span class="hm-hl-big">{{ hl.size }}</span>
+      <span class="hm-hl-line"><strong>SPEED Lab papers in 2026</strong>, {{ n_astar }} of them at <strong class="hm-hl-astar">CORE A*</strong> venues, across
+        {% for v in hl_venues %}{% if v != "arXiv" %}<span class="hm-hl-vn" data-v="{{ v }}">{{ v | remove: " 2026" }}</span>{% endif %}{% endfor %}</span>
+    </p>
     <div class="hm-hl-filters" role="group" aria-label="Filter highlights by venue">
       <button class="hm-hlf is-on" data-v="all" aria-pressed="true">All</button>
       {% assign venues = hl | map: "venue" | uniq %}
@@ -49,7 +55,6 @@ layout: default
         <span class="hm-hl-meta"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>{{ h.where }}</span>
         <span class="hm-hl-meta"><i class="fa-regular fa-calendar" aria-hidden="true"></i>{{ h.when }}</span>
         <span class="hm-hl-title">{{ h.title }}</span>
-        <span class="hm-hl-authors">{{ h.authors }}</span>
       </a>
       {% endfor %}
     </div>
@@ -169,7 +174,13 @@ layout: default
 .hm-pall { display: inline-block; margin-top: 0.9rem; font-size: 0.9rem; font-weight: 600; color: var(--global-theme-color) !important; text-decoration: underline !important; text-underline-offset: 3px; }
 
 /* 2026 highlights: neutral paper blocks, one accent colour */
-.hm-hl-sub { margin: -0.4rem 0 1rem; color: var(--global-text-color-light); font-size: 0.95rem; }
+.hm-hl-sub { display: flex; align-items: center; gap: 1rem; margin: -0.2rem 0 1.2rem; padding: 0.9rem 1.1rem; border-radius: 10px; background: linear-gradient(100deg, rgba(109,40,217,0.07), rgba(29,78,216,0.06) 45%, rgba(190,24,93,0.06)); }
+.hm-hl-big { flex: none; font-size: 3rem; font-weight: 800; line-height: 1; letter-spacing: -0.03em; background: linear-gradient(135deg, #6d28d9, #1d4ed8 45%, #be185d); -webkit-background-clip: text; background-clip: text; color: transparent; font-variant-numeric: tabular-nums; }
+html[data-theme="dark"] .hm-hl-big { background-image: linear-gradient(135deg, #c4b5fd, #93c5fd 45%, #f9a8d4); }
+.hm-hl-line { font-size: 1rem; line-height: 1.7; color: var(--global-text-color); }
+.hm-hl-astar { color: var(--global-theme-color); }
+.hm-hl-vn { font-weight: 700; color: var(--vc); white-space: nowrap; }
+.hm-hl-vn:not(:last-child)::after { content: "·"; color: var(--global-text-color-light); font-weight: 400; margin: 0 0.4rem; }
 .hm-hl-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.1rem; }
 .hm-hlf { all: unset; cursor: pointer; font-size: 0.85rem; font-weight: 600; padding: 0.3rem 0.75rem; border: 1px solid var(--global-divider-color); border-radius: 999px; color: var(--global-text-color); }
 .hm-hlf:hover { border-color: var(--global-text-color-light); }
@@ -190,7 +201,6 @@ layout: default
 .hm-hl-meta i { width: 0.9rem; text-align: center; opacity: 0.7; }
 .hm-hl-title { margin-top: 0.6rem; padding-top: 0.65rem; border-top: 1px solid var(--global-divider-color); font-size: 0.93rem; font-weight: 700; line-height: 1.45; }
 .hm-hl-card:hover .hm-hl-title { color: var(--global-theme-color); }
-.hm-hl-authors { font-size: 0.8rem; color: var(--global-text-color-light); line-height: 1.45; margin-top: 0.15rem; }
 
 /* Venue colours: only the venue name, the filter dot and the hover edge use them */
 .hm-hl [data-v="NeurIPS 2026"] { --vc: #6d28d9; }
@@ -278,6 +288,8 @@ html[data-theme="dark"] .hm-ncat[data-c="paper"] { color: #93c5fd; } html[data-t
   .hm-paper { grid-template-columns: 76px minmax(0, 1fr); gap: 0.7rem; }
   .hm-sponsors { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hm-hl-grid { grid-template-columns: 1fr; }
+  .hm-hl-big { font-size: 2.4rem; }
+  .hm-hl-line { font-size: 0.93rem; }
   .hm-sp { height: 96px; }
   .hm-nh { grid-template-columns: 50px minmax(0, 1fr) 14px; row-gap: 0.3rem; }
   .hm-ncat { grid-column: 2; justify-self: start; }
