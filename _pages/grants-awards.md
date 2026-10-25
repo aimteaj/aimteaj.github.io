@@ -67,6 +67,22 @@ description: ""
 
   <article class="ga-row">
     <div class="ga-meta">
+      <div class="ga-sponsor">National Science Foundation</div>
+      <div class="ga-program">NAIRR Pilot Classroom, Prototype National Research Platform (PNRP)</div>
+      <div class="ga-role">PI</div>
+      <div class="ga-amount ga-year">2026–2027</div>
+    </div>
+    <div class="ga-body">
+      <h3 class="ga-title">Hands-on AI Fundamentals and Modern Generative AI Education Using Classroom-Scale GPU and LLM Resources</h3>
+      <p>Brings a shared, Jupyter-based GPU environment to CAP 4630: Introduction to Artificial Intelligence for about 95 undergraduates in Spring 2027, with hands-on labs and team projects spanning machine learning, deep learning, large language models, parameter-efficient fine-tuning and vision-language models. Rated Excellent in review and approved for the full requested allocation.</p>
+      <div class="ga-links">
+        <a href="https://nairrpilot.org/projects/awarded?_requestNumber=NAIRR260482" target="_blank" rel="noopener">View NAIRR project NAIRR260482</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="ga-row">
+    <div class="ga-meta">
       <div class="ga-sponsor">Florida Atlantic University</div>
       <div class="ga-program">Vertically Integrated Projects (VIP) Program</div>
       <div class="ga-role">Faculty lead</div>

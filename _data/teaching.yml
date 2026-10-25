@@ -8,6 +8,10 @@ courses:
   llm: "Large Language Models"
 
 terms:
+  - term: "Spring 2027"
+    school: "fau"
+    courses: [ai]
+    note: "CAP 4630, about 95 students, with GPU labs supported by an NSF NAIRR Pilot Classroom allocation"
   - term: "Fall 2026"
     school: "fau"
     courses: [llm]
