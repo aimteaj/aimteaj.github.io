@@ -192,6 +192,29 @@ layout: default
 .hm-hl-card:hover .hm-hl-title { color: var(--global-theme-color); }
 .hm-hl-authors { font-size: 0.8rem; color: var(--global-text-color-light); line-height: 1.45; margin-top: 0.15rem; }
 
+/* Venue colours: only the venue name, the filter dot and the hover edge use them */
+.hm-hl [data-v="NeurIPS 2026"] { --vc: #6d28d9; }
+.hm-hl [data-v="EMNLP 2026"] { --vc: #b91c1c; }
+.hm-hl [data-v="CVPR 2026"] { --vc: #1d4ed8; }
+.hm-hl [data-v="ACL 2026"] { --vc: #c2410c; }
+.hm-hl [data-v="IJCNN 2026"] { --vc: #0e7490; }
+.hm-hl [data-v="ICTAI 2026"] { --vc: #be185d; }
+.hm-hl [data-v="Scientific Reports"] { --vc: #15803d; }
+.hm-hl [data-v="IEEE TSC"] { --vc: #4338ca; }
+.hm-hl [data-v="arXiv"] { --vc: #a16207; }
+html[data-theme="dark"] .hm-hl [data-v="NeurIPS 2026"] { --vc: #c4b5fd; }
+html[data-theme="dark"] .hm-hl [data-v="EMNLP 2026"] { --vc: #fca5a5; }
+html[data-theme="dark"] .hm-hl [data-v="CVPR 2026"] { --vc: #93c5fd; }
+html[data-theme="dark"] .hm-hl [data-v="ACL 2026"] { --vc: #fdba74; }
+html[data-theme="dark"] .hm-hl [data-v="IJCNN 2026"] { --vc: #67e8f9; }
+html[data-theme="dark"] .hm-hl [data-v="ICTAI 2026"] { --vc: #f9a8d4; }
+html[data-theme="dark"] .hm-hl [data-v="Scientific Reports"] { --vc: #86efac; }
+html[data-theme="dark"] .hm-hl [data-v="IEEE TSC"] { --vc: #a5b4fc; }
+html[data-theme="dark"] .hm-hl [data-v="arXiv"] { --vc: #fcd34d; }
+.hm-hl-venue { color: var(--vc, var(--global-text-color)) !important; }
+.hm-hl-card::before { background: var(--vc, var(--global-theme-color)) !important; }
+.hm-hlf[data-v]:not([data-v="all"])::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--vc); margin-right: 0.45rem; vertical-align: 1px; }
+
 /* Research support: logo wall; hover or focus shows what each sponsor funds */
 .hm-sponsors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.9rem; }
 .hm-sp { position: relative; display: block; height: 116px; border-radius: 8px; overflow: hidden; background: #fff; border: 1px solid var(--global-divider-color); }
