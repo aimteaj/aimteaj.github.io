@@ -29,14 +29,6 @@ layout: default
 
   <div class="hm-bio">{{ content }}</div>
 
-  <!-- At a glance: each fact opens its page -->
-  <div class="hm-facts">
-    <a class="hm-fact" href="{{ '/publications/' | relative_url }}"><span class="hm-fn">{% bibliography_count %}</span><span class="hm-fl">Publications since 2023</span></a>
-    <a class="hm-fact" href="{{ '/mentorship/' | relative_url }}"><span class="hm-fn">{{ m.phd.size }}</span><span class="hm-fl">Ph.D. students advised</span></a>
-    <a class="hm-fact" href="{{ '/grants-awards/' | relative_url }}"><span class="hm-fn">6</span><span class="hm-fl">Research grants, incl. NSF CRII as sole PI</span></a>
-    <a class="hm-fact" href="{{ '/grants-awards/' | relative_url }}"><span class="hm-fn">Top 2%</span><span class="hm-fl">Stanford–Elsevier world scientist list</span></a>
-  </div>
-
   <!-- Research interests explorer -->
   <section class="hm-sec">
     <h2 class="hm-h2">Research</h2>
@@ -238,16 +230,6 @@ html[data-theme="dark"] .hm-ncat[data-c="paper"] { color: #93c5fd; } html[data-t
   }
   topics.forEach(function (t) { t.addEventListener('click', function () { show(t); }); });
   if (topics.length) show(topics[0]);
-
-  // ---- At-a-glance numbers count up once on load
-  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  root.querySelectorAll('.hm-fn').forEach(function (el) {
-    var m = el.textContent.trim().match(/^(\D*)(\d+)(.*)$/); if (!m || reduce) return;
-    var end = +m[2], t0 = null;
-    function step(ts) { if (!t0) t0 = ts; var p = Math.min(1, (ts - t0) / 1100), e = 1 - Math.pow(1 - p, 3);
-      el.textContent = m[1] + Math.round(end * e) + m[3]; if (p < 1) requestAnimationFrame(step); }
-    el.textContent = m[1] + '0' + m[3]; requestAnimationFrame(step);
-  });
 
   // ---- News: categorise, give each item a headline, filter, expand
   var tl = root.querySelector('.hm-tl'); if (!tl) return;
