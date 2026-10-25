@@ -5,7 +5,7 @@
 latest:
   - id: hals
     short: "HALS"
-    venue: "NeurIPS 2026"
+    venue: "NeurIPS 2026 · Main Conference"
     title: "Do Robust LVLMs Hallucinate More?"
     subtitle: "Uncovering robustness-induced hallucination in large vision-language models"
     description: "Adversarial robustness is usually treated as a pure win. We examine whether robustly fine-tuned LVLMs pay for it in faithfulness, and characterize the hallucination that robustness training can introduce."
@@ -15,7 +15,7 @@ latest:
     link: "https://speedlab-git.github.io/HALS-Website/"
   - id: faml
     short: "FAML"
-    venue: "CVPR 2026"
+    venue: "CVPR 2026 · Main Conference (Findings)"
     title: "When Data is Scarce, Learn to Adapt"
     subtitle: "Robust federated learning via adversarial meta-optimization"
     description: "Federated clients often hold only a handful of samples. We combine meta-learning with adversarial optimization so that personalized models adapt quickly while staying robust to attacks."
@@ -25,7 +25,7 @@ latest:
     link: "https://speedlab-git.github.io/FAML-CVPR/"
   - id: trajectory-lens
     short: "TrajectoryLens"
-    venue: "EMNLP 2026"
+    venue: "EMNLP 2026 · Main Conference"
     title: "Do LVLMs Know When They Are Wrong?"
     subtitle: "Trajectory-based correctness estimation from a single forward pass"
     description: "We read the trajectory of an LVLM’s internal representations to estimate whether its answer is correct, using only a single forward pass and no repeated sampling."
