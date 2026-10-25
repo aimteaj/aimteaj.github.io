@@ -77,79 +77,15 @@ nav_order: 3
         </div>
         <div class="mini-body">
           <h4>{{ p.title }}</h4>
-          <p>{{ p.description }}</p>
+          {% if p.venue %}<div class="mini-venue">{{ p.venue }}</div>{% endif %}
+          {% if p.description and p.description != "" %}<p>{{ p.description }}</p>{% endif %}
+          {% if p.links %}<div class="mini-links">{% for l in p.links %}<a href="{{ l.url }}" target="_blank" rel="noopener noreferrer">{{ l.name }}</a>{% endfor %}</div>{% endif %}
         </div>
       </article>
       {% endfor %}
     </div>
   </section>
 
-  <section class="lab-section lab-section--tight">
-    <div class="lab-eyebrow">Publications</div>
-    <h2 class="lab-title">Research highlights</h2>
-  </section>
-
-  <div class="research-highlights">
-    <div class="container">
-
-      {% assign sorted_projects = site.data.research_highlights | sort: "importance" %}
-      {% for project in sorted_projects %}
-      {% if project.teaser %}{% continue %}{% endif %}
-      <div class="research-project">
-
-        <div class="project-header">
-          <div class="project-title-wrap">
-            <h2 class="project-title">{{ project.title }}</h2>
-          </div>
-
-          <div class="project-authors">
-            {% for author in project.authors %}
-              <span class="author">{{ author.name }}</span>{% unless forloop.last %}<span class="author-sep">•</span>{% endunless %}
-            {% endfor %}
-          </div>
-
-          <div class="project-meta">
-            <span class="venue">{{ project.venue }}</span>
-            {% if project.status %}
-              <span class="status status-{{ project.status | downcase | replace: ' ', '-' | replace: '(', '' | replace: ')', '' | replace: '.', '' | replace: ',', '' | replace: '|', '' }}">
-                {{ project.status }}
-              </span>
-            {% endif %}
-          </div>
-
-          <div class="project-links">
-            {% for link in project.links %}
-              <a href="{{ link.url }}" class="rh-btn" target="_blank" rel="noopener noreferrer">
-                <i class="fas {{ link.icon }}"></i>
-                <span>{{ link.name }}</span>
-              </a>
-            {% endfor %}
-          </div>
-        </div>
-
-        <div class="architecture-container-large">
-          <div class="architecture-image-large">
-            {% if project.video %}
-            <video class="teaser-video architecture-img" muted loop playsinline controls preload="none"
-                   {% if project.image %}poster="{{ site.baseurl }}/assets/img/{{ project.image }}"{% endif %}>
-              <source src="{{ site.baseurl }}/assets/video/{{ project.video }}" type="video/mp4">
-            </video>
-            {% else %}
-            <img src="{{ site.baseurl }}/assets/img/{{ project.image }}" alt="{{ project.image_alt }}" class="img-fluid architecture-img">
-            {% endif %}
-          </div>
-
-          <div class="architecture-caption-large">
-            <div class="caption-label">{{ project.image_alt }}</div>
-            <div class="caption-text">{{ project.description }}</div>
-          </div>
-        </div>
-
-      </div>
-      {% endfor %}
-
-    </div>
-  </div>
 </div>
 
 <style>
@@ -626,6 +562,11 @@ nav_order: 3
 .mini-body { padding: 0.95rem 1.05rem 1.1rem; }
 .mini-body h4 { font-size: 1.02rem; font-weight: 800; color: #0f172a; margin: 0 0 0.4rem; line-height: 1.35; }
 .mini-body p { font-size: 0.92rem; color: #475569; margin: 0; line-height: 1.55; }
+.mini-venue { font-size: 0.82rem; font-weight: 700; color: #1d4ed8; margin: 0 0 0.45rem; line-height: 1.4; }
+.mini-links { display: flex; gap: 1rem; margin-top: 0.6rem; }
+.mini-links a { font-size: 0.86rem; font-weight: 700; color: #7c3aed; text-decoration: underline; text-underline-offset: 3px; }
+html[data-theme="dark"] .mini-venue { color: #93c5fd; }
+html[data-theme="dark"] .mini-links a { color: #c4b5fd; }
 
 html[data-theme="dark"] .lab-title, html[data-theme="dark"] .lab-subhead,
 html[data-theme="dark"] .teaser-title, html[data-theme="dark"] .ongoing-body h3,
