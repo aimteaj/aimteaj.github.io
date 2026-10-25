@@ -4,7 +4,7 @@ title: Research Projects
 permalink: /research-highlights/
 description: ""
 nav: true
-nav_order: 3
+nav_order: 2
 ---
 
 <div class="research-highlights-page">
