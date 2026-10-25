@@ -323,6 +323,22 @@ description: ""
           <div class="mentor-role">PhD Student</div>
         </div>
       </div>
+
+      <div class="mentor-item">
+        <div class="mentor-icon">🔹</div>
+        <div>
+          <div class="mentor-name">Muftiqur Rahman Agni</div>
+          <div class="mentor-role">PhD Student</div>
+        </div>
+      </div>
+
+      <div class="mentor-item">
+        <div class="mentor-icon">🔹</div>
+        <div>
+          <div class="mentor-name">Ebrahim (Nima) Maghsoudlou</div>
+          <div class="mentor-role">PhD Student, SIU Carbondale (Co-advised)</div>
+        </div>
+      </div>
     </div>
 
     <div class="mentor-highlight">
@@ -462,6 +478,30 @@ description: ""
         <div>
           <div class="mentor-name">Nadia D Lafontant</div>
           <div class="mentor-topic">Resource-Efficient Fine-Tuning of Vision-Language Models</div>
+        </div>
+      </div>
+
+      <div class="mentor-item">
+        <div class="mentor-icon">🌱</div>
+        <div>
+          <div class="mentor-name">Shelly Abramov</div>
+          <div class="mentor-topic">Undergraduate Researcher (CRA REU)</div>
+        </div>
+      </div>
+
+      <div class="mentor-item">
+        <div class="mentor-icon">🌱</div>
+        <div>
+          <div class="mentor-name">Thomas Zemen</div>
+          <div class="mentor-topic">Alumnus — now Software Engineer, Mastercard</div>
+        </div>
+      </div>
+
+      <div class="mentor-item">
+        <div class="mentor-icon">🌱</div>
+        <div>
+          <div class="mentor-name">Thomas Boyd</div>
+          <div class="mentor-topic">Alumnus — now Machine Learning Operations Developer, Coapt</div>
         </div>
       </div>
 

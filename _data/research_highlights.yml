@@ -1,3 +1,25 @@
+- title: "Do Robust LVLMs Hallucinate More? Uncovering Robustness-Induced Hallucination in Large Vision-Language Models"
+  authors:
+    - name: "Md Zarif Hossain"
+      affiliation: "Florida Atlantic University"
+    - name: "Awal Ahmed Fime"
+      affiliation: "Florida Atlantic University"
+    - name: "Ahmed Imteaj"
+      affiliation: "Florida Atlantic University"
+  description: "Adversarial robustness is usually treated as a pure win. We show that adversarially robust vision encoders increase hallucination in LVLMs by homogenizing spatial visual tokens, and introduce HALS (Homogenization-Aware Latent Steering), a training-free method that keeps LVLMs robust and visually grounded without retraining."
+  image: "hals-neurips2026.png"
+  image_alt: "HALS: Homogenization-Aware Latent Steering"
+  links:
+    - name: "Project Page"
+      url: "https://speedlab-git.github.io/HALS-Website/"
+      icon: "fa-globe"
+    - name: "Teaser Video"
+      url: "https://www.speedlab.network"
+      icon: "fa-video"
+  venue: "NeurIPS 2026 Main Track [CORE A*]"
+  status: "Accepted"
+  importance: 0
+
 - title: "Do LVLMs Know When They Are Wrong? Trajectory-Based Correctness Estimation from a Single Forward Pass"
   authors:
     - name: "Awal Ahmed Fime"
@@ -13,6 +35,9 @@
     - name: "Paper"
       url: "#"
       icon: "#"
+    - name: "Teaser Video"
+      url: "https://www.speedlab.network"
+      icon: "fa-video"
   venue: "EMNLP 2026 Main Conference [CORE A* | Ranked #2 in Computational Linguistics]"
   status: "Accepted"
   importance: 1
@@ -58,6 +83,9 @@
     - name: "Project Page"
       url: "https://speedlab-git.github.io/FAML-CVPR/"
       icon: "fa-globe"
+    - name: "Teaser Video"
+      url: "https://www.speedlab.network"
+      icon: "fa-video"
     - name: "Paper"
       url: "#"
       icon: "fa-file-powerpoint"
