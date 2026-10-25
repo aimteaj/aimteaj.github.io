@@ -73,12 +73,13 @@ nav_order: 2
 .publications .title { font-size: 1.04rem; line-height: 1.45; margin-bottom: 0.25rem; }
 .publications .author { font-size: 0.93rem; line-height: 1.5; color: var(--global-text-color); }
 .publications .periodical { font-size: 0.9rem; color: var(--global-text-color-light); line-height: 1.5; }
-.publications .periodical + .periodical { display: inline-block; margin-top: 0.35rem; font-size: 0.78rem; font-weight: 700; color: var(--global-theme-color); border: 1px solid var(--global-theme-color); border-radius: 4px; padding: 0.05rem 0.45rem; }
+.publications .pub-note { display: inline-block; margin-top: 0.35rem; font-size: 0.78rem; font-weight: 700; color: var(--global-theme-color); border: 1px solid var(--global-theme-color); border-radius: 4px; padding: 0.05rem 0.45rem; }
 .publications .links { margin-top: 0.55rem; }
 .publications .links .btn { font-size: 0.78rem; font-weight: 600; padding: 0.2rem 0.65rem; border-radius: 4px; }
 .publications abbr.badge { font-size: 0.74rem; font-weight: 700; padding: 0.3rem 0.35rem; border-radius: 4px !important; }
 .publications .preview { border-radius: 6px !important; box-shadow: none !important; border: 1px solid var(--global-divider-color); }
 .publications mark { background: rgba(250,204,21,0.35); color: inherit; padding: 0 1px; border-radius: 2px; }
+.pub-ph { width: 100%; aspect-ratio: 16 / 9; margin-top: 0.4rem; border: 1px dashed var(--global-divider-color); border-radius: 6px; display: grid; place-items: center; color: var(--global-text-color-light); opacity: 0.7; }
 .pub-sel-flag { display: inline-block; margin-left: 0.5rem; vertical-align: 2px; font-size: 0.7rem; font-weight: 700; color: #a16207; background: rgba(234,179,8,0.14); border: 1px solid rgba(202,138,4,0.35); border-radius: 4px; padding: 0 0.4rem; }
 html[data-theme="dark"] .pub-sel-flag { color: #facc15; }
 
