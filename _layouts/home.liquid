@@ -19,7 +19,7 @@ layout: default
         <li>Senior Member, <a href="https://www.fau.edu/engineering/research/c2a2/people/" target="_blank" rel="noopener">CA-AI</a></li>
       </ul>
       <nav class="hm-links" aria-label="Contact and profiles">
-        <a href="mailto:aimteaj@fau.edu"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Email</a>
+        <a class="hm-email" href="mailto:aimteaj@fau.edu" title="aimteaj@fau.edu"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>Email</span></a>
         <a href="https://scholar.google.com/citations?user=I5IZ4GQAAAAJ" target="_blank" rel="noopener"><i class="ai ai-google-scholar" aria-hidden="true"></i>Google Scholar</a>
         <a href="https://www.linkedin.com/in/ahmed-imteaj-a13343a3" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
         <a href="https://orcid.org/0000-0002-6975-3997" target="_blank" rel="noopener"><i class="ai ai-orcid" aria-hidden="true"></i>ORCID</a>
@@ -349,6 +349,15 @@ html[data-theme="dark"] .hm-ncat[data-c="paper"] { color: #93c5fd; } html[data-t
   }
   topics.forEach(function (t) { t.addEventListener('click', function () { show(t); }); });
   if (topics.length) show(topics[0]);
+
+  // ---- Email button: open the mail app and also copy the address
+  var em = root.querySelector('.hm-email');
+  if (em) em.addEventListener('click', function () {
+    var label = em.querySelector('span'), addr = 'aimteaj@fau.edu';
+    try { navigator.clipboard && navigator.clipboard.writeText(addr); } catch (e) {}
+    label.textContent = addr + ' (copied)';
+    clearTimeout(em._t); em._t = setTimeout(function () { label.textContent = 'Email'; }, 2600);
+  });
 
   // ---- 2026 highlights: venue filter
   var hlf = root.querySelectorAll('.hm-hlf');
