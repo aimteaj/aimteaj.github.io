@@ -1,0 +1,55 @@
+# Teaching page content. Each term lists course keys from `courses`.
+
+courses:
+  ai: "Artificial Intelligence"
+  ml: "Machine Learning & Soft Computing"
+  ds: "Data Structures"
+  genai: "Generative AI"
+  llm: "Large Language Models"
+
+terms:
+  - term: "Fall 2026"
+    school: "fau"
+    courses: [llm]
+    note: "New course"
+  - term: "Spring 2026"
+    school: "fau"
+    courses: [ai]
+  - term: "Fall 2025"
+    school: "fau"
+    courses: [ai]
+  - term: "Spring 2025"
+    school: "siu"
+    courses: [ai, ds, genai]
+    note: "Generative AI offered through the University Honors Program"
+  - term: "Fall 2024"
+    school: "siu"
+    courses: [ml]
+  - term: "Summer 2024"
+    school: "siu"
+    courses: [genai]
+    note: "New course, CS491-955"
+  - term: "Spring 2024"
+    school: "siu"
+    courses: [ds, ai]
+  - term: "Fall 2023"
+    school: "siu"
+    courses: [ml]
+  - term: "Spring 2023"
+    school: "siu"
+    courses: [ai]
+  - term: "Fall 2022"
+    school: "siu"
+    courses: [ml]
+
+schools:
+  fau: "Florida Atlantic University"
+  siu: "Southern Illinois University Carbondale"
+
+developed:
+  - title: "Large Language Models"
+    detail: "New course, Fall 2026, Florida Atlantic University"
+  - title: "Generative AI: Computing and Ethical Perspectives"
+    detail: "Interdisciplinary undergraduate course, University Honors Program, Spring 2025, SIU"
+  - title: "CS491-955: Generative Artificial Intelligence"
+    detail: "Computer Science Department, Summer 2024, SIU"

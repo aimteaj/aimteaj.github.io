@@ -1,0 +1,82 @@
+# Mentorship page content. Add a person by adding a line to the right group.
+
+phd:
+  - name: "Md Zarif Hossain"
+    role: "Ph.D. Candidate"
+    place: "Florida Atlantic University"
+  - name: "Awal Ahmed Fime"
+    role: "Ph.D. Student"
+    place: "Florida Atlantic University"
+  - name: "Muftiqur Rahman Agni"
+    role: "Ph.D. Student"
+    place: "Florida Atlantic University"
+  - name: "Ebrahim (Nima) Maghsoudlou"
+    role: "Ph.D. Student, co-advised"
+    place: "Southern Illinois University Carbondale"
+
+senior_design:
+  - title: "SmartDiet: A Multimodal Vision-Language Framework for Intelligent Nutrition Tracking and Personalized Dietary Recommendations"
+    short: "SmartDiet"
+    period: "Fall 2025 – Spring 2026"
+    students: ["Kenneth Karp", "Shahed Ahmed", "Wyatt Evans", "Hunter Termo", "Tolga Destici"]
+    area: "Multimodal AI, vision-language models, computer vision, and intelligent systems for automated food recognition and nutritional analysis."
+    supervision: "Faculty mentor for a year-long Senior Design project, providing guidance in problem formulation, system architecture, multimodal AI integration, implementation, experimental evaluation, technical documentation, and project presentation."
+    award: "Best Project Award (Judge's Choice), EECS Virtual Category, Senior Design Showcase 2026, Florida Atlantic University"
+  - title: "Vision-Language Models for Underwater Exploration"
+    short: "VLM for Underwater Exploration"
+    period: "Fall 2025 – Spring 2026"
+    students: ["Austin Pritchard", "Dominique Penney", "Luis Rodriguez", "Renna Ozar", "Yumin Jang"]
+    area: "Vision-language models, multimodal AI, computer vision, underwater scene understanding, and intelligent perception for autonomous marine systems."
+    supervision: "Faculty mentor for a year-long Senior Design project, providing guidance in research and system design, vision-language model integration, underwater scene understanding, object recognition, implementation, experimental evaluation, and project presentation."
+
+masters:
+  - name: "Dina Famouri"
+    topic: "Human Activity Recognition with Keypoint Analysis"
+  - name: "Oleksandr Jockusch"
+    topic: "Federated Meta-Learning for Emotion and Sentiment-Aware Multi-modal Complaint Identification"
+  - name: "Revathi Gajjala"
+    topic: "Physics-Informed Neural Networks"
+  - name: "Veerendra Reddy Ayaluri"
+    topic: "Federated Learning Testbed for Mobile Agents"
+  - name: "Sai Sandhiptha Bayya"
+    topic: "Ensuring Fairness in Federated Learning for Healthcare Systems"
+  - name: "Mark Sidhom"
+    topic: "Fine-Tuned LLM for Healthcare"
+  - name: "Prince Duo"
+    topic: "Hallucination Attacks and Impacts on Large-Language Models"
+  - name: "Venkata Gnana Prakash Paruchuri"
+    topic: "Topic Modeling on Research Articles using BERT"
+  - name: "Gireesh Nadh Mekala"
+    topic: "Road Traffic Prediction using Federated Learning"
+  - name: "Srivatsa Tangirala"
+    topic: "Poisoning Attacks in Federated Learning using GANs"
+  - name: "Madhu Nimeshika Dasika"
+    topic: "Skin Cancer Classification using Transfer Learning"
+  - name: "Wasimuddin Fathimullah"
+    topic: "Intrusion Detection with Federated Reinforcement Learning"
+
+undergrad:
+  - name: "Nadia D Lafontant"
+    topic: "Resource-Efficient Fine-Tuning of Vision-Language Models"
+  - name: "Shelly Abramov"
+    topic: "Undergraduate Researcher (CRA REU)"
+  - name: "Ian Tudor"
+    topic: "Drone Swarming, Distributed Streaming, and Learning"
+  - name: "Thomas Zemen"
+    topic: "Alumnus, now Software Engineer at Mastercard"
+  - name: "Thomas Boyd"
+    topic: "Alumnus, now Machine Learning Operations Developer at Coapt"
+
+programs:
+  - title: "NSF-DoD REU Site Mentor"
+    note: "Research Experiences for Undergraduates"
+    people: ["Raghad Alabagi", "Meileik Hyman"]
+  - title: "NSF-DoD RET Site Mentor"
+    note: "Research Experiences for Teachers"
+    people: ["Marisa Behar", "Yoandra Abad"]
+  - title: "Mentor, FIU Thrive ML Team"
+    note: "Part of the Green Family Foundation Neighborhood Health Education Learning Program (NeighborhoodHELP)"
+  - title: "Collaborative AI-Driven Health Research Project"
+    note: "Funded by the Florida Department of Health in Miami-Dade"
+  - title: "Featured in FIU CEC News and KFSCIS News"
+    note: "Coverage of student mentoring and research engagement"

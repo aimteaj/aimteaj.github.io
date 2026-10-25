@@ -7,601 +7,216 @@ nav_order: 6
 description: ""
 ---
 
+{% assign m = site.data.mentorship %}
+{% assign sd_students = 0 %}{% for p in m.senior_design %}{% assign sd_students = sd_students | plus: p.students.size %}{% endfor %}
+{% assign prog_people = 0 %}{% for p in m.programs %}{% if p.people %}{% assign prog_people = prog_people | plus: p.people.size %}{% endif %}{% endfor %}
+
+<div class="mt">
+
+  <div class="mt-tabs" role="tablist" aria-label="Filter mentees by group">
+    <button class="mt-tab is-on" role="tab" aria-selected="true" data-f="all"><span class="mt-n">All</span><span class="mt-l">groups</span></button>
+    <button class="mt-tab" role="tab" aria-selected="false" data-f="phd"><span class="mt-n">{{ m.phd.size }}</span><span class="mt-l">Ph.D.</span></button>
+    <button class="mt-tab" role="tab" aria-selected="false" data-f="senior"><span class="mt-n">{{ sd_students }}</span><span class="mt-l">Senior Design</span></button>
+    <button class="mt-tab" role="tab" aria-selected="false" data-f="ms"><span class="mt-n">{{ m.masters.size }}</span><span class="mt-l">Master's</span></button>
+    <button class="mt-tab" role="tab" aria-selected="false" data-f="ug"><span class="mt-n">{{ m.undergrad.size }}</span><span class="mt-l">Undergraduate</span></button>
+    <button class="mt-tab" role="tab" aria-selected="false" data-f="prog"><span class="mt-n">{{ prog_people }}</span><span class="mt-l">REU / RET</span></button>
+  </div>
+
+  <div class="mt-search">
+    <label for="mt-q" class="mt-sr">Search mentees and topics</label>
+    <input id="mt-q" type="search" placeholder="Search by name or topic" autocomplete="off">
+    <span class="mt-count" aria-live="polite"></span>
+  </div>
+
+  <section class="mt-sec" data-g="phd">
+    <h2 class="mt-h2">Doctoral advising</h2>
+    <div class="mt-people">
+      {% for p in m.phd %}
+      <div class="mt-person mt-item">
+        <div class="mt-avatar" aria-hidden="true">{{ p.name | slice: 0 }}</div>
+        <div>
+          <div class="mt-name">{{ p.name }}</div>
+          <div class="mt-sub">{{ p.role }}</div>
+          <div class="mt-sub2">{{ p.place }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="mt-sec" data-g="senior">
+    <h2 class="mt-h2">Senior Design projects</h2>
+    {% for p in m.senior_design %}
+    <article class="mt-project mt-item">
+      <div class="mt-pmeta">
+        <div class="mt-pprog">Senior Design</div>
+        <div class="mt-sub2">{{ p.period }}</div>
+        <div class="mt-sub2">Florida Atlantic University</div>
+      </div>
+      <div class="mt-pbody">
+        {% if p.award %}<div class="mt-award"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2l2.9 6.1 6.6.8-4.9 4.6 1.3 6.5L12 16.8 6.1 20l1.3-6.5L2.5 8.9l6.6-.8z"/></svg>{{ p.award }}</div>{% endif %}
+        <h3 class="mt-ptitle">{{ p.title }}</h3>
+        <div class="mt-students">
+          {% for s in p.students %}<span class="mt-chip">{{ s }}</span>{% endfor %}
+        </div>
+        <details class="mt-more">
+          <summary>Research area and supervision</summary>
+          <dl>
+            <dt>Research area</dt><dd>{{ p.area }}</dd>
+            <dt>Supervision</dt><dd>{{ p.supervision }}</dd>
+          </dl>
+        </details>
+      </div>
+    </article>
+    {% endfor %}
+  </section>
+
+  <section class="mt-sec" data-g="ms">
+    <h2 class="mt-h2">Graduated master's thesis and project students</h2>
+    <ul class="mt-list">
+      {% for p in m.masters %}
+      <li class="mt-item"><span class="mt-name">{{ p.name }}</span><span class="mt-topic">{{ p.topic }}</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="mt-sec" data-g="ug">
+    <h2 class="mt-h2">Undergraduate researchers</h2>
+    <ul class="mt-list">
+      {% for p in m.undergrad %}
+      <li class="mt-item"><span class="mt-name">{{ p.name }}</span><span class="mt-topic">{{ p.topic }}</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="mt-sec" data-g="prog">
+    <h2 class="mt-h2">Program mentorship and community engagement</h2>
+    <ul class="mt-list">
+      {% for p in m.programs %}
+      <li class="mt-item">
+        <span class="mt-name">{{ p.title }}</span>
+        <span class="mt-topic">{{ p.note }}{% if p.people %}<span class="mt-inline-people">{% for s in p.people %}<span class="mt-chip">{{ s }}</span>{% endfor %}</span>{% endif %}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <p class="mt-empty" hidden>No mentees match that search.</p>
+</div>
+
 <style>
-  .mentor-hero {
-    position: relative;
-    overflow: hidden;
-    padding: 2.5rem 2rem;
-    border-radius: 24px;
-    margin-bottom: 2rem;
-    color: white;
-    background: linear-gradient(-45deg, #0f172a, #2563eb, #7c3aed, #14b8a6);
-    background-size: 400% 400%;
-    animation: mentorGradient 12s ease infinite;
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
-  }
+.mt { max-width: 980px; margin: 0 auto; }
+.mt-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
-  .mentor-hero::before,
-  .mentor-hero::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(40px);
-    opacity: 0.26;
-    pointer-events: none;
-  }
+/* Group counts that double as filters */
+.mt-tabs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border-top: 2px solid var(--global-text-color); border-bottom: 1px solid var(--global-divider-color); margin-bottom: 1.25rem; }
+.mt-tab { all: unset; cursor: pointer; padding: 1rem 0.8rem 0.9rem; display: flex; flex-direction: column; gap: 0.15rem; border-right: 1px solid var(--global-divider-color); position: relative; }
+.mt-tab:last-child { border-right: 0; }
+.mt-tab .mt-n { font-size: 1.9rem; font-weight: 700; line-height: 1.1; color: var(--global-text-color); font-variant-numeric: tabular-nums; }
+.mt-tab .mt-l { font-size: 0.85rem; color: var(--global-text-color-light); font-weight: 600; }
+.mt-tab:hover .mt-n { color: var(--global-theme-color); }
+.mt-tab.is-on::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--global-theme-color); }
+.mt-tab.is-on .mt-n, .mt-tab.is-on .mt-l { color: var(--global-theme-color); }
+.mt-tab:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: -2px; }
 
-  .mentor-hero::before {
-    width: 230px;
-    height: 230px;
-    background: rgba(255,255,255,0.18);
-    top: -80px;
-    right: -40px;
-    animation: mentorFloat 9s ease-in-out infinite;
-  }
+.mt-search { display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+.mt-search input { flex: 1; max-width: 420px; padding: 0.6rem 0.9rem; border: 1px solid var(--global-divider-color); border-radius: 6px; background: var(--global-bg-color); color: var(--global-text-color); font: inherit; font-size: 0.95rem; }
+.mt-search input:focus { outline: 2px solid var(--global-theme-color); outline-offset: 1px; border-color: transparent; }
+.mt-count { font-size: 0.88rem; color: var(--global-text-color-light); }
 
-  .mentor-hero::after {
-    width: 170px;
-    height: 170px;
-    background: rgba(255,255,255,0.14);
-    bottom: -45px;
-    left: -25px;
-    animation: mentorFloat 11s ease-in-out infinite reverse;
-  }
+.mt-sec { padding-top: 1.6rem; }
+.mt-h2 { font-size: 1.35rem; font-weight: 700; margin: 0 0 0.4rem; padding-bottom: 0.7rem; border-bottom: 1px solid var(--global-text-color); }
 
-  .mentor-hero h1 {
-    margin: 0 0 0.8rem 0;
-    font-size: 2.35rem;
-    color: white;
-  }
+.mt-name { font-weight: 700; color: var(--global-text-color); }
+.mt-sub { font-size: 0.9rem; color: var(--global-theme-color); font-weight: 600; }
+.mt-sub2 { font-size: 0.85rem; color: var(--global-text-color-light); }
 
-  .mentor-hero p {
-    margin: 0;
-    max-width: 860px;
-    font-size: 1.04rem;
-    line-height: 1.8;
-    color: rgba(255,255,255,0.95);
-  }
+.mt-people { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; }
+.mt-person { display: flex; gap: 0.9rem; align-items: flex-start; padding: 1.1rem 0; border-bottom: 1px solid var(--global-divider-color); }
+.mt-person:nth-child(odd) { padding-right: 1.5rem; }
+.mt-avatar { flex: none; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: var(--global-theme-color); border: 1.5px solid var(--global-theme-color); }
 
-  .mentor-section-title {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-size: 1.65rem;
-    font-weight: 800;
-    letter-spacing: 0.2px;
-  }
+.mt-project { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 2rem; padding: 1.5rem 0; border-bottom: 1px solid var(--global-divider-color); }
+.mt-pprog { font-weight: 700; color: var(--global-text-color); margin-bottom: 0.2rem; }
+.mt-award { display: inline-flex; align-items: flex-start; gap: 0.45rem; font-size: 0.86rem; font-weight: 700; color: #a16207; background: rgba(234,179,8,0.12); border: 1px solid rgba(202,138,4,0.35); border-radius: 6px; padding: 0.35rem 0.7rem; margin-bottom: 0.75rem; line-height: 1.4; }
+.mt-award svg { flex: none; margin-top: 2px; }
+html[data-theme="dark"] .mt-award { color: #facc15; }
+.mt-ptitle { font-size: 1.12rem; font-weight: 700; line-height: 1.4; margin: 0 0 0.7rem; color: var(--global-text-color); }
+.mt-students { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.mt-chip { font-size: 0.84rem; padding: 0.2rem 0.6rem; border: 1px solid var(--global-divider-color); border-radius: 999px; color: var(--global-text-color); white-space: nowrap; }
+.mt-more { margin-top: 0.9rem; }
+.mt-more summary { cursor: pointer; font-size: 0.9rem; font-weight: 600; color: var(--global-theme-color); list-style: none; display: inline-flex; align-items: center; gap: 0.4rem; }
+.mt-more summary::-webkit-details-marker { display: none; }
+.mt-more summary::before { content: ""; width: 0.45rem; height: 0.45rem; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: rotate(-45deg); transition: transform 0.2s ease; }
+.mt-more[open] summary::before { transform: rotate(45deg); }
+.mt-more summary:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; border-radius: 2px; }
+.mt-more dl { margin: 0.8rem 0 0; }
+.mt-more dt { font-size: 0.82rem; font-weight: 700; color: var(--global-text-color-light); margin-top: 0.6rem; }
+.mt-more dd { margin: 0.15rem 0 0; line-height: 1.6; color: var(--global-text-color); max-width: 68ch; }
 
-  .mentor-section-title.phd { color: #1d4ed8; }
-  .mentor-section-title.ms { color: #7c3aed; }
-  .mentor-section-title.ug { color: #059669; }
-  .mentor-section-title.program { color: #ea580c; }
-  .mentor-section-title.community { color: #be185d; }
+.mt-list { list-style: none; padding: 0; margin: 0; }
+.mt-list li { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 1.5rem; padding: 0.85rem 0; border-bottom: 1px solid var(--global-divider-color); }
+.mt-topic { color: var(--global-text-color); line-height: 1.5; }
+.mt-inline-people { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.45rem; }
 
-  .mentor-grid {
-    display: grid;
-    gap: 1.2rem;
-  }
+.mt mark { background: rgba(250,204,21,0.35); color: inherit; padding: 0 1px; border-radius: 2px; }
+.mt-empty { padding: 2rem 0; color: var(--global-text-color-light); }
 
-  .mentor-card {
-    position: relative;
-    overflow: hidden;
-    padding: 1.35rem 1.35rem 1.2rem 1.35rem;
-    border-radius: 20px;
-    background: rgba(255,255,255,0.95);
-    border: 1px solid rgba(255,255,255,0.5);
-    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-    animation: mentorFadeUp 0.8s ease both;
-  }
-
-  .mentor-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 38px rgba(15, 23, 42, 0.13);
-  }
-
-  .mentor-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 0.35s ease;
-    background: linear-gradient(135deg, rgba(255,255,255,0.20), rgba(255,255,255,0.05));
-    pointer-events: none;
-  }
-
-  .mentor-card:hover::before {
-    opacity: 1;
-  }
-
-  .mentor-blue { border-left: 6px solid #2563eb; background: linear-gradient(180deg, #f8fbff, #eef6ff); }
-  .mentor-purple { border-left: 6px solid #7c3aed; background: linear-gradient(180deg, #fcfaff, #f5f0ff); }
-  .mentor-green { border-left: 6px solid #059669; background: linear-gradient(180deg, #f6fff9, #ecfff5); }
-  .mentor-orange { border-left: 6px solid #ea580c; background: linear-gradient(180deg, #fff9f4, #fff1e7); }
-  .mentor-pink { border-left: 6px solid #be185d; background: linear-gradient(180deg, #fff8fc, #fff0f7); }
-
-  .mentor-card h3 {
-    margin-top: 0;
-    margin-bottom: 0.35rem;
-    font-size: 1.05rem;
-    font-weight: 750;
-    color: #0f172a;
-  }
-
-  .mentor-subtitle {
-    font-size: 0.92rem;
-    font-weight: 650;
-    color: #475569;
-    margin-bottom: 0.85rem;
-  }
-
-  .mentor-card p {
-    margin: 0.45rem 0;
-    line-height: 1.75;
-    color: #334155;
-  }
-
-  .mentor-list {
-    display: grid;
-    gap: 0.75rem;
-    margin-top: 0.8rem;
-  }
-
-  .mentor-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.8rem;
-    padding: 0.9rem 1rem;
-    border-radius: 14px;
-    background: rgba(255,255,255,0.76);
-    border: 1px solid rgba(148,163,184,0.16);
-    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.04);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .mentor-item:hover {
-    transform: translateX(4px);
-    box-shadow: 0 10px 18px rgba(15, 23, 42, 0.08);
-  }
-
-  .mentor-icon {
-    font-size: 1.02rem;
-    line-height: 1.5;
-    margin-top: 0.06rem;
-  }
-
-  .mentor-name {
-    font-weight: 750;
-    color: #0f172a;
-  }
-
-  .mentor-role {
-    color: #475569;
-    font-weight: 600;
-    margin-top: 0.1rem;
-  }
-
-  .mentor-topic {
-    color: #334155;
-    margin-top: 0.18rem;
-    line-height: 1.6;
-  }
-
-  .mentor-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.65rem;
-    margin-top: 1rem;
-  }
-
-  .mentor-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.55rem 0.95rem;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.84);
-    color: #0f172a;
-    font-size: 0.93rem;
-    font-weight: 700;
-    border: 1px solid rgba(148,163,184,0.18);
-    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.05);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    animation: mentorPop 0.6s ease both;
-  }
-
-  .mentor-badge:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 18px rgba(15, 23, 42, 0.10);
-  }
-
-  .mentor-highlight {
-    display: inline-block;
-    margin-top: 0.8rem;
-    padding: 0.75rem 1rem;
-    border-radius: 16px;
-    background: linear-gradient(90deg, rgba(37,99,235,0.10), rgba(124,58,237,0.10));
-    border: 1px solid rgba(37,99,235,0.14);
-    color: #0f172a;
-    font-weight: 650;
-  }
-
-  .mentor-columns {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
-  }
-
-  .mentor-divider {
-    height: 1px;
-    border: none;
-    margin: 2rem 0 1rem 0;
-    background: linear-gradient(to right, transparent, rgba(148,163,184,0.5), transparent);
-  }
-
-  @media (min-width: 980px) {
-    .mentor-columns.two {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-
-  @keyframes mentorGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-  @keyframes mentorFloat {
-    0% { transform: translateY(0px) translateX(0px); }
-    50% { transform: translateY(18px) translateX(8px); }
-    100% { transform: translateY(0px) translateX(0px); }
-  }
-
-  @keyframes mentorFadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(18px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes mentorPop {
-    from {
-      opacity: 0;
-      transform: scale(0.92);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .mentor-hero,
-    .mentor-hero::before,
-    .mentor-hero::after,
-    .mentor-card,
-    .mentor-badge {
-      animation: none !important;
-    }
-
-    .mentor-card,
-    .mentor-item,
-    .mentor-badge {
-      transition: none !important;
-    }
-  }
+@media (max-width: 760px) {
+  .mt-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .mt-tab:nth-child(3n) { border-right: 0; }
+  .mt-tab:nth-child(-n+3) { border-bottom: 1px solid var(--global-divider-color); }
+  .mt-tab .mt-n { font-size: 1.5rem; }
+  .mt-people { grid-template-columns: 1fr; }
+  .mt-person:nth-child(odd) { padding-right: 0; }
+  .mt-project { grid-template-columns: 1fr; gap: 0.6rem; }
+  .mt-list li { grid-template-columns: 1fr; gap: 0.2rem; }
+}
+@media (prefers-reduced-motion: reduce) { .mt-more summary::before { transition: none; } }
 </style>
 
-## <span class="mentor-section-title phd">PhD Students</span>
+<script>
+(function () {
+  var root = document.querySelector('.mt'); if (!root) return;
+  var tabs = root.querySelectorAll('.mt-tab'), secs = root.querySelectorAll('.mt-sec');
+  var q = root.querySelector('#mt-q'), count = root.querySelector('.mt-count'), empty = root.querySelector('.mt-empty');
+  var group = 'all';
+  // remember original text so search highlighting can be undone
+  root.querySelectorAll('.mt-item .mt-name, .mt-item .mt-topic, .mt-item .mt-ptitle, .mt-item .mt-chip').forEach(function (el) { el.dataset.orig = el.innerHTML; });
 
-<div class="mentor-grid">
-  <div class="mentor-card mentor-blue">
-    <h3>🎓 Doctoral Advising</h3>
-    <div class="mentor-subtitle">Current PhD mentees</div>
-
-    <div class="mentor-list">
-      <div class="mentor-item">
-        <div class="mentor-icon">🔹</div>
-        <div>
-          <div class="mentor-name">Md Zarif Hossain</div>
-          <div class="mentor-role">PhD Candidate</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">🔹</div>
-        <div>
-          <div class="mentor-name">Awal Ahmed Fime</div>
-          <div class="mentor-role">PhD Student</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">🔹</div>
-        <div>
-          <div class="mentor-name">Muftiqur Rahman Agni</div>
-          <div class="mentor-role">PhD Student</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">🔹</div>
-        <div>
-          <div class="mentor-name">Ebrahim (Nima) Maghsoudlou</div>
-          <div class="mentor-role">PhD Student, SIU Carbondale (Co-advised)</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mentor-highlight">
-      Mentoring doctoral researchers in advanced AI, secure learning systems, and next-generation multimodal intelligence.
-    </div>
-  </div>
-</div>
-
-<hr class="mentor-divider">
-
-## <span class="mentor-section-title ms">Graduated MS Thesis and Project Students</span>
-
-<div class="mentor-grid">
-  <div class="mentor-card mentor-purple">
-    <h3>📚 Master’s Student Mentorship</h3>
-    <div class="mentor-subtitle">Graduated thesis and project students</div>
-
-    <div class="mentor-list">
-      <div class="mentor-item">
-        <div class="mentor-icon">📘</div>
-        <div>
-          <div class="mentor-name">Dina Famouri</div>
-          <div class="mentor-topic">Human Activity Recognition with Keypoint Analysis</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">📘</div>
-        <div>
-          <div class="mentor-name">Oleksandr Jockusch</div>
-          <div class="mentor-topic">Federated Meta-Learning for Emotion and Sentiment-Aware Multi-modal Complaint Identification</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">📘</div>
-        <div>
-          <div class="mentor-name">Revathi Gajjala</div>
-          <div class="mentor-topic">Physics-Informed Neural Networks</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">📘</div>
-        <div>
-          <div class="mentor-name">Veerendra Reddy Ayaluri</div>
-          <div class="mentor-topic">Federated Learning Testbed for Mobile Agents</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">📘</div>
-        <div>
-          <div class="mentor-name">Sai Sandhiptha Bayya</div>
-          <div class="mentor-topic">Ensuring Fairness in Federated Learning for Healthcare Systems</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">📘</div>
-        <div>
-          <div class="mentor-name">Mark Sidhom</div>
-          <div class="mentor-topic">Fine-Tuned LLM for Healthcare</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">📘</div>
-        <div>
-          <div class="mentor-name">Prince Duo</div>
-          <div class="mentor-topic">Hallucination Attacks and Impacts on Large-Language Models</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">📘</div>
-        <div>
-          <div class="mentor-name">Venkata Gnana Prakash Paruchuri</div>
-          <div class="mentor-topic">Topic Modeling on Research Articles using BERT</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">📘</div>
-        <div>
-          <div class="mentor-name">Gireesh Nadh Mekala</div>
-          <div class="mentor-topic">Road Traffic Prediction using Federated Learning</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">📘</div>
-        <div>
-          <div class="mentor-name">Srivatsa Tangirala</div>
-          <div class="mentor-topic">Poisoning Attacks in Federated Learning using GANs</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">📘</div>
-        <div>
-          <div class="mentor-name">Madhu Nimeshika Dasika</div>
-          <div class="mentor-topic">Skin Cancer Classification using Transfer Learning</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">📘</div>
-        <div>
-          <div class="mentor-name">Wasimuddin Fathimullah</div>
-          <div class="mentor-topic">Intrusion Detection with Federated Reinforcement Learning</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mentor-badges">
-      <span class="mentor-badge">AI Research Mentorship</span>
-      <span class="mentor-badge">Thesis Supervision</span>
-      <span class="mentor-badge">Project Advising</span>
-      <span class="mentor-badge">Applied Machine Learning</span>
-    </div>
-  </div>
-</div>
-
-<hr class="mentor-divider">
-
-## <span class="mentor-section-title ug">Undergraduate Research Students</span>
-
-<div class="mentor-grid">
-  <div class="mentor-card mentor-green">
-    <h3>🧪 Undergraduate Research Mentorship</h3>
-    <div class="mentor-subtitle">Student researchers engaged in advanced AI projects</div>
-
-    <div class="mentor-list">
-      <div class="mentor-item">
-        <div class="mentor-icon">🌱</div>
-        <div>
-          <div class="mentor-name">Nadia D Lafontant</div>
-          <div class="mentor-topic">Resource-Efficient Fine-Tuning of Vision-Language Models</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">🌱</div>
-        <div>
-          <div class="mentor-name">Shelly Abramov</div>
-          <div class="mentor-topic">Undergraduate Researcher (CRA REU)</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">🌱</div>
-        <div>
-          <div class="mentor-name">Thomas Zemen</div>
-          <div class="mentor-topic">Alumnus — now Software Engineer, Mastercard</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">🌱</div>
-        <div>
-          <div class="mentor-name">Thomas Boyd</div>
-          <div class="mentor-topic">Alumnus — now Machine Learning Operations Developer, Coapt</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">🌱</div>
-        <div>
-          <div class="mentor-name">Ian Tudor</div>
-          <div class="mentor-topic">Drone Swarming, Distributed Streaming, and Learning</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mentor-highlight">
-      Supporting undergraduate researchers through hands-on projects in efficient AI, distributed systems, and emerging multimodal technologies.
-    </div>
-  </div>
-</div>
-
-<hr class="mentor-divider">
-
-## <span class="mentor-section-title program">Program Mentorship</span>
-
-<div class="mentor-columns two">
-  <div class="mentor-card mentor-orange">
-    <h3>🧑‍🏫 NSF-DoD REU Site Mentor</h3>
-    <div class="mentor-subtitle">Research Experiences for Undergraduates</div>
-
-    <div class="mentor-list">
-      <div class="mentor-item">
-        <div class="mentor-icon">⭐</div>
-        <div>
-          <div class="mentor-name">Raghad Alabagi</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">⭐</div>
-        <div>
-          <div class="mentor-name">Meileik Hyman</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="mentor-card mentor-orange">
-    <h3>🏫 NSF-DoD RET Site Mentor</h3>
-    <div class="mentor-subtitle">Research Experiences for Teachers</div>
-
-    <div class="mentor-list">
-      <div class="mentor-item">
-        <div class="mentor-icon">⭐</div>
-        <div>
-          <div class="mentor-name">Marisa Behar</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">⭐</div>
-        <div>
-          <div class="mentor-name">Yoandra Abad</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<hr class="mentor-divider">
-
-## <span class="mentor-section-title community">Recognition and Community Projects</span>
-
-<div class="mentor-grid">
-  <div class="mentor-card mentor-pink">
-    <h3>📰 Recognition and Broader Mentoring Engagement</h3>
-    <div class="mentor-subtitle">Community-connected and collaborative mentoring efforts</div>
-
-    <div class="mentor-list">
-      <div class="mentor-item">
-        <div class="mentor-icon">📰</div>
-        <div>
-          <div class="mentor-name">Featured in FIU CEC News and KFSCIS News</div>
-          <div class="mentor-topic"><a href="#">View coverage</a></div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">🤝</div>
-        <div>
-          <div class="mentor-name">Mentor of FIU Thrive ML Team</div>
-          <div class="mentor-topic">Part of the Green Family Foundation Neighborhood Health Education Learning Program (NeighborhoodHELP)</div>
-        </div>
-      </div>
-
-      <div class="mentor-item">
-        <div class="mentor-icon">💡</div>
-        <div>
-          <div class="mentor-name">Collaborative AI-Driven Health Research Project</div>
-          <div class="mentor-topic">Funded by the Florida Department of Health in Miami-Dade</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mentor-badges">
-      <span class="mentor-badge">Student Development</span>
-      <span class="mentor-badge">Research Leadership</span>
-      <span class="mentor-badge">Community Engagement</span>
-      <span class="mentor-badge">Collaborative Mentoring</span>
-    </div>
-  </div>
-</div>
+  function esc(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+  function apply() {
+    var term = (q.value || '').trim().toLowerCase(), shown = 0;
+    secs.forEach(function (sec) {
+      var inGroup = group === 'all' || sec.dataset.g === group, any = false;
+      sec.querySelectorAll('.mt-item').forEach(function (it) {
+        it.querySelectorAll('[data-orig]').forEach(function (el) { el.innerHTML = el.dataset.orig; });
+        var hit = !term || it.textContent.toLowerCase().indexOf(term) > -1;
+        it.hidden = !(inGroup && hit);
+        if (!it.hidden) {
+          any = true; shown++;
+          if (term) it.querySelectorAll('[data-orig]').forEach(function (el) {
+            if (el.children.length && !el.classList.contains('mt-topic')) return;
+            el.innerHTML = el.innerHTML.replace(new RegExp('(' + esc(term) + ')(?![^<]*>)', 'ig'), '<mark>$1</mark>');
+          });
+        }
+      });
+      sec.hidden = !any;
+    });
+    count.textContent = term ? shown + (shown === 1 ? ' match' : ' matches') : '';
+    empty.hidden = shown > 0;
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      group = t.dataset.f;
+      tabs.forEach(function (x) { var on = x === t; x.classList.toggle('is-on', on); x.setAttribute('aria-selected', on); });
+      try { history.replaceState(null, '', group === 'all' ? location.pathname : '#' + group); } catch (e) {}
+      apply();
+    });
+  });
+  q.addEventListener('input', apply);
+  var h = location.hash.slice(1);
+  var start = Array.prototype.find.call(tabs, function (t) { return t.dataset.f === h; });
+  if (start) start.click();
+})();
+</script>

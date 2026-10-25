@@ -7,427 +7,134 @@ nav_order: 5
 description: ""
 ---
 
+{% assign t = site.data.teaching %}
+
+<div class="tc">
+
+  <div class="tc-courses" role="group" aria-label="Highlight terms by course">
+    {% for c in t.courses %}
+      {% assign key = c[0] %}{% assign n = 0 %}
+      {% for term in t.terms %}{% if term.courses contains key %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}
+      <button class="tc-course" data-c="{{ key }}" aria-pressed="false">
+        <span class="tc-cname">{{ c[1] }}</span>
+        <span class="tc-ccount">{% if n == 1 %}1 term{% else %}{{ n }} terms{% endif %}</span>
+      </button>
+    {% endfor %}
+  </div>
+  <p class="tc-hint" aria-live="polite">Select a course to highlight the terms it was taught.</p>
+
+  {% for s in t.schools %}
+  {% assign sk = s[0] %}
+  <section class="tc-school">
+    <h2 class="tc-h2">{{ s[1] }}{% if sk == "fau" %}<span class="tc-now">Current</span>{% endif %}</h2>
+    <ol class="tc-timeline">
+      {% for term in t.terms %}{% if term.school == sk %}
+      <li class="tc-term" data-c="{{ term.courses | join: ' ' }}">
+        <div class="tc-when">{{ term.term }}</div>
+        <div class="tc-what">
+          {% for k in term.courses %}<span class="tc-pill" data-c="{{ k }}">{{ t.courses[k] }}</span>{% endfor %}
+          {% if term.note %}<div class="tc-note">{{ term.note }}</div>{% endif %}
+        </div>
+      </li>
+      {% endif %}{% endfor %}
+    </ol>
+  </section>
+  {% endfor %}
+
+  <section class="tc-school">
+    <h2 class="tc-h2">Courses developed</h2>
+    <ul class="tc-dev">
+      {% for d in t.developed %}
+      <li><span class="tc-devtitle">{{ d.title }}</span><span class="tc-devdetail">{{ d.detail }}</span></li>
+      {% endfor %}
+    </ul>
+  </section>
+
+  <section class="tc-school">
+    <h2 class="tc-h2">Teaching recognition</h2>
+    <div class="tc-award">
+      <div class="tc-awardyear">2024</div>
+      <div>
+        <div class="tc-devtitle">Outstanding Teacher of the Year Award</div>
+        <p>School of Computing, Southern Illinois University Carbondale. For dedication to teaching excellence, student mentorship and curriculum innovation, including the development of modern AI-focused coursework.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
 <style>
-  .teach-hero {
-    position: relative;
-    overflow: hidden;
-    padding: 2.4rem 2rem;
-    border-radius: 24px;
-    margin-bottom: 2rem;
-    color: white;
-    background: linear-gradient(-45deg, #0f172a, #2563eb, #0ea5e9, #14b8a6);
-    background-size: 400% 400%;
-    animation: teachGradient 12s ease infinite;
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
-  }
+.tc { max-width: 980px; margin: 0 auto; }
 
-  .teach-hero::before,
-  .teach-hero::after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(40px);
-    opacity: 0.28;
-    pointer-events: none;
-  }
+.tc-courses { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 2px solid var(--global-text-color); border-bottom: 1px solid var(--global-divider-color); }
+.tc-course { all: unset; cursor: pointer; padding: 1rem 0.85rem 0.9rem; border-right: 1px solid var(--global-divider-color); display: flex; flex-direction: column; gap: 0.3rem; position: relative; }
+.tc-course:last-child { border-right: 0; }
+.tc-cname { font-weight: 700; font-size: 0.98rem; line-height: 1.3; color: var(--global-text-color); }
+.tc-ccount { font-size: 0.85rem; color: var(--global-text-color-light); font-variant-numeric: tabular-nums; }
+.tc-course:hover .tc-cname { color: var(--global-theme-color); }
+.tc-course[aria-pressed="true"]::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--global-theme-color); }
+.tc-course[aria-pressed="true"] .tc-cname, .tc-course[aria-pressed="true"] .tc-ccount { color: var(--global-theme-color); }
+.tc-course:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: -2px; }
+.tc-hint { font-size: 0.88rem; color: var(--global-text-color-light); margin: 0.7rem 0 0; min-height: 1.4em; }
 
-  .teach-hero::before {
-    width: 220px;
-    height: 220px;
-    background: rgba(255,255,255,0.20);
-    top: -70px;
-    right: -50px;
-    animation: teachFloat 9s ease-in-out infinite;
-  }
+.tc-school { padding-top: 2rem; }
+.tc-h2 { font-size: 1.35rem; font-weight: 700; margin: 0 0 0.3rem; padding-bottom: 0.7rem; border-bottom: 1px solid var(--global-text-color); display: flex; align-items: baseline; gap: 0.8rem; }
+.tc-now { font-size: 0.78rem; font-weight: 700; color: var(--global-theme-color); border: 1px solid var(--global-theme-color); border-radius: 4px; padding: 0.1rem 0.5rem; }
 
-  .teach-hero::after {
-    width: 180px;
-    height: 180px;
-    background: rgba(255,255,255,0.14);
-    bottom: -50px;
-    left: -40px;
-    animation: teachFloat 11s ease-in-out infinite reverse;
-  }
+.tc-timeline { list-style: none; margin: 0; padding: 0; position: relative; }
+.tc-timeline::before { content: ""; position: absolute; left: 140px; top: 0; bottom: 0; width: 1px; background: var(--global-divider-color); }
+.tc-term { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 1.6rem; padding: 0.95rem 0; position: relative; transition: opacity 0.2s ease; }
+.tc-term::before { content: ""; position: absolute; left: 136px; top: 1.35rem; width: 9px; height: 9px; border-radius: 50%; background: var(--global-bg-color); border: 2px solid var(--global-text-color-light); transition: background 0.2s ease, border-color 0.2s ease; }
+.tc-when { font-weight: 700; font-variant-numeric: tabular-nums; color: var(--global-text-color); padding-top: 0.15rem; }
+.tc-what { display: flex; flex-wrap: wrap; gap: 0.45rem; align-items: center; padding-left: 0.4rem; }
+.tc-pill { font-size: 0.92rem; padding: 0.25rem 0.75rem; border: 1px solid var(--global-divider-color); border-radius: 6px; color: var(--global-text-color); transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease; }
+.tc-note { flex-basis: 100%; font-size: 0.85rem; color: var(--global-text-color-light); }
 
-  .teach-hero h1 {
-    margin: 0 0 0.75rem 0;
-    font-size: 2.3rem;
-    color: white;
-  }
+/* highlight state */
+.tc.is-filtering .tc-term { opacity: 0.35; }
+.tc.is-filtering .tc-term.is-hit { opacity: 1; }
+.tc.is-filtering .tc-term.is-hit::before { background: var(--global-theme-color); border-color: var(--global-theme-color); }
+.tc-pill.is-hit { background: var(--global-theme-color); border-color: var(--global-theme-color); color: #fff; }
 
-  .teach-hero p {
-    margin: 0;
-    max-width: 860px;
-    line-height: 1.8;
-    font-size: 1.04rem;
-    color: rgba(255,255,255,0.95);
-  }
+.tc-dev { list-style: none; margin: 0; padding: 0; }
+.tc-dev li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.5rem; padding: 0.95rem 0; border-bottom: 1px solid var(--global-divider-color); }
+.tc-devtitle { font-weight: 700; color: var(--global-text-color); }
+.tc-devdetail { color: var(--global-text-color-light); font-size: 0.93rem; line-height: 1.5; }
 
-  .teach-section-title {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    font-size: 1.65rem;
-    font-weight: 800;
-    letter-spacing: 0.2px;
-  }
+.tc-award { display: grid; grid-template-columns: 140px minmax(0, 1fr); gap: 1.6rem; padding: 1.1rem 0; }
+.tc-awardyear { font-size: 1.6rem; font-weight: 700; color: var(--global-theme-color); line-height: 1.1; }
+.tc-award p { margin: 0.35rem 0 0; line-height: 1.65; max-width: 68ch; color: var(--global-text-color); }
 
-  .teach-section-title.current { color: #1d4ed8; }
-  .teach-section-title.previous { color: #7c3aed; }
-  .teach-section-title.developed { color: #059669; }
-  .teach-section-title.recognition { color: #ea580c; }
-
-  .teach-grid {
-    display: grid;
-    gap: 1.2rem;
-  }
-
-  .teach-card {
-    position: relative;
-    overflow: hidden;
-    padding: 1.35rem 1.35rem 1.2rem 1.35rem;
-    border-radius: 20px;
-    background: rgba(255,255,255,0.94);
-    border: 1px solid rgba(255,255,255,0.55);
-    box-shadow: 0 10px 28px rgba(15, 23, 42, 0.07);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-    animation: teachFadeUp 0.8s ease both;
-  }
-
-  .teach-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 18px 36px rgba(15, 23, 42, 0.12);
-  }
-
-  .teach-card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 0.35s ease;
-    background: linear-gradient(135deg, rgba(255,255,255,0.22), rgba(255,255,255,0.04));
-    pointer-events: none;
-  }
-
-  .teach-card:hover::before {
-    opacity: 1;
-  }
-
-  .teach-blue { border-left: 6px solid #2563eb; background: linear-gradient(180deg, #f8fbff, #eef6ff); }
-  .teach-purple { border-left: 6px solid #7c3aed; background: linear-gradient(180deg, #fcfaff, #f4efff); }
-  .teach-green { border-left: 6px solid #059669; background: linear-gradient(180deg, #f6fff9, #ebfff5); }
-  .teach-orange { border-left: 6px solid #ea580c; background: linear-gradient(180deg, #fff9f4, #fff1e8); }
-
-  .teach-card h3 {
-    margin-top: 0;
-    margin-bottom: 0.35rem;
-    font-size: 1.05rem;
-    font-weight: 750;
-    color: #0f172a;
-  }
-
-  .teach-subtitle {
-    font-size: 0.92rem;
-    font-weight: 650;
-    color: #475569;
-    margin-bottom: 0.8rem;
-  }
-
-  .teach-card p {
-    margin: 0.45rem 0;
-    color: #334155;
-    line-height: 1.75;
-  }
-
-  .teach-course-list {
-    display: grid;
-    gap: 0.75rem;
-    margin-top: 0.8rem;
-  }
-
-  .teach-course-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.8rem;
-    padding: 0.9rem 1rem;
-    border-radius: 14px;
-    background: rgba(255,255,255,0.72);
-    border: 1px solid rgba(148,163,184,0.16);
-    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.04);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .teach-course-item:hover {
-    transform: translateX(4px);
-    box-shadow: 0 10px 18px rgba(15, 23, 42, 0.08);
-  }
-
-  .teach-icon {
-    font-size: 1.05rem;
-    line-height: 1.5;
-    margin-top: 0.08rem;
-  }
-
-  .teach-course-meta {
-    min-width: 135px;
-    font-weight: 750;
-    color: #1e3a8a;
-  }
-
-  .teach-course-text {
-    color: #0f172a;
-    line-height: 1.65;
-  }
-
-  .teach-badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.65rem;
-    margin-top: 1rem;
-  }
-
-  .teach-badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 0.55rem 0.95rem;
-    border-radius: 999px;
-    background: rgba(255,255,255,0.82);
-    color: #0f172a;
-    font-size: 0.93rem;
-    font-weight: 700;
-    border: 1px solid rgba(148,163,184,0.18);
-    box-shadow: 0 6px 14px rgba(15, 23, 42, 0.05);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    animation: teachPop 0.6s ease both;
-  }
-
-  .teach-badge:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 18px rgba(15, 23, 42, 0.10);
-  }
-
-  .teach-highlight {
-    display: inline-block;
-    margin-top: 0.7rem;
-    padding: 0.72rem 1rem;
-    border-radius: 16px;
-    background: linear-gradient(90deg, rgba(37,99,235,0.10), rgba(14,165,233,0.10));
-    border: 1px solid rgba(37,99,235,0.14);
-    color: #0f172a;
-    font-weight: 650;
-  }
-
-  .teach-divider {
-    height: 1px;
-    border: none;
-    margin: 2rem 0 1rem 0;
-    background: linear-gradient(to right, transparent, rgba(148,163,184,0.5), transparent);
-  }
-
-  @keyframes teachGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-  @keyframes teachFloat {
-    0% { transform: translateY(0px) translateX(0px); }
-    50% { transform: translateY(18px) translateX(8px); }
-    100% { transform: translateY(0px) translateX(0px); }
-  }
-
-  @keyframes teachFadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(18px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes teachPop {
-    from {
-      opacity: 0;
-      transform: scale(0.92);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
-
-  @media (max-width: 720px) {
-    .teach-course-item {
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    .teach-course-meta {
-      min-width: unset;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .teach-hero,
-    .teach-hero::before,
-    .teach-hero::after,
-    .teach-card,
-    .teach-badge {
-      animation: none !important;
-    }
-
-    .teach-card,
-    .teach-course-item,
-    .teach-badge {
-      transition: none !important;
-    }
-  }
+@media (max-width: 760px) {
+  .tc-courses { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .tc-course { border-bottom: 1px solid var(--global-divider-color); }
+  .tc-course:nth-child(2n) { border-right: 0; }
+  .tc-timeline::before { left: 4px; }
+  .tc-term { grid-template-columns: 1fr; gap: 0.4rem; padding-left: 1.5rem; }
+  .tc-term::before { left: 0; }
+  .tc-what { padding-left: 0; }
+  .tc-dev li { grid-template-columns: 1fr; gap: 0.2rem; }
+  .tc-award { grid-template-columns: 1fr; gap: 0.3rem; }
+}
+@media (prefers-reduced-motion: reduce) { .tc-term, .tc-term::before, .tc-pill { transition: none; } }
 </style>
 
-## <span class="teach-section-title current">Current and Upcoming Teaching</span>
-
-<div class="teach-grid">
-  <div class="teach-card teach-blue">
-    <h3>📍 Florida Atlantic University</h3>
-    <div class="teach-subtitle">Current instructional portfolio</div>
-
-    <div class="teach-course-list">
-      <div class="teach-course-item">
-        <div class="teach-icon">🧠</div>
-        <div class="teach-course-meta">Fall 2025</div>
-        <div class="teach-course-text"><strong>Artificial Intelligence</strong></div>
-      </div>
-
-      <div class="teach-course-item">
-        <div class="teach-icon">🤖</div>
-        <div class="teach-course-meta">Spring 2026</div>
-        <div class="teach-course-text"><strong>Artificial Intelligence</strong></div>
-      </div>
-
-      <div class="teach-course-item">
-        <div class="teach-icon">✨</div>
-        <div class="teach-course-meta">Fall 2026</div>
-        <div class="teach-course-text"><strong>Large Language Models</strong> <span style="color:#7c3aed; font-weight:700;">| New course</span></div>
-      </div>
-    </div>
-
-    <div class="teach-highlight">
-      Focused on building strong foundations in modern AI while expanding advanced offerings in emerging areas.
-    </div>
-  </div>
-</div>
-
-<hr class="teach-divider">
-
-## <span class="teach-section-title previous">Courses Previously Taught</span>
-
-<div class="teach-grid">
-  <div class="teach-card teach-purple">
-    <h3>📚 Southern Illinois University Carbondale</h3>
-    <div class="teach-subtitle">Previous teaching experience across core and emerging AI areas</div>
-
-    <div class="teach-course-list">
-      <div class="teach-course-item">
-        <div class="teach-icon">📘</div>
-        <div class="teach-course-meta">Fall 2022</div>
-        <div class="teach-course-text"><strong>Machine Learning & Soft Computing</strong></div>
-      </div>
-
-      <div class="teach-course-item">
-        <div class="teach-icon">🧠</div>
-        <div class="teach-course-meta">Spring 2023</div>
-        <div class="teach-course-text"><strong>Artificial Intelligence</strong></div>
-      </div>
-
-      <div class="teach-course-item">
-        <div class="teach-icon">📗</div>
-        <div class="teach-course-meta">Fall 2023</div>
-        <div class="teach-course-text"><strong>Machine Learning & Soft Computing</strong></div>
-      </div>
-
-      <div class="teach-course-item">
-        <div class="teach-icon">💻</div>
-        <div class="teach-course-meta">Spring 2024</div>
-        <div class="teach-course-text"><strong>Data Structures and Artificial Intelligence</strong></div>
-      </div>
-
-      <div class="teach-course-item">
-        <div class="teach-icon">⚡</div>
-        <div class="teach-course-meta">Summer 2024</div>
-        <div class="teach-course-text"><strong>Generative AI</strong> <span style="color:#475569;">| CS Department</span></div>
-      </div>
-
-      <div class="teach-course-item">
-        <div class="teach-icon">📘</div>
-        <div class="teach-course-meta">Fall 2024</div>
-        <div class="teach-course-text"><strong>Machine Learning & Soft Computing</strong></div>
-      </div>
-
-      <div class="teach-course-item">
-        <div class="teach-icon">🚀</div>
-        <div class="teach-course-meta">Spring 2025</div>
-        <div class="teach-course-text">
-          <strong>Artificial Intelligence, Data Structures, and Generative AI</strong><br>
-          <span style="color:#7c3aed; font-weight:650;">Interdisciplinary Undergraduate Course</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<hr class="teach-divider">
-
-## <span class="teach-section-title developed">Courses Developed</span>
-
-<div class="teach-grid">
-  <div class="teach-card teach-green">
-    <h3>🛠️ Curriculum Development</h3>
-    <div class="teach-subtitle">Designed new course offerings in rapidly growing AI domains</div>
-
-    <div class="teach-course-list">
-      <div class="teach-course-item">
-        <div class="teach-icon">🌟</div>
-        <div class="teach-course-text">
-          <strong>CS491-955: Generative Artificial Intelligence</strong><br>
-          <span style="color:#475569;">Offered Summer 2024 | CS Department</span>
-        </div>
-      </div>
-
-      <div class="teach-course-item">
-        <div class="teach-icon">🎓</div>
-        <div class="teach-course-text">
-          <strong>Generative AI: Computing and Ethical Perspectives</strong><br>
-          <span style="color:#475569;">Offered Spring 2025 | University Honors Program</span>
-        </div>
-      </div>
-    </div>
-
-    <div class="teach-badges">
-      <span class="teach-badge">Curriculum Innovation</span>
-      <span class="teach-badge">Emerging AI Topics</span>
-      <span class="teach-badge">Interdisciplinary Teaching</span>
-      <span class="teach-badge">New Course Design</span>
-    </div>
-  </div>
-</div>
-
-<hr class="teach-divider">
-
-## <span class="teach-section-title recognition">Teaching Recognition</span>
-
-<div class="teach-grid">
-  <div class="teach-card teach-orange">
-    <h3>🏆 Outstanding Teacher of the Year Award</h3>
-    <div class="teach-subtitle">Southern Illinois University School of Computing | 2024</div>
-
-    <p>
-      Honored to receive the <strong>Outstanding Teacher of the Year Award</strong> for dedication to teaching excellence,
-      student mentorship, and curriculum innovation.
-    </p>
-
-    <div class="teach-highlight">
-      Recognized for impactful instruction, student-centered mentoring, and continued development of modern AI-focused coursework.
-    </div>
-  </div>
-</div>
+<script>
+(function () {
+  var root = document.querySelector('.tc'); if (!root) return;
+  var btns = root.querySelectorAll('.tc-course'), hint = root.querySelector('.tc-hint');
+  var defaultHint = hint.textContent;
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      var on = b.getAttribute('aria-pressed') !== 'true', key = b.dataset.c;
+      btns.forEach(function (x) { x.setAttribute('aria-pressed', x === b && on ? 'true' : 'false'); });
+      root.classList.toggle('is-filtering', on);
+      root.querySelectorAll('.tc-term').forEach(function (term) {
+        term.classList.toggle('is-hit', on && term.dataset.c.split(' ').indexOf(key) > -1);
+      });
+      root.querySelectorAll('.tc-pill').forEach(function (p) { p.classList.toggle('is-hit', on && p.dataset.c === key); });
+      hint.textContent = on ? b.querySelector('.tc-cname').textContent + ': taught in ' + b.querySelector('.tc-ccount').textContent + '. Select it again to clear.' : defaultHint;
+    });
+  });
+})();
+</script>

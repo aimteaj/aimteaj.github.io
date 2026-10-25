@@ -133,6 +133,14 @@ description: ""
   <h2 class="ga-h2 ga-h2--next">Honors and distinctions</h2>
 
   <article class="ga-row">
+    <div class="ga-meta"><div class="ga-yearbig">2023–2026</div></div>
+    <div class="ga-body">
+      <h3 class="ga-title">Stanford University World's Top 2% Scientists</h3>
+      <p>Listed in the Stanford–Elsevier ranking of the world's top 2% scientists for impactful research contributions and global scientific influence, in 2023, 2024, 2025 and 2026.</p>
+    </div>
+  </article>
+
+  <article class="ga-row">
     <div class="ga-meta"><div class="ga-yearbig">2024</div></div>
     <div class="ga-body">
       <h3 class="ga-title">Outstanding Teacher of the Year Award</h3>
@@ -153,10 +161,34 @@ description: ""
   </article>
 
   <article class="ga-row">
+    <div class="ga-meta"><div class="ga-yearbig">2022</div></div>
+    <div class="ga-body">
+      <h3 class="ga-title">Outstanding Student Life Award: Graduate Scholar of the Year</h3>
+      <p>Florida International University. A university-wide award from the Division of Academic and Student Affairs, recognizing exceptional scholarly achievement, leadership and contributions to the graduate student community.</p>
+    </div>
+  </article>
+
+  <article class="ga-row">
+    <div class="ga-meta"><div class="ga-yearbig">2021</div></div>
+    <div class="ga-body">
+      <h3 class="ga-title">Best Graduate Student in Research Award</h3>
+      <p>Knight Foundation School of Computing and Information Sciences, Florida International University. Recognizes the top graduate researcher for outstanding research productivity and scholarly contributions.</p>
+    </div>
+  </article>
+
+  <article class="ga-row">
+    <div class="ga-meta"><div class="ga-yearbig">2021</div></div>
+    <div class="ga-body">
+      <h3 class="ga-title">Second Place, Graduate Student Scholarly Forum</h3>
+      <p>Florida International University. Awarded for the Ph.D. research "Lightweight Federated Learning Framework for Resource Constrained IoT Environment."</p>
+    </div>
+  </article>
+
+  <article class="ga-row">
     <div class="ga-meta"><div class="ga-yearbig ga-yearbig--muted">FIU</div></div>
     <div class="ga-body">
       <h3 class="ga-title">University-Wide Outstanding Master's Degree Graduate Award</h3>
-      <p>Presented to one master's graduate in recognition of exceptional academic achievement, impactful research and dedicated service.</p>
+      <p>Florida International University. Presented to one master's graduate, the top graduate across all engineering and science departments, in recognition of exceptional academic achievement, impactful research and dedicated service.</p>
     </div>
   </article>
 
@@ -164,7 +196,7 @@ description: ""
     <div class="ga-meta"><div class="ga-yearbig">2019</div></div>
     <div class="ga-body">
       <h3 class="ga-title">Best Paper Award, CSCI 2019</h3>
-      <p>For research on distributed IoT sensing and federated learning, focused on scalable, privacy-preserving distributed learning.</p>
+      <p>IEEE Conference on Computational Science and Computational Intelligence. For research on distributed IoT sensing and federated learning, focused on scalable, privacy-preserving distributed learning.</p>
     </div>
   </article>
 
