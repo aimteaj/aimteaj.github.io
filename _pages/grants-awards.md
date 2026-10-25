@@ -85,6 +85,19 @@ description: ""
   <article class="ga-row">
     <div class="ga-meta">
       <div class="ga-sponsor">National Science Foundation</div>
+      <div class="ga-program">ACCESS Explore allocation (CIS262111)</div>
+      <div class="ga-role">PI</div>
+      <div class="ga-amount">200,000 credits</div>
+    </div>
+    <div class="ga-body">
+      <h3 class="ga-title">Adaptive Latent Steering for Reliable and Grounded Vision-Language Models</h3>
+      <p>Provides 1,500 GPU hours on NCSA DeltaAI, October 2026 through October 2027, for research on steering vision-language models toward reliable, visually grounded outputs.</p>
+    </div>
+  </article>
+
+  <article class="ga-row">
+    <div class="ga-meta">
+      <div class="ga-sponsor">National Science Foundation</div>
       <div class="ga-program">NAIRR Pilot Classroom, Prototype National Research Platform (PNRP)</div>
       <div class="ga-role">PI</div>
       <div class="ga-amount ga-year">2026–2027</div>
@@ -95,19 +108,6 @@ description: ""
       <div class="ga-links">
         <a href="https://nairrpilot.org/projects/awarded?_requestNumber=NAIRR260482" target="_blank" rel="noopener">View NAIRR project NAIRR260482</a>
       </div>
-    </div>
-  </article>
-
-  <article class="ga-row">
-    <div class="ga-meta">
-      <div class="ga-sponsor">National Science Foundation</div>
-      <div class="ga-program">ACCESS Explore allocation (CIS262111)</div>
-      <div class="ga-role">PI</div>
-      <div class="ga-amount">200,000 credits</div>
-    </div>
-    <div class="ga-body">
-      <h3 class="ga-title">Adaptive Latent Steering for Reliable and Grounded Vision-Language Models</h3>
-      <p>Provides 1,500 GPU hours on NCSA DeltaAI, October 2026 through October 2027, for research on steering vision-language models toward reliable, visually grounded outputs.</p>
     </div>
   </article>
 
