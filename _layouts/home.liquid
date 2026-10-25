@@ -34,10 +34,11 @@ layout: default
   <section class="hm-sec hm-hl">
     <h2 class="hm-h2">2026 at top AI venues</h2>
     {% assign n_astar = hl | where: "rank", "CORE A*" | size %}
+    {% assign n_q1 = hl | where: "rank", "Q1 Journal" | size %}
     {% assign hl_venues = hl | map: "venue" | uniq %}
     <p class="hm-hl-sub">
       <span class="hm-hl-big">{{ hl.size }}</span>
-      <span class="hm-hl-line"><strong>SPEED Lab papers in 2026</strong>, {{ n_astar }} of them at <strong class="hm-hl-astar">CORE A*</strong> venues, across
+      <span class="hm-hl-line"><strong>SPEED Lab papers in 2026</strong>, {{ n_astar }} of them at <strong class="hm-hl-astar">CORE A*</strong> venues and {{ n_q1 }} in <strong class="hm-hl-q1">Q1 journals</strong>, across
         {% for v in hl_venues %}{% if v != "arXiv" %}<span class="hm-hl-vn" data-v="{{ v }}">{{ v | remove: " 2026" }}</span> {% endif %}{% endfor %}</span>
     </p>
     <div class="hm-hl-filters" role="group" aria-label="Filter highlights by venue">
@@ -201,6 +202,8 @@ html[data-theme="dark"] .hm-topic.is-on .hm-ti { color: #111827; }
 html[data-theme="dark"] .hm-hl-big { background-image: linear-gradient(135deg, #c4b5fd, #93c5fd 45%, #f9a8d4); }
 .hm-hl-line { min-width: 0; font-size: 1rem; line-height: 1.7; color: var(--global-text-color); }
 .hm-hl-astar { color: var(--global-theme-color); }
+.hm-hl-q1 { color: #15803d; }
+html[data-theme="dark"] .hm-hl-q1 { color: #86efac; }
 .hm-hl-vn { font-weight: 700; color: var(--vc); white-space: nowrap; }
 .hm-hl-vn:not(:last-of-type)::after { content: "·"; color: var(--global-text-color-light); font-weight: 400; margin: 0 0.4rem; }
 .hm-hl-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.1rem; }
