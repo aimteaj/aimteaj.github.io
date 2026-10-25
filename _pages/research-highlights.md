@@ -23,11 +23,92 @@ nav_order: 3
     </div>
   </div>
 
+  {% assign lab = site.data.lab_projects %}
+
+  <!-- ===== Selected Research: Our latest work, in motion (mirrored from speedlab.network) ===== -->
+  <section class="lab-section">
+    <div class="lab-eyebrow">Selected Research</div>
+    <h2 class="lab-title">Our latest work, <em>in motion</em></h2>
+
+    <div class="teaser-grid">
+      {% for t in lab.latest %}
+      <article class="teaser-card">
+        <div class="teaser-media">
+          <video class="teaser-video" muted loop playsinline controls preload="none"
+                 poster="{{ site.baseurl }}/assets/img/lab-projects/{{ t.poster }}">
+            <source src="{{ site.baseurl }}/assets/video/{{ t.video }}" type="video/mp4">
+          </video>
+        </div>
+        <div class="teaser-body">
+          <div class="teaser-meta">
+            <span class="teaser-short">{{ t.short }}</span>
+            <span class="teaser-venue">{{ t.venue }}</span>
+          </div>
+          <h3 class="teaser-title">{{ t.title }}</h3>
+          <p class="teaser-subtitle">{{ t.subtitle }}</p>
+          <p class="teaser-desc">{{ t.description }}</p>
+          <div class="teaser-tags">
+            {% for tag in t.tags %}<span class="teaser-tag">{{ tag }}</span>{% endfor %}
+          </div>
+          {% if t.link != "" %}
+          <a href="{{ t.link }}" class="rh-btn teaser-link" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-globe"></i><span>Project Page</span>
+          </a>
+          {% endif %}
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <!-- ===== Ongoing Research: Projects in progress (mirrored from speedlab.network) ===== -->
+  <section class="lab-section">
+    <div class="lab-eyebrow">Ongoing Research</div>
+    <h2 class="lab-title">Projects in progress</h2>
+    <p class="lab-lead">Active projects across vision-language models, generative AI and safety-critical applications.</p>
+
+    <div class="ongoing-list">
+      {% for p in lab.ongoing %}
+      <article class="ongoing-row{% cycle '', ' is-flipped' %}">
+        <div class="ongoing-media">
+          <img src="{{ site.baseurl }}/assets/img/lab-projects/{{ p.image }}" alt="{{ p.title }}" loading="lazy">
+        </div>
+        <div class="ongoing-body">
+          <span class="status-pill"><span class="pulse-dot"></span> Ongoing</span>
+          <h3>{{ p.title }}</h3>
+          <p>{{ p.description }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+
+    <h3 class="lab-subhead">More projects</h3>
+    <div class="mini-grid">
+      {% for p in lab.more %}
+      <article class="mini-card">
+        <div class="mini-media">
+          <img src="{{ site.baseurl }}/assets/img/lab-projects/{{ p.image }}" alt="" loading="lazy">
+        </div>
+        <div class="mini-body">
+          <h4>{{ p.title }}</h4>
+          <p>{{ p.description }}</p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="lab-section lab-section--tight">
+    <div class="lab-eyebrow">Publications</div>
+    <h2 class="lab-title">Research highlights</h2>
+  </section>
+
   <div class="research-highlights">
     <div class="container">
 
       {% assign sorted_projects = site.data.research_highlights | sort: "importance" %}
       {% for project in sorted_projects %}
+      {% if project.teaser %}{% continue %}{% endif %}
       <div class="research-project">
 
         <div class="project-header">
@@ -62,7 +143,14 @@ nav_order: 3
 
         <div class="architecture-container-large">
           <div class="architecture-image-large">
+            {% if project.video %}
+            <video class="teaser-video architecture-img" muted loop playsinline controls preload="none"
+                   {% if project.image %}poster="{{ site.baseurl }}/assets/img/{{ project.image }}"{% endif %}>
+              <source src="{{ site.baseurl }}/assets/video/{{ project.video }}" type="video/mp4">
+            </video>
+            {% else %}
             <img src="{{ site.baseurl }}/assets/img/{{ project.image }}" alt="{{ project.image_alt }}" class="img-fluid architecture-img">
+            {% endif %}
           </div>
 
           <div class="architecture-caption-large">
@@ -496,4 +584,104 @@ nav_order: 3
     transition: none !important;
   }
 }
+
+/* ===== Lab sections: latest work (videos), ongoing projects, more projects ===== */
+.lab-section { margin: 2.6rem 0 1rem; }
+.lab-section--tight { margin: 2.8rem 0 0.6rem; }
+.lab-eyebrow {
+  font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #7c3aed; margin-bottom: 0.35rem;
+}
+.lab-title { font-size: 2rem; font-weight: 800; color: #0f172a; margin: 0 0 0.5rem; line-height: 1.2; }
+.lab-title em { font-style: italic; background: linear-gradient(90deg, #2563eb, #7c3aed); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.lab-lead { color: #475569; font-size: 1.05rem; margin: 0 0 1.4rem; max-width: 46rem; }
+.lab-subhead { font-size: 1.35rem; font-weight: 800; color: #0f172a; margin: 2.4rem 0 1rem; }
+
+.teaser-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.4rem; margin-top: 1.2rem; }
+.teaser-card {
+  display: flex; flex-direction: column; border-radius: 22px; overflow: hidden; background: #fff;
+  border: 1px solid rgba(15,23,42,0.08); box-shadow: 0 16px 36px rgba(15,23,42,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.teaser-card:hover { transform: translateY(-4px); box-shadow: 0 22px 44px rgba(37,99,235,0.14); }
+.teaser-media { background: #0b1020; aspect-ratio: 16 / 9; }
+.teaser-video { display: block; width: 100%; height: 100%; object-fit: cover; background: #0b1020; }
+.architecture-image-large .teaser-video { height: auto; border-radius: 16px; }
+.teaser-body { padding: 1.2rem 1.35rem 1.4rem; display: flex; flex-direction: column; gap: 0.55rem; flex: 1; }
+.teaser-meta { display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+.teaser-short { font-weight: 800; font-size: 0.85rem; color: #fff; background: linear-gradient(90deg, #2563eb, #7c3aed); padding: 0.25rem 0.7rem; border-radius: 999px; }
+.teaser-venue { font-weight: 700; font-size: 0.85rem; color: #1d4ed8; background: rgba(37,99,235,0.08); padding: 0.25rem 0.7rem; border-radius: 999px; }
+.teaser-title { font-size: 1.3rem; font-weight: 800; color: #0f172a; margin: 0.2rem 0 0; line-height: 1.3; }
+.teaser-subtitle { font-weight: 650; color: #334155; margin: 0; }
+.teaser-desc { color: #475569; margin: 0; line-height: 1.6; }
+.teaser-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; padding-top: 0.3rem; }
+.teaser-tag { font-size: 0.8rem; font-weight: 650; color: #0f766e; background: rgba(20,184,166,0.10); border: 1px solid rgba(20,184,166,0.18); padding: 0.2rem 0.6rem; border-radius: 999px; }
+.teaser-link { align-self: flex-start; margin-top: 0.4rem; }
+
+.ongoing-list { display: flex; flex-direction: column; gap: 1.6rem; }
+.ongoing-row {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 1.6rem; align-items: center;
+  background: #fff; border: 1px solid rgba(15,23,42,0.08); border-radius: 22px; padding: 1.2rem;
+  box-shadow: 0 12px 30px rgba(15,23,42,0.06);
+}
+.ongoing-row.is-flipped .ongoing-media { order: 2; }
+.ongoing-media img { width: 100%; border-radius: 16px; display: block; background: #f8fafc; }
+.ongoing-body h3 { font-size: 1.3rem; font-weight: 800; color: #0f172a; margin: 0.6rem 0 0.5rem; line-height: 1.3; }
+.ongoing-body p { color: #475569; line-height: 1.65; margin: 0; }
+.status-pill { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.8rem; font-weight: 800; color: #15803d; background: rgba(34,197,94,0.10); border: 1px solid rgba(34,197,94,0.22); padding: 0.25rem 0.7rem; border-radius: 999px; }
+.pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 0 rgba(34,197,94,0.6); animation: labPulse 1.8s infinite; }
+@keyframes labPulse { 0% { box-shadow: 0 0 0 0 rgba(34,197,94,0.55); } 70% { box-shadow: 0 0 0 8px rgba(34,197,94,0); } 100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); } }
+
+.mini-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem; }
+.mini-card { background: #fff; border: 1px solid rgba(15,23,42,0.08); border-radius: 18px; overflow: hidden; box-shadow: 0 10px 24px rgba(15,23,42,0.06); transition: transform 0.25s ease; }
+.mini-card:hover { transform: translateY(-3px); }
+.mini-media { aspect-ratio: 16 / 10; background: #f8fafc; overflow: hidden; }
+.mini-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mini-body { padding: 0.95rem 1.05rem 1.1rem; }
+.mini-body h4 { font-size: 1.02rem; font-weight: 800; color: #0f172a; margin: 0 0 0.4rem; line-height: 1.35; }
+.mini-body p { font-size: 0.92rem; color: #475569; margin: 0; line-height: 1.55; }
+
+html[data-theme="dark"] .lab-title, html[data-theme="dark"] .lab-subhead,
+html[data-theme="dark"] .teaser-title, html[data-theme="dark"] .ongoing-body h3,
+html[data-theme="dark"] .mini-body h4 { color: #f1f5f9; }
+html[data-theme="dark"] .lab-lead, html[data-theme="dark"] .teaser-desc,
+html[data-theme="dark"] .ongoing-body p, html[data-theme="dark"] .mini-body p { color: #cbd5e1; }
+html[data-theme="dark"] .teaser-subtitle { color: #e2e8f0; }
+html[data-theme="dark"] .teaser-card, html[data-theme="dark"] .ongoing-row,
+html[data-theme="dark"] .mini-card { background: #111827; border-color: rgba(148,163,184,0.18); }
+html[data-theme="dark"] .teaser-venue { color: #93c5fd; background: rgba(59,130,246,0.15); }
+html[data-theme="dark"] .teaser-tag { color: #5eead4; }
+html[data-theme="dark"] .status-pill { color: #86efac; }
+
+@media (max-width: 900px) {
+  .teaser-grid { grid-template-columns: 1fr; }
+  .mini-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ongoing-row { grid-template-columns: 1fr; }
+  .ongoing-row.is-flipped .ongoing-media { order: 0; }
+}
+@media (max-width: 560px) {
+  .mini-grid { grid-template-columns: 1fr; }
+  .lab-title { font-size: 1.6rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pulse-dot { animation: none; }
+  .teaser-card, .mini-card { transition: none; }
+}
 </style>
+
+<script>
+  // Play teaser videos (muted) only while on screen, so the page stays light.
+  (function () {
+    var vids = document.querySelectorAll(".teaser-video");
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce || !("IntersectionObserver" in window)) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var v = e.target;
+        if (e.isIntersecting) { v.preload = "auto"; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+        else if (!v.paused) { v.pause(); }
+      });
+    }, { threshold: 0.35 });
+    vids.forEach(function (v) { io.observe(v); });
+  })();
+</script>

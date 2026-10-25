@@ -13,11 +13,9 @@
     - name: "Project Page"
       url: "https://speedlab-git.github.io/HALS-Website/"
       icon: "fa-globe"
-    - name: "Teaser Video"
-      url: "https://www.speedlab.network"
-      icon: "fa-video"
   venue: "NeurIPS 2026 Main Track [CORE A*]"
   status: "Accepted"
+  teaser: true # shown as a teaser video in "Our Latest Work"
   importance: 0
 
 - title: "Do LVLMs Know When They Are Wrong? Trajectory-Based Correctness Estimation from a Single Forward Pass"
@@ -35,11 +33,9 @@
     - name: "Paper"
       url: "#"
       icon: "#"
-    - name: "Teaser Video"
-      url: "https://www.speedlab.network"
-      icon: "fa-video"
   venue: "EMNLP 2026 Main Conference [CORE A* | Ranked #2 in Computational Linguistics]"
   status: "Accepted"
+  teaser: true # shown as a teaser video in "Our Latest Work"
   importance: 1
 
 - title: "SLADE: Shielding against Dual Exploits in Large Vision-Language Models"
@@ -83,14 +79,12 @@
     - name: "Project Page"
       url: "https://speedlab-git.github.io/FAML-CVPR/"
       icon: "fa-globe"
-    - name: "Teaser Video"
-      url: "https://www.speedlab.network"
-      icon: "fa-video"
     - name: "Paper"
       url: "#"
       icon: "fa-file-powerpoint"
   venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 [Ranked #1 CS Conference]"
   status: "Published"
+  teaser: true # shown as a teaser video in "Our Latest Work"
   importance: 2
 
 - title: "Towards Trustworthy Autonomous Vehicles with Vision-Language Models Under Adversarial Attacks"

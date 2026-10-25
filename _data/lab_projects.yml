@@ -1,0 +1,82 @@
+# Mirrored from the SPEED Lab website (speedlab.network) home page.
+# latest  = "Selected Research — Our latest work, in motion" (teaser videos)
+# ongoing = "Ongoing Research — Projects in progress"; more = "More projects"
+
+latest:
+  - id: hals
+    short: "HALS"
+    venue: "NeurIPS 2026"
+    title: "Do Robust LVLMs Hallucinate More?"
+    subtitle: "Uncovering robustness-induced hallucination in large vision-language models"
+    description: "Adversarial robustness is usually treated as a pure win. We examine whether robustly fine-tuned LVLMs pay for it in faithfulness, and characterize the hallucination that robustness training can introduce."
+    tags: ["LVLMs", "Robustness", "Hallucination"]
+    video: "HALS_NeurIPS2026_teaser.mp4"
+    poster: "HALS_NeurIPS2026_teaser_poster.jpg"
+    link: "https://speedlab-git.github.io/HALS-Website/"
+  - id: faml
+    short: "FAML"
+    venue: "CVPR 2026"
+    title: "When Data is Scarce, Learn to Adapt"
+    subtitle: "Robust federated learning via adversarial meta-optimization"
+    description: "Federated clients often hold only a handful of samples. We combine meta-learning with adversarial optimization so that personalized models adapt quickly while staying robust to attacks."
+    tags: ["Federated Learning", "Meta-Learning", "Adversarial"]
+    video: "FAML_CVPR2026_teaser.mp4"
+    poster: "FAML_CVPR2026_teaser_poster.jpg"
+    link: "https://speedlab-git.github.io/FAML-CVPR/"
+  - id: trajectory-lens
+    short: "TrajectoryLens"
+    venue: "EMNLP 2026"
+    title: "Do LVLMs Know When They Are Wrong?"
+    subtitle: "Trajectory-based correctness estimation from a single forward pass"
+    description: "We read the trajectory of an LVLM’s internal representations to estimate whether its answer is correct, using only a single forward pass and no repeated sampling."
+    tags: ["LVLMs", "Uncertainty", "Interpretability"]
+    video: "TrajectoryLens_EMNLP2026_teaser.mp4"
+    poster: "TrajectoryLens_EMNLP2026_teaser_poster.jpg"
+    link: ""
+  - id: coastsight
+    short: "CoastSight"
+    venue: "FAU VIP Project"
+    title: "CoastSight"
+    subtitle: "Generative and vision-language AI for disaster intelligence"
+    description: "An interdisciplinary project applying generative AI and vision-language models to disaster intelligence and coastal resilience, with students working hands-on across disciplines."
+    tags: ["Generative AI", "VLMs", "Disaster Intelligence"]
+    video: "CoastSight_teaser.mp4"
+    poster: "CoastSight_teaser_poster.jpg"
+    link: ""
+
+ongoing:
+  - title: "RoadSentry: AI-Powered Roadside Construction Safety Intelligence"
+    image: "roadsentry.webp"
+    description: "An AI safety platform for roadside work zones that combines computer vision, multi-object tracking and vision-language models to monitor workers, vehicles and equipment, flag hazards and near-misses, and raise real-time alerts. A spatial safety layer reasons about restricted-zone entry, worker–equipment proximity and movement, while a central dashboard surfaces AI-generated incident summaries, risk levels, visual evidence and safety trends."
+  - title: "Developing Robust and Reliable Vision Language Models"
+    image: "slade.webp"
+    description: "Vision-language models that accurately interpret visual content and generate meaningful, contextually grounded descriptions, improving both visual understanding and text generation for captioning, visual question answering and other tasks that require deep joint reasoning over images and text."
+  - title: "Making Multimodal LLMs Efficient during Runtime"
+    image: "parrot.webp"
+    description: "Token pruning strategies for Large Vision-Language Models that identify and discard redundant visual tokens across the pipeline, cutting compute and memory while preserving visual reasoning and question answering, for deployment on resource-constrained edge devices."
+  - title: "Self-Correcting Multimodal LLMs"
+    image: "self-correcting.webp"
+    description: "Techniques that let an LVLM notice when it starts hallucinating and correct itself, producing accurate, grounded responses without external intervention or human feedback, to make LVLMs more reliable in real-world deployment."
+  - title: "Fine-Grained Diffusion for Realistic Image Generation"
+    image: "diffusion.webp"
+    description: "Improving diffusion models so that fine-grained semantics in a prompt (object relationships, spatial arrangements, subtle visual cues) are faithfully reflected in the generated image, enabling precise, controllable synthesis for autonomous driving, simulation and scientific visualization."
+
+more:
+  - title: "SkyWatch: Criminal Activity Detection via Keypoint Analysis with Drones"
+    image: "Crimedetection.webp"
+    description: "Drone imagery and keypoint detection to recognize criminal activity patterns from the air."
+  - title: "FLAMINGO: Resilient Federated Meta-Learning against Adversarial Attacks"
+    image: "flamingo.webp"
+    description: "A federated meta-learning algorithm that makes personalized edge models robust to adversarial attacks."
+  - title: "WatchOverGPT: Real-Time Crime Detection Framework"
+    image: "Crimewatchgpt.webp"
+    description: "Wearable cameras, location data and LLM-based conversational AI to detect and respond to safety threats."
+  - title: "Skyward Insights: Drone-Powered Land Cover Detection"
+    image: "drone.webp"
+    description: "Federated learning over drone imagery for real-time classification of land cover patterns."
+  - title: "Driving Smarter Roads: Real-time Traffic Insights"
+    image: "traffic.webp"
+    description: "Federated learning and social media analysis for real-time traffic management."
+  - title: "Robust, Lightweight and Secure Distributed ML"
+    image: "fedavo.webp"
+    description: "Algorithms that adapt to diverse data distributions while staying lightweight enough for constrained devices."
