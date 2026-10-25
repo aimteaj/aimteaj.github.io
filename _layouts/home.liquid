@@ -65,14 +65,14 @@ layout: default
     <h2 class="hm-h2">Research</h2>
     <div class="hm-explore">
       <div class="hm-topics" role="tablist" aria-label="Research interests">
-        <button class="hm-topic is-on" role="tab" aria-selected="true" data-sel="1">Selected publications</button>
-        <button class="hm-topic" role="tab" aria-selected="false" data-re="vision-language|vlm|lvlm|multimodal|clip|language model|llm">Vision-language models and multimodal LLMs</button>
-        <button class="hm-topic" role="tab" aria-selected="false" data-re="federated">Federated learning for edge devices</button>
-        <button class="hm-topic" role="tab" aria-selected="false" data-re="secur|privacy|trust|attack|poison|jailbreak|intrusion|exploit">Trustworthy AI, agentic AI and cybersecurity</button>
-        <button class="hm-topic" role="tab" aria-selected="false" data-re="robust|adversarial|hallucinat">Robustness of VLMs and FL</button>
-        <button class="hm-topic" role="tab" aria-selected="false" data-re="quantum">Quantum AI and post-quantum security</button>
-        <button class="hm-topic" role="tab" aria-selected="false" data-re="image|video|uav|drone|pose|skeleton|land cover|chart|scene">Computer vision, 3D models and digital twins</button>
-        <button class="hm-topic" role="tab" aria-selected="false" data-re="vehicle|driver|road|traffic|medical|health|wearable|stress|crime|surveillance|power|disaster|land cover">Applications: transportation, health, surveillance, infrastructure</button>
+        <button class="hm-topic is-on" role="tab" aria-selected="true" data-sel="1" data-t="sel"><span class="hm-ti"><i class="fa-solid fa-star" aria-hidden="true"></i></span><span class="hm-tl-label">Selected publications</span><span class="hm-tc"></span></button>
+        <button class="hm-topic" role="tab" aria-selected="false" data-re="vision-language|vlm|lvlm|multimodal|clip|language model|llm" data-t="vlm"><span class="hm-ti"><i class="fa-solid fa-eye" aria-hidden="true"></i></span><span class="hm-tl-label">Vision-language models and multimodal LLMs</span><span class="hm-tc"></span></button>
+        <button class="hm-topic" role="tab" aria-selected="false" data-re="federated" data-t="fl"><span class="hm-ti"><i class="fa-solid fa-circle-nodes" aria-hidden="true"></i></span><span class="hm-tl-label">Federated learning for edge devices</span><span class="hm-tc"></span></button>
+        <button class="hm-topic" role="tab" aria-selected="false" data-re="secur|privacy|trust|attack|poison|jailbreak|intrusion|exploit" data-t="trust"><span class="hm-ti"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></span><span class="hm-tl-label">Trustworthy AI, agentic AI and cybersecurity</span><span class="hm-tc"></span></button>
+        <button class="hm-topic" role="tab" aria-selected="false" data-re="robust|adversarial|hallucinat" data-t="robust"><span class="hm-ti"><i class="fa-solid fa-bolt" aria-hidden="true"></i></span><span class="hm-tl-label">Robustness of VLMs and FL</span><span class="hm-tc"></span></button>
+        <button class="hm-topic" role="tab" aria-selected="false" data-re="quantum" data-t="quantum"><span class="hm-ti"><i class="fa-solid fa-atom" aria-hidden="true"></i></span><span class="hm-tl-label">Quantum AI and post-quantum security</span><span class="hm-tc"></span></button>
+        <button class="hm-topic" role="tab" aria-selected="false" data-re="image|video|uav|drone|pose|skeleton|land cover|chart|scene" data-t="cv"><span class="hm-ti"><i class="fa-solid fa-cube" aria-hidden="true"></i></span><span class="hm-tl-label">Computer vision, 3D models and digital twins</span><span class="hm-tc"></span></button>
+        <button class="hm-topic" role="tab" aria-selected="false" data-re="vehicle|driver|road|traffic|medical|health|wearable|stress|crime|surveillance|power|disaster|land cover" data-t="apps"><span class="hm-ti"><i class="fa-solid fa-city" aria-hidden="true"></i></span><span class="hm-tl-label">Applications: transportation, health, surveillance, infrastructure</span><span class="hm-tc"></span></button>
       </div>
       <div class="hm-papers" role="tabpanel" aria-live="polite">
         <div class="hm-plist">{% bibliography --template bib_mini --group_by none %}</div>
@@ -158,10 +158,32 @@ layout: default
 .hm-h2 { font-size: 1.35rem; font-weight: 700; margin: 0 0 1.1rem; padding-bottom: 0.7rem; border-bottom: 1px solid var(--global-text-color); }
 
 .hm-explore { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 2rem; align-items: start; }
-.hm-topics { display: flex; flex-direction: column; border-left: 1px solid var(--global-divider-color); }
-.hm-topic { all: unset; cursor: pointer; padding: 0.6rem 0 0.6rem 1rem; margin-left: -1px; border-left: 3px solid transparent; font-size: 0.95rem; font-weight: 600; line-height: 1.35; color: var(--global-text-color-light); }
-.hm-topic:hover { color: var(--global-text-color); }
-.hm-topic.is-on { color: var(--global-theme-color); border-left-color: var(--global-theme-color); }
+.hm-topics { display: flex; flex-direction: column; gap: 0.35rem; }
+.hm-topic[data-t="sel"] { --tc: #b45309; }
+.hm-topic[data-t="vlm"] { --tc: #6d28d9; }
+.hm-topic[data-t="fl"] { --tc: #0f766e; }
+.hm-topic[data-t="trust"] { --tc: #1d4ed8; }
+.hm-topic[data-t="robust"] { --tc: #b91c1c; }
+.hm-topic[data-t="quantum"] { --tc: #be185d; }
+.hm-topic[data-t="cv"] { --tc: #4338ca; }
+.hm-topic[data-t="apps"] { --tc: #15803d; }
+html[data-theme="dark"] .hm-topic[data-t="sel"] { --tc: #fcd34d; }
+html[data-theme="dark"] .hm-topic[data-t="vlm"] { --tc: #c4b5fd; }
+html[data-theme="dark"] .hm-topic[data-t="fl"] { --tc: #5eead4; }
+html[data-theme="dark"] .hm-topic[data-t="trust"] { --tc: #93c5fd; }
+html[data-theme="dark"] .hm-topic[data-t="robust"] { --tc: #fca5a5; }
+html[data-theme="dark"] .hm-topic[data-t="quantum"] { --tc: #f9a8d4; }
+html[data-theme="dark"] .hm-topic[data-t="cv"] { --tc: #a5b4fc; }
+html[data-theme="dark"] .hm-topic[data-t="apps"] { --tc: #86efac; }
+.hm-topic { all: unset; box-sizing: border-box; cursor: pointer; display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; align-items: center; gap: 0.7rem; padding: 0.5rem 0.65rem 0.5rem 0.5rem; border-radius: 10px; border: 1px solid transparent; font-size: 0.93rem; font-weight: 600; line-height: 1.35; color: var(--global-text-color); transition: background 0.18s ease, border-color 0.18s ease, transform 0.18s ease; }
+.hm-ti { width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center; color: var(--tc); background: color-mix(in srgb, var(--tc) 13%, transparent); font-size: 0.95rem; transition: background 0.18s ease, color 0.18s ease; }
+.hm-tc { font-size: 0.75rem; font-weight: 700; color: var(--tc); font-variant-numeric: tabular-nums; min-width: 1.4rem; text-align: right; }
+.hm-topic:hover { background: color-mix(in srgb, var(--tc) 7%, transparent); transform: translateX(2px); }
+.hm-topic.is-on { background: color-mix(in srgb, var(--tc) 11%, transparent); border-color: color-mix(in srgb, var(--tc) 35%, transparent); color: var(--tc); }
+.hm-topic.is-on .hm-ti { background: var(--tc); color: #fff; }
+html[data-theme="dark"] .hm-topic.is-on .hm-ti { color: #111827; }
+.hm-explore.has-topic .hm-pv { color: var(--ac); }
+.hm-explore.has-topic .hm-paper:hover .hm-pt { color: var(--ac); }
 .hm-plist { display: flex; flex-direction: column; }
 .hm-plist ol, .hm-plist ul { list-style: none; padding: 0; margin: 0; }
 .hm-plist li { margin: 0; padding: 0; }
@@ -282,9 +304,10 @@ html[data-theme="dark"] .hm-ncat[data-c="paper"] { color: #93c5fd; } html[data-t
   .hm-fact:nth-child(2n) { border-right: 0; }
   .hm-fact:nth-child(-n+2) { border-bottom: 1px solid var(--global-divider-color); }
   .hm-explore { grid-template-columns: 1fr; gap: 1rem; }
-  .hm-topics { flex-direction: row; overflow-x: auto; border-left: 0; border-bottom: 1px solid var(--global-divider-color); gap: 0.2rem; scrollbar-width: thin; }
-  .hm-topic { white-space: nowrap; padding: 0.55rem 0.8rem; margin: 0 0 -1px; border-left: 0; border-bottom: 3px solid transparent; }
-  .hm-topic.is-on { border-bottom-color: var(--global-theme-color); }
+  .hm-topics { flex-direction: row; overflow-x: auto; gap: 0.4rem; padding-bottom: 0.4rem; scrollbar-width: thin; }
+  .hm-topic { flex: none; white-space: nowrap; grid-template-columns: 28px auto auto; gap: 0.5rem; border-color: var(--global-divider-color); }
+  .hm-ti { width: 28px; height: 28px; font-size: 0.8rem; }
+  .hm-topic:hover { transform: none; }
   .hm-paper { grid-template-columns: 76px minmax(0, 1fr); gap: 0.7rem; }
   .hm-sponsors { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hm-hl-grid { grid-template-columns: 1fr; }
@@ -297,7 +320,7 @@ html[data-theme="dark"] .hm-ncat[data-c="paper"] { color: #93c5fd; } html[data-t
   .hm-nchev { grid-column: 3; grid-row: 1; }
   .hm-nc { padding-left: 0; }
 }
-@media (prefers-reduced-motion: reduce) { .hm-hl-card, .hm-hl-card::before, .hm-links a, .hm-sp-logo, .hm-sp-cap, .hm-nchev { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .hm-topic, .hm-ti, .hm-hl-card, .hm-hl-card::before, .hm-links a, .hm-sp-logo, .hm-sp-cap, .hm-nchev { transition: none; } }
 </style>
 
 <script>
@@ -305,8 +328,13 @@ html[data-theme="dark"] .hm-ncat[data-c="paper"] { color: #93c5fd; } html[data-t
   var root = document.querySelector('.hm'); if (!root) return;
   var papers = Array.prototype.slice.call(root.querySelectorAll('.hm-paper'));
   var none = root.querySelector('.hm-pnone'), topics = root.querySelectorAll('.hm-topic');
+  topics.forEach(function (t) {
+    var re = t.dataset.re ? new RegExp(t.dataset.re, 'i') : null;
+    t.querySelector('.hm-tc').textContent = papers.filter(function (p) { return re ? re.test(p.dataset.text) : p.dataset.sel === '1'; }).length;
+  });
   function show(btn) {
     topics.forEach(function (t) { var on = t === btn; t.classList.toggle('is-on', on); t.setAttribute('aria-selected', on); });
+    var ex = root.querySelector('.hm-explore'); ex.classList.add('has-topic'); ex.style.setProperty('--ac', getComputedStyle(btn).getPropertyValue('--tc'));
     var re = btn.dataset.re ? new RegExp(btn.dataset.re, 'i') : null, n = 0, cap = 8;
     papers.forEach(function (p) {
       var hit = re ? re.test(p.dataset.text) : p.dataset.sel === '1';
