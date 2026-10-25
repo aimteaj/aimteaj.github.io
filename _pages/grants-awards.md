@@ -53,6 +53,19 @@ description: ""
   <article class="ga-row">
     <div class="ga-meta">
       <div class="ga-sponsor">National Science Foundation</div>
+      <div class="ga-program">ACCESS Explore allocation (CIS262111)</div>
+      <div class="ga-role">PI</div>
+      <div class="ga-amount">200,000 credits</div>
+    </div>
+    <div class="ga-body">
+      <h3 class="ga-title">Adaptive Latent Steering for Reliable and Grounded Vision-Language Models</h3>
+      <p>Provides 1,500 GPU hours on NCSA DeltaAI, October 2026 through October 2027, for research on steering vision-language models toward reliable, visually grounded outputs.</p>
+    </div>
+  </article>
+
+  <article class="ga-row">
+    <div class="ga-meta">
+      <div class="ga-sponsor">National Science Foundation</div>
       <div class="ga-program">National Artificial Intelligence Research Resource (NAIRR) Pilot</div>
       <div class="ga-role">Sole PI</div>
     </div>
@@ -69,7 +82,7 @@ description: ""
     <div class="ga-meta">
       <div class="ga-sponsor">Florida Atlantic University</div>
       <div class="ga-program">Vertically Integrated Projects (VIP) Program</div>
-      <div class="ga-role">Faculty lead</div>
+      <div class="ga-role">Lead PI</div>
       <div class="ga-amount ga-year">2026</div>
     </div>
     <div class="ga-body">
@@ -79,19 +92,6 @@ description: ""
         <a href="https://speedlab-git.github.io/coastsight/" target="_blank" rel="noopener">CoastSight project page</a>
         <a href="https://www.fau.edu/vip/projects/coastsight-coastal-ai-disaster-intelligence-/" target="_blank" rel="noopener">FAU VIP project page</a>
       </div>
-    </div>
-  </article>
-
-  <article class="ga-row">
-    <div class="ga-meta">
-      <div class="ga-sponsor">National Science Foundation</div>
-      <div class="ga-program">ACCESS Explore allocation (CIS262111)</div>
-      <div class="ga-role">PI</div>
-      <div class="ga-amount">200,000 credits</div>
-    </div>
-    <div class="ga-body">
-      <h3 class="ga-title">Adaptive Latent Steering for Reliable and Grounded Vision-Language Models</h3>
-      <p>Provides 1,500 GPU hours on NCSA DeltaAI, October 2026 through October 2027, for research on steering vision-language models toward reliable, visually grounded outputs.</p>
     </div>
   </article>
 
