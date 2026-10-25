@@ -285,13 +285,6 @@ description: ""
   }
 </style>
 
-<div class="teach-hero">
-  <p>
-    A snapshot of courses taught, curriculum development efforts, and teaching recognition across undergraduate and graduate education in
-    artificial intelligence, machine learning, data structures, and large language models.
-  </p>
-</div>
-
 ## <span class="teach-section-title current">Current and Upcoming Teaching</span>
 
 <div class="teach-grid">

@@ -294,12 +294,6 @@ description: ""
   }
 </style>
 
-<div class="mentor-hero">
-  <p>
-    A record of student advising, research mentorship, and academic guidance across doctoral, master’s, undergraduate, and community-centered programs.
-  </p>
-</div>
-
 ## <span class="mentor-section-title phd">PhD Students</span>
 
 <div class="mentor-grid">

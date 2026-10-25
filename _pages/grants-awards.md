@@ -256,12 +256,6 @@ description: ""
   }
 </style>
 
-<div class="ga-hero">
-  <p>
-    An overview of externally funded research grants, academic honors, and scholarly recognitions reflecting contributions to Advanced AI, federated learning, multimodal LLMs and cybersecurity.
-  </p>
-</div>
-
 ## <span class="ga-section-title grants">Research Grants</span>
 
 <div class="ga-grid">

@@ -9,20 +9,6 @@ nav_order: 3
 
 <div class="research-highlights-page">
 
-  <div class="rh-hero">
-    <p>
-      Selected research highlights spanning robust artificial intelligence, vision-language models, federated learning, multimodal systems, and trustworthy machine intelligence.
-    </p>
-
-    <div class="rh-hero-badges">
-      <span class="rh-hero-badge">Vision-Language Models</span>
-      <span class="rh-hero-badge">Federated Learning</span>
-      <span class="rh-hero-badge">Robust, Efficient and Secure AI</span>
-      <span class="rh-hero-badge">Trustworthy AI, Agentic AI and Cybersecurity</span>
-      <span class="rh-hero-badge">Real-World Applications</span>
-    </div>
-  </div>
-
   {% assign lab = site.data.lab_projects %}
 
   <!-- ===== Selected Research: Our latest work, in motion (mirrored from speedlab.network) ===== -->
