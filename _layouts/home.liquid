@@ -180,8 +180,8 @@ layout: default
 .hm-hl-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.9rem; }
 .hm-hl-card { display: flex; flex-direction: column; gap: 0.3rem; padding: 1rem 1.1rem 1.15rem; border: 1px solid var(--global-divider-color); border-top: 4px solid var(--vc); border-radius: 8px; background: var(--global-card-bg-color); color: var(--global-text-color); transition: transform 0.18s ease, box-shadow 0.18s ease; }
 .hm-hl-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15,23,42,0.1); }
-.hm-hl-top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.35rem; }
-.hm-hl-venue { font-size: 1.15rem; font-weight: 800; color: var(--vc); letter-spacing: -0.01em; }
+.hm-hl-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.35rem 0.5rem; margin-bottom: 0.35rem; }
+.hm-hl-venue { white-space: nowrap; font-size: 1.15rem; font-weight: 800; color: var(--vc); letter-spacing: -0.01em; }
 html[data-theme="dark"] .hm-hl-venue { filter: brightness(1.45); }
 .hm-hl-track { font-size: 0.7rem; font-weight: 700; color: #fff; background: var(--vc); border-radius: 4px; padding: 0.15rem 0.45rem; white-space: nowrap; }
 .hm-hl-meta { font-size: 0.8rem; color: var(--global-text-color-light); display: flex; align-items: center; gap: 0.45rem; }
