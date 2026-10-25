@@ -93,7 +93,7 @@ layout: default
           <span class="hm-nt"></span>
           <span class="hm-nchev" aria-hidden="true"></span>
         </button>
-        <div class="hm-nc" hidden>{% if item.inline %}{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}{% else %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</div>
+        <div class="hm-nc" hidden>{% if item.inline %}{{ item.content | emojify }}{% else %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</div>
       </article>
       {% endfor %}
     </div>
@@ -191,6 +191,8 @@ html[data-theme="dark"] .hm-ncat[data-c="paper"] { color: #93c5fd; } html[data-t
 .hm-nc [style] { background: none !important; border: 0 !important; padding: 0 !important; box-shadow: none !important; border-radius: 0 !important; font-size: inherit !important; }
 .hm-nc span[style], .hm-nc strong[style] { color: inherit !important; }
 .hm-nc br + br { display: none; }
+.hm-nc p { margin: 0 0 0.6rem; }
+.hm-nc p:last-child { margin-bottom: 0; }
 .hm-nc a { color: var(--global-theme-color); font-weight: 600; }
 .hm-nc a span[style] { color: inherit !important; }
 .hm-more { all: unset; cursor: pointer; margin-top: 1rem; font-size: 0.9rem; font-weight: 600; color: var(--global-theme-color); padding: 0.45rem 0.9rem; border: 1px solid var(--global-theme-color); border-radius: 6px; }
@@ -251,29 +253,43 @@ html[data-theme="dark"] .hm-ncat[data-c="paper"] { color: #93c5fd; } html[data-t
   var tl = root.querySelector('.hm-tl'); if (!tl) return;
   var items = Array.prototype.slice.call(tl.querySelectorAll('.hm-ni'));
   var LABEL = { paper: 'Paper', grant: 'Grant / award', talk: 'Talk / media', service: 'Service', update: 'Update' };
-  function category(t) {
-    t = t.toLowerCase();
-    if (/reviewer|review panel|program committee|guest editor|served on|served as|panelist|session chair|organizing committee/.test(t)) return 'service';
-    if (/grant|award|awarded|funded|fellow|top 2%|scholarship|honou?red|recogni[sz]ed/.test(t)) return 'grant';
-    if (/invited talk|keynote|talk|presented|presentation|interview|featured|news feature|joined/.test(t)) return 'talk';
-    if (/accepted|published|paper|journal|conference/.test(t)) return 'paper';
-    return 'update';
+  var RULES = [
+    ['update', /joined|appointed|career announcement|faculty advisor|course proposal|new course/],
+    ['service', /reviewer|review panel|program committee|guest editor|area chair|session chair|organizing chair|special session|served as|served on|serving as|panelist/],
+    ['grant', /grant|award|awarded|funded|fellowship|top 2%|scholarship|honou?red|recogni[sz]ed|nominated/],
+    ['talk', /invited talk|keynote|talk|presented|presentation|interview|featured|news feature|demo/],
+    ['paper', /accepted|published|paper|journal|transactions|proceedings/]
+  ];
+  function classify(t) { t = t.toLowerCase(); for (var k = 0; k < RULES.length; k++) if (RULES[k][1].test(t)) return RULES[k][0]; return null; }
+  function firstLine(c) {
+    var blocks = c.querySelectorAll('p, div, li');
+    for (var b = 0; b < blocks.length; b++) {
+      var el = blocks[b]; if (el.querySelector('p, div, li')) continue;
+      var txt = '';
+      for (var n = 0; n < el.childNodes.length; n++) {
+        var node = el.childNodes[n];
+        if (node.nodeName === 'BR') { if (txt.trim().length >= 12) break; else continue; }
+        txt += node.textContent;
+      }
+      txt = txt.replace(/\s+/g, ' ').trim();
+      if (txt.length >= 12) return txt;
+    }
+    return (c.textContent || '').replace(/\s+/g, ' ').trim();
   }
   function headline(c) {
-    var first = c.querySelector('strong, b, span[style*="font-weight:8"], span[style*="font-weight: 8"]');
-    var txt = (c.textContent || '').replace(/\s+/g, ' ').trim();
-    var h = first ? first.textContent.replace(/\s+/g, ' ').trim() : '';
-    if (h.length < 18 || h.length > 160 || txt.indexOf(h) > 40) {
-      var mm = txt.match(/^(.{25,170}?[.!?])(\s|$)/); h = mm ? mm[1] : txt.slice(0, 150) + (txt.length > 150 ? '…' : '');
+    var h = firstLine(c).replace(/^[^\w“"(]+/, '');
+    if (h.length > 160) {
+      var cut = h.slice(0, 160).search(/(?<!\b(?:Dr|Mr|Ms|Prof|vs|al|e\.g|i\.e))[.!?](?=\s)[^.!?]*$/);
+      h = cut > 40 ? h.slice(0, cut + 1) : h.slice(0, 150).replace(/\s+\S*$/, '') + '…';
     }
-    return h.replace(/^[^\w“"(]+/, '');
+    return h;
   }
   var counts = { all: items.length, paper: 0, grant: 0, talk: 0, service: 0 };
   items.forEach(function (it) {
-    var c = it.querySelector('.hm-nc'), cat = category(c.textContent);
+    var c = it.querySelector('.hm-nc'), h = headline(c), cat = classify(h) || classify(c.textContent) || 'update';
     it.dataset.c = cat; if (counts[cat] !== undefined) counts[cat]++;
     var tag = it.querySelector('.hm-ncat'); tag.textContent = LABEL[cat]; tag.dataset.c = cat;
-    it.querySelector('.hm-nt').textContent = headline(c);
+    it.querySelector('.hm-nt').textContent = h;
     var btn = it.querySelector('.hm-nh');
     btn.addEventListener('click', function () {
       var open = it.classList.toggle('is-open'); c.hidden = !open; btn.setAttribute('aria-expanded', open);
