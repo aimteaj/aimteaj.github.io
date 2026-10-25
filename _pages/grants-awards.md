@@ -67,6 +67,23 @@ description: ""
 
   <article class="ga-row">
     <div class="ga-meta">
+      <div class="ga-sponsor">Florida Atlantic University</div>
+      <div class="ga-program">Vertically Integrated Projects (VIP) Program</div>
+      <div class="ga-role">Faculty lead</div>
+      <div class="ga-amount ga-year">2026</div>
+    </div>
+    <div class="ga-body">
+      <h3 class="ga-title">CoastSight: Generative and Vision-Language AI for Disaster Intelligence</h3>
+      <p>Explores generative AI and vision-language models for disaster intelligence and coastal resilience, with students from across disciplines doing hands-on research. Co-led with Dr. Stephanie Wakefield and Dr. Jason O. Hallstrom.</p>
+      <div class="ga-links">
+        <a href="https://speedlab-git.github.io/coastsight/" target="_blank" rel="noopener">CoastSight project page</a>
+        <a href="https://www.fau.edu/vip/projects/coastsight-coastal-ai-disaster-intelligence-/" target="_blank" rel="noopener">FAU VIP project page</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="ga-row">
+    <div class="ga-meta">
       <div class="ga-sponsor">National Science Foundation</div>
       <div class="ga-program">NAIRR Pilot Classroom, Prototype National Research Platform (PNRP)</div>
       <div class="ga-role">PI</div>
@@ -91,23 +108,6 @@ description: ""
     <div class="ga-body">
       <h3 class="ga-title">Adaptive Latent Steering for Reliable and Grounded Vision-Language Models</h3>
       <p>Provides 1,500 GPU hours on NCSA DeltaAI, October 2026 through October 2027, for research on steering vision-language models toward reliable, visually grounded outputs.</p>
-    </div>
-  </article>
-
-  <article class="ga-row">
-    <div class="ga-meta">
-      <div class="ga-sponsor">Florida Atlantic University</div>
-      <div class="ga-program">Vertically Integrated Projects (VIP) Program</div>
-      <div class="ga-role">Faculty lead</div>
-      <div class="ga-amount ga-year">2026</div>
-    </div>
-    <div class="ga-body">
-      <h3 class="ga-title">CoastSight: Generative and Vision-Language AI for Disaster Intelligence</h3>
-      <p>Explores generative AI and vision-language models for disaster intelligence and coastal resilience, with students from across disciplines doing hands-on research. Co-led with Dr. Stephanie Wakefield and Dr. Jason O. Hallstrom.</p>
-      <div class="ga-links">
-        <a href="https://speedlab-git.github.io/coastsight/" target="_blank" rel="noopener">CoastSight project page</a>
-        <a href="https://www.fau.edu/vip/projects/coastsight-coastal-ai-disaster-intelligence-/" target="_blank" rel="noopener">FAU VIP project page</a>
-      </div>
     </div>
   </article>
 
