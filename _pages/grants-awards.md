@@ -72,6 +72,19 @@ description: ""
     <div class="ga-body">
       <h3 class="ga-title">ARMOR-HAL: Unified Defense for Adversarial Robustness and Hallucination Mitigation in Large Vision-Language Models</h3>
       <p>Advances secure and dependable AI through unified defense frameworks for large vision-language models.</p>
+
+      <div class="ga-pubs">
+        <div class="ga-pubs-head">
+          <span>Publications from this grant</span>
+          <span class="ga-pubs-total">2 papers</span>
+        </div>
+        <table>
+          <tbody>
+            <tr><td>NeurIPS 2026</td><td>1</td></tr>
+            <tr><td>EMNLP 2026</td><td>1</td></tr>
+          </tbody>
+        </table>
+      </div>
       <div class="ga-links">
         <a href="https://nairrpilot.org/projects/awarded?_requestNumber=NAIRR250393" target="_blank" rel="noopener">View project details</a>
       </div>
