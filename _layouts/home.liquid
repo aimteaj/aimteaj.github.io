@@ -15,7 +15,7 @@ layout: default
       <p class="hm-role">Assistant Professor of Electrical Engineering and Computer Science<br><a href="https://www.fau.edu/" target="_blank" rel="noopener">Florida Atlantic University</a>, Boca Raton</p>
       <ul class="hm-aff">
         <li>Founding Director, <a href="https://www.speedlab.network" target="_blank" rel="noopener">SPEED Lab</a></li>
-        <li>Faculty Fellow, <a href="https://www.fau.edu/smart/" target="_blank" rel="noopener">I-SMART</a></li>
+        <li>Faculty Fellow, <a href="https://www.fau.edu/smart/leadership/" target="_blank" rel="noopener">I-SMART</a></li>
         <li>Senior Member, <a href="https://www.fau.edu/engineering/research/c2a2/people/" target="_blank" rel="noopener">CA-AI</a></li>
       </ul>
       <nav class="hm-links" aria-label="Contact and profiles">
@@ -28,6 +28,33 @@ layout: default
   </header>
 
   <div class="hm-bio">{{ content }}</div>
+
+  <!-- 2026 highlights -->
+  {% assign hl = site.data.highlights_2026 %}
+  <section class="hm-sec hm-hl">
+    <div class="hm-hl-head">
+      <h2 class="hm-h2">2026 at top AI venues</h2>
+      <p class="hm-hl-sub">{{ hl.size }} SPEED Lab papers this year across NeurIPS, EMNLP, CVPR, ACL, IJCNN and Scientific Reports.</p>
+    </div>
+    <div class="hm-hl-filters" role="group" aria-label="Filter highlights by venue">
+      <button class="hm-hlf is-on" data-v="all" aria-pressed="true">All</button>
+      {% assign venues = hl | map: "venue" | uniq %}
+      {% for v in venues %}<button class="hm-hlf" data-v="{{ v }}" aria-pressed="false">{{ v }}</button>{% endfor %}
+    </div>
+    <div class="hm-hl-grid">
+      {% for h in hl %}
+      <a class="hm-hl-card" data-v="{{ h.venue }}" href="{{ '/publications/' | relative_url }}#{{ h.key }}" style="--vc: {{ h.color }}">
+        <span class="hm-hl-top">
+          <span class="hm-hl-venue">{{ h.venue }}</span>
+          <span class="hm-hl-track">{{ h.track }}</span>
+        </span>
+        <span class="hm-hl-meta"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>{{ h.where }}</span>
+        <span class="hm-hl-meta"><i class="fa-regular fa-calendar" aria-hidden="true"></i>{{ h.when }}</span>
+        <span class="hm-hl-title">{{ h.title }}</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
 
   <!-- Research interests explorer -->
   <section class="hm-sec">
@@ -142,6 +169,26 @@ layout: default
 .hm-pnone { color: var(--global-text-color-light); padding: 0.8rem 0; }
 .hm-pall { display: inline-block; margin-top: 0.9rem; font-size: 0.9rem; font-weight: 600; color: var(--global-theme-color) !important; text-decoration: underline !important; text-underline-offset: 3px; }
 
+/* 2026 highlights */
+.hm-hl-head { display: block; }
+.hm-hl-sub { margin: -0.4rem 0 1rem; color: var(--global-text-color-light); font-size: 0.95rem; }
+.hm-hl-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
+.hm-hlf { all: unset; cursor: pointer; font-size: 0.85rem; font-weight: 600; padding: 0.3rem 0.75rem; border: 1px solid var(--global-divider-color); border-radius: 999px; color: var(--global-text-color); }
+.hm-hlf:hover { border-color: var(--global-theme-color); }
+.hm-hlf.is-on { background: var(--global-text-color); border-color: var(--global-text-color); color: var(--global-bg-color); }
+.hm-hlf:focus-visible, .hm-hl-card:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 2px; }
+.hm-hl-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.9rem; }
+.hm-hl-card { display: flex; flex-direction: column; gap: 0.3rem; padding: 1rem 1.1rem 1.15rem; border: 1px solid var(--global-divider-color); border-top: 4px solid var(--vc); border-radius: 8px; background: var(--global-card-bg-color); color: var(--global-text-color); transition: transform 0.18s ease, box-shadow 0.18s ease; }
+.hm-hl-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15,23,42,0.1); }
+.hm-hl-top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; margin-bottom: 0.35rem; }
+.hm-hl-venue { font-size: 1.15rem; font-weight: 800; color: var(--vc); letter-spacing: -0.01em; }
+html[data-theme="dark"] .hm-hl-venue { filter: brightness(1.45); }
+.hm-hl-track { font-size: 0.7rem; font-weight: 700; color: #fff; background: var(--vc); border-radius: 4px; padding: 0.15rem 0.45rem; white-space: nowrap; }
+.hm-hl-meta { font-size: 0.8rem; color: var(--global-text-color-light); display: flex; align-items: center; gap: 0.45rem; }
+.hm-hl-meta i { width: 0.9rem; text-align: center; opacity: 0.8; }
+.hm-hl-title { margin-top: 0.55rem; padding-top: 0.6rem; border-top: 1px solid var(--global-divider-color); font-size: 0.92rem; font-weight: 600; line-height: 1.45; }
+.hm-hl-card:hover .hm-hl-title { color: var(--global-theme-color); }
+
 /* Research support: logo wall; hover or focus shows what each sponsor funds */
 .hm-sponsors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.9rem; }
 .hm-sp { position: relative; display: block; height: 116px; border-radius: 8px; overflow: hidden; background: #fff; border: 1px solid var(--global-divider-color); }
@@ -203,6 +250,7 @@ html[data-theme="dark"] .hm-ncat[data-c="paper"] { color: #93c5fd; } html[data-t
   .hm-topic.is-on { border-bottom-color: var(--global-theme-color); }
   .hm-paper { grid-template-columns: 76px minmax(0, 1fr); gap: 0.7rem; }
   .hm-sponsors { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hm-hl-grid { grid-template-columns: 1fr; }
   .hm-sp { height: 96px; }
   .hm-nh { grid-template-columns: 50px minmax(0, 1fr) 14px; row-gap: 0.3rem; }
   .hm-ncat { grid-column: 2; justify-self: start; }
@@ -210,7 +258,7 @@ html[data-theme="dark"] .hm-ncat[data-c="paper"] { color: #93c5fd; } html[data-t
   .hm-nchev { grid-column: 3; grid-row: 1; }
   .hm-nc { padding-left: 0; }
 }
-@media (prefers-reduced-motion: reduce) { .hm-fact::after, .hm-links a, .hm-sp-logo, .hm-sp-cap, .hm-nchev { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .hm-hl-card, .hm-links a, .hm-sp-logo, .hm-sp-cap, .hm-nchev { transition: none; } }
 </style>
 
 <script>
@@ -230,6 +278,15 @@ html[data-theme="dark"] .hm-ncat[data-c="paper"] { color: #93c5fd; } html[data-t
   }
   topics.forEach(function (t) { t.addEventListener('click', function () { show(t); }); });
   if (topics.length) show(topics[0]);
+
+  // ---- 2026 highlights: venue filter
+  var hlf = root.querySelectorAll('.hm-hlf');
+  hlf.forEach(function (b) {
+    b.addEventListener('click', function () {
+      hlf.forEach(function (x) { var on = x === b; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', on); });
+      root.querySelectorAll('.hm-hl-card').forEach(function (c) { c.hidden = !(b.dataset.v === 'all' || c.dataset.v === b.dataset.v); });
+    });
+  });
 
   // ---- News: categorise, give each item a headline, filter, expand
   var tl = root.querySelector('.hm-tl'); if (!tl) return;
