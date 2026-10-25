@@ -62,6 +62,7 @@
       icon: "fa-image"
   venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025 [Ranked #1 CS Conference]"
   status: "Published"
+  teaser: true # shown as a teaser video in "Our Latest Work"
   importance: 3
 
 - title: "When Data is Scarce, Learn to Adapt: Robust Federated Learning via Adversarial Meta-Optimization"
@@ -111,6 +112,7 @@
       icon: "fa-code"
   venue: "Proceedings of IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2025 [Ranked #1 CS Conference]"
   status: "Published"
+  teaser: true # shown as a teaser video in "Our Latest Work"
   importance: 7
 
 - title: "Sim-CLIP: Unsupervised Siamese Adversarial Fine-Tuning for Robust Vision-Language Models"
@@ -137,6 +139,7 @@
       icon: "fa-image"
   venue: "IEEE International Joint Conference on Neural Networks (IJCNN 2026)"
   status: "Accepted"
+  teaser: true # shown as a teaser video in "Our Latest Work"
   importance: 6
 
 - title: "Blockchain-Empowered Cyber-Secure Federated Learning for Trustworthy Edge Computing"

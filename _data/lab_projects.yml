@@ -33,6 +33,78 @@ latest:
     video: "TrajectoryLens_EMNLP2026_teaser.mp4"
     poster: "TrajectoryLens_EMNLP2026_teaser_poster.jpg"
     link: ""
+  - id: edits-wild
+    short: "Edits in the Wild"
+    venue: "EMNLP 2026 · Main Conference"
+    title: "Edits in the Wild"
+    subtitle: "A multilingual benchmark for localizing on-device generative image edits"
+    description: "Phones, tablets and laptops now ship with generative AI editors. ConsumerGenEdit pairs 48,000 real edits made on Apple, Google and Samsung devices with compression variants, bounding boxes and descriptions in English, Bangla and Persian, to test where and how VLMs can localize consumer AI edits."
+    tags: ["Benchmark", "Multilingual VLMs", "Image Provenance"]
+    video: "EditsInTheWild_EMNLP2026_teaser.mp4"
+    poster: "EditsInTheWild_EMNLP2026_teaser_poster.jpg"
+    link: ""
+  - id: robustchart360
+    short: "RobustChart360"
+    venue: "EMNLP 2026 · Industry Track"
+    title: "From Benchmarks to Real-World Use"
+    subtitle: "Evaluating the robustness of vision-language models for chart understanding"
+    description: "We test 14 VLMs on 2,505 charts across six real-world robustness dimensions. Accuracy drops by up to 31% under caption mismatches and by over 50% at severe low resolution, and models over-rely on text when visual and textual signals conflict."
+    tags: ["Chart Understanding", "Robustness", "Benchmark"]
+    video: "RobustChart360_EMNLP2026_teaser.mp4"
+    poster: "RobustChart360_EMNLP2026_teaser_poster.jpg"
+    link: ""
+  - id: sim-clip
+    short: "Sim-CLIP"
+    venue: "IJCNN 2026 · Main Conference"
+    title: "Sim-CLIP"
+    subtitle: "Unsupervised Siamese adversarial fine-tuning for robust, semantically rich VLMs"
+    description: "A Siamese fine-tuning scheme with a cosine-similarity objective and symmetric stop-gradient that makes CLIP encoders robust without large batches or momentum encoders, while keeping the semantic detail VLMs need."
+    tags: ["Robust CLIP", "Adversarial Training", "VLMs"]
+    video: "SimCLIP_IJCNN2026_teaser.mp4"
+    poster: "SimCLIP_IJCNN2026_teaser_poster.jpg"
+    link: "https://speedlab-git.github.io/Sim-CLIP/"
+  - id: secure-yet-fragile
+    short: "Secure yet Fragile"
+    venue: "Scientific Reports · 2026"
+    title: "Secure yet Fragile"
+    subtitle: "Adversarial vulnerabilities of federated vision–language models in medical AI"
+    description: "A systematic audit of CLIP-based medical VLMs trained with FedAvg, FedProx, FedPer and FedBN, under four attacks on three MedMNIST datasets. Client-level perturbations propagate through aggregation; the test-time defense CLIPure gives the most consistent recovery."
+    tags: ["Federated Learning", "Medical AI", "Adversarial Robustness"]
+    video: "SecureYetFragile_SciRep2026_teaser.mp4"
+    poster: "SecureYetFragile_SciRep2026_teaser_poster.jpg"
+    link: "https://doi.org/10.1038/s41598-026-48102-4"
+    link_label: "Paper"
+  - id: slade
+    short: "SLADE"
+    venue: "CVPR 2025 · Main Conference"
+    title: "SLADE"
+    subtitle: "Shielding against dual exploits in large vision-language models"
+    description: "Unsupervised adversarial fine-tuning with dual-level (patch and global) contrastive learning that defends LVLMs against both gradient-based and jailbreak attacks while preserving fine-grained semantic detail."
+    tags: ["LVLM Security", "Jailbreak Defense", "Robust CLIP"]
+    video: "SLADE_CVPR2025_teaser.mp4"
+    poster: "SLADE_CVPR2025_teaser_poster.jpg"
+    link: "https://openaccess.thecvf.com/content/CVPR2025/papers/Hossain_SLADE_Shielding_against_Dual_Exploits_in_Large_Vision-Language_Models_CVPR_2025_paper.pdf"
+    link_label: "Paper"
+  - id: pose-to-protect
+    short: "Pose to Protect"
+    venue: "ICCV 2025 · Workshops"
+    title: "Pose to Protect"
+    subtitle: "Federated skeleton-based anomaly detection for privacy-conscious surveillance"
+    description: "Crime detection from 2D OpenPose skeletons and an LSTM, trained across cameras with federated learning, so no raw video or identities ever leave a site."
+    tags: ["Privacy", "Federated Learning", "Video Surveillance"]
+    video: "PoseToProtect_ICCVW2025_teaser.mp4"
+    poster: "PoseToProtect_ICCVW2025_teaser_poster.jpg"
+    link: ""
+  - id: trustworthy-av
+    short: "Trustworthy AVs"
+    venue: "CVPR 2025 · Workshops"
+    title: "Towards Trustworthy Autonomous Vehicles"
+    subtitle: "Vision-language models under targeted and untargeted adversarial attacks"
+    description: "We stress-test CLIP, TeCoA, FARE and Sim-CLIP encoders inside driving VLMs on LingoQA, NuScenes-QA, ROADWork and CoVLA, using richly re-annotated scenes. Sim-CLIP is the most robust while keeping accuracy high."
+    tags: ["Autonomous Driving", "VLM Robustness", "Adversarial Attacks"]
+    video: "TrustworthyAV_CVPRW2025_teaser.mp4"
+    poster: "TrustworthyAV_CVPRW2025_teaser_poster.jpg"
+    link: ""
   - id: coastsight
     short: "CoastSight"
     venue: "FAU VIP Project"

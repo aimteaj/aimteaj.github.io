@@ -38,7 +38,7 @@ nav_order: 3
           </div>
           {% if t.link != "" %}
           <a href="{{ t.link }}" class="rh-btn teaser-link" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-globe"></i><span>Project Page</span>
+            <i class="fas {% if t.link_label == "Paper" %}fa-file-pdf{% else %}fa-globe{% endif %}"></i><span>{{ t.link_label | default: "Project Page" }}</span>
           </a>
           {% endif %}
         </div>
