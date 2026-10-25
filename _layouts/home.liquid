@@ -59,31 +59,50 @@ layout: default
     </div>
   </section>
 
-  <!-- News -->
-  {% assign news = site.news | reverse %}
-  {% assign news_size = news | size %}
+  <!-- Research support -->
   <section class="hm-sec">
-    <h2 class="hm-h2">News</h2>
-    <ol class="hm-news">
-      {% for item in news %}
-      <li class="hm-ni{% if forloop.index > 5 %} is-extra{% endif %}"{% if forloop.index > 5 %} hidden{% endif %}>
-        <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %Y' }}</time>
-        <div class="hm-nc">{% if item.inline %}{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}{% else %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</div>
-      </li>
+    <h2 class="hm-h2">Research support</h2>
+    <div class="hm-sponsors">
+      {% for sp in site.data.sponsors %}
+      <a class="hm-sp" href="{{ '/grants-awards/' | relative_url }}" aria-label="{{ sp.name }}: {{ sp.funds }}">
+        <span class="hm-sp-logo"><img src="{{ '/assets/img/sponsors/' | append: sp.logo | relative_url }}" alt="{{ sp.name }}" loading="lazy"></span>
+        <span class="hm-sp-cap"><strong>{{ sp.name }}</strong>{{ sp.funds }}</span>
+      </a>
       {% endfor %}
-    </ol>
-    {% if news_size > 5 %}
-    <button class="hm-more" type="button" aria-expanded="false" data-n="{{ news_size | minus: 5 }}">Show {{ news_size | minus: 5 }} earlier updates</button>
-    {% endif %}
+    </div>
   </section>
 
-  <section class="hm-sec hm-support">
-    <h2 class="hm-h2">Research support</h2>
-    <p>National Science Foundation (NSF), U.S. Department of Homeland Security (DHS), NSF National Artificial Intelligence Research Resource (NAIRR) Pilot, Computing Research Association (CRA), Oak Ridge Associated Universities (ORAU), and the FAU Vertically Integrated Projects (VIP) Program.</p>
+  <!-- News -->
+  {% assign news = site.news | reverse %}
+  <section class="hm-sec">
+    <h2 class="hm-h2">News</h2>
+    <div class="hm-nf" role="group" aria-label="Filter news">
+      <button class="hm-nfb is-on" data-c="all" aria-pressed="true">All <span></span></button>
+      <button class="hm-nfb" data-c="paper" aria-pressed="false">Papers <span></span></button>
+      <button class="hm-nfb" data-c="grant" aria-pressed="false">Grants and awards <span></span></button>
+      <button class="hm-nfb" data-c="talk" aria-pressed="false">Talks and media <span></span></button>
+      <button class="hm-nfb" data-c="service" aria-pressed="false">Service <span></span></button>
+    </div>
+    <div class="hm-tl">
+      {% for item in news %}
+      {% assign y = item.date | date: '%Y' %}
+      <article class="hm-ni" data-year="{{ y }}">
+        <button class="hm-nh" type="button" aria-expanded="false">
+          <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %d' }}</time>
+          <span class="hm-ncat"></span>
+          <span class="hm-nt"></span>
+          <span class="hm-nchev" aria-hidden="true"></span>
+        </button>
+        <div class="hm-nc" hidden>{% if item.inline %}{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}{% else %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</div>
+      </article>
+      {% endfor %}
+    </div>
+    <button class="hm-more" type="button" hidden></button>
   </section>
 </div>
 
 <style>
+.hm [hidden] { display: none !important; }
 .hm { max-width: 980px; margin: 0 auto; }
 .hm a { text-decoration: none; }
 
@@ -131,11 +150,44 @@ layout: default
 .hm-pnone { color: var(--global-text-color-light); padding: 0.8rem 0; }
 .hm-pall { display: inline-block; margin-top: 0.9rem; font-size: 0.9rem; font-weight: 600; color: var(--global-theme-color) !important; text-decoration: underline !important; text-underline-offset: 3px; }
 
-/* News: tone down the colourful inline styling of individual items */
-.hm-news { list-style: none; padding: 0; margin: 0; }
-.hm-ni { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 1rem; padding: 0.95rem 0; border-bottom: 1px solid var(--global-divider-color); }
-.hm-ni time { font-size: 0.85rem; font-weight: 700; color: var(--global-text-color-light); padding-top: 0.15rem; font-variant-numeric: tabular-nums; }
-.hm-nc { font-size: 0.95rem; line-height: 1.6; color: var(--global-text-color); }
+/* Research support: logo wall; hover or focus shows what each sponsor funds */
+.hm-sponsors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.9rem; }
+.hm-sp { position: relative; display: block; height: 116px; border-radius: 8px; overflow: hidden; background: #fff; border: 1px solid var(--global-divider-color); }
+.hm-sp-logo { position: absolute; inset: 0; display: grid; place-items: center; padding: 1.1rem 1.4rem; transition: opacity 0.2s ease, transform 0.25s ease; }
+.hm-sp-logo img { max-width: 100%; max-height: 72px; object-fit: contain; }
+.hm-sp-cap { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; gap: 0.25rem; padding: 0.9rem 1.1rem; background: var(--global-theme-color); color: #fff; font-size: 0.88rem; line-height: 1.4; opacity: 0; transform: translateY(8px); transition: opacity 0.2s ease, transform 0.25s ease; }
+.hm-sp-cap strong { font-size: 0.95rem; }
+.hm-sp:hover .hm-sp-cap, .hm-sp:focus-visible .hm-sp-cap { opacity: 1; transform: none; }
+.hm-sp:hover .hm-sp-logo, .hm-sp:focus-visible .hm-sp-logo { opacity: 0; transform: scale(0.96); }
+.hm-sp:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 2px; }
+
+/* News */
+.hm-nf { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 1.2rem; }
+.hm-nfb { all: unset; cursor: pointer; font-size: 0.88rem; font-weight: 600; padding: 0.35rem 0.8rem; border: 1px solid var(--global-divider-color); border-radius: 999px; color: var(--global-text-color); }
+.hm-nfb span { font-weight: 700; color: var(--global-text-color-light); margin-left: 0.2rem; font-variant-numeric: tabular-nums; }
+.hm-nfb:hover { border-color: var(--global-theme-color); }
+.hm-nfb.is-on { background: var(--global-theme-color); border-color: var(--global-theme-color); color: #fff; }
+.hm-nfb.is-on span { color: rgba(255,255,255,0.8); }
+.hm-nfb:focus-visible, .hm-nh:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 2px; }
+
+.hm-tl { position: relative; padding-left: 1.6rem; }
+.hm-tl::before { content: ""; position: absolute; left: 5px; top: 0.6rem; bottom: 0.6rem; width: 2px; background: var(--global-divider-color); }
+.hm-yr { position: relative; font-size: 1rem; font-weight: 700; margin: 1.2rem 0 0.3rem; color: var(--global-text-color); }
+.hm-yr:first-child { margin-top: 0; }
+.hm-yr::before { content: ""; position: absolute; left: calc(-1.6rem + 0px); top: 0.3rem; width: 12px; height: 12px; border-radius: 50%; background: var(--global-text-color); }
+.hm-ni { position: relative; border-bottom: 1px solid var(--global-divider-color); }
+.hm-ni::before { content: ""; position: absolute; left: calc(-1.6rem + 2px); top: 1.05rem; width: 8px; height: 8px; border-radius: 50%; background: var(--global-bg-color); border: 2px solid var(--global-text-color-light); }
+.hm-ni.is-open::before { background: var(--global-theme-color); border-color: var(--global-theme-color); }
+.hm-nh { all: unset; cursor: pointer; display: grid; grid-template-columns: 58px auto minmax(0, 1fr) 16px; gap: 0.8rem; align-items: baseline; width: 100%; padding: 0.8rem 0; box-sizing: border-box; }
+.hm-nh time { font-size: 0.82rem; font-weight: 700; color: var(--global-text-color-light); font-variant-numeric: tabular-nums; }
+.hm-ncat { font-size: 0.72rem; font-weight: 700; padding: 0.08rem 0.45rem; border-radius: 4px; white-space: nowrap; border: 1px solid currentColor; }
+.hm-ncat[data-c="paper"] { color: #2563eb; } .hm-ncat[data-c="grant"] { color: #b45309; } .hm-ncat[data-c="talk"] { color: #0f766e; } .hm-ncat[data-c="service"] { color: #7c3aed; } .hm-ncat[data-c="update"] { color: var(--global-text-color-light); }
+html[data-theme="dark"] .hm-ncat[data-c="paper"] { color: #93c5fd; } html[data-theme="dark"] .hm-ncat[data-c="grant"] { color: #fcd34d; } html[data-theme="dark"] .hm-ncat[data-c="talk"] { color: #5eead4; } html[data-theme="dark"] .hm-ncat[data-c="service"] { color: #c4b5fd; }
+.hm-nt { font-size: 0.97rem; font-weight: 600; line-height: 1.45; color: var(--global-text-color); }
+.hm-nh:hover .hm-nt { color: var(--global-theme-color); }
+.hm-nchev { width: 8px; height: 8px; border-right: 2px solid var(--global-text-color-light); border-bottom: 2px solid var(--global-text-color-light); transform: rotate(45deg); transition: transform 0.2s ease; align-self: center; }
+.hm-ni.is-open .hm-nchev { transform: rotate(-135deg); }
+.hm-nc { padding: 0 0 1rem calc(58px + 0.8rem); font-size: 0.94rem; line-height: 1.65; color: var(--global-text-color); max-width: 78ch; }
 .hm-nc [style] { background: none !important; border: 0 !important; padding: 0 !important; box-shadow: none !important; border-radius: 0 !important; font-size: inherit !important; }
 .hm-nc span[style], .hm-nc strong[style] { color: inherit !important; }
 .hm-nc br + br { display: none; }
@@ -143,8 +195,6 @@ layout: default
 .hm-nc a span[style] { color: inherit !important; }
 .hm-more { all: unset; cursor: pointer; margin-top: 1rem; font-size: 0.9rem; font-weight: 600; color: var(--global-theme-color); padding: 0.45rem 0.9rem; border: 1px solid var(--global-theme-color); border-radius: 6px; }
 .hm-more:hover { background: var(--global-theme-color); color: #fff; }
-
-.hm-support p { color: var(--global-text-color); line-height: 1.7; max-width: 74ch; }
 
 @media (max-width: 760px) {
   .hm-head { grid-template-columns: 1fr; gap: 1.2rem; }
@@ -157,9 +207,16 @@ layout: default
   .hm-topics { flex-direction: row; overflow-x: auto; border-left: 0; border-bottom: 1px solid var(--global-divider-color); gap: 0.2rem; scrollbar-width: thin; }
   .hm-topic { white-space: nowrap; padding: 0.55rem 0.8rem; margin: 0 0 -1px; border-left: 0; border-bottom: 3px solid transparent; }
   .hm-topic.is-on { border-bottom-color: var(--global-theme-color); }
-  .hm-paper, .hm-ni { grid-template-columns: 76px minmax(0, 1fr); gap: 0.7rem; }
+  .hm-paper { grid-template-columns: 76px minmax(0, 1fr); gap: 0.7rem; }
+  .hm-sponsors { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hm-sp { height: 96px; }
+  .hm-nh { grid-template-columns: 50px minmax(0, 1fr) 14px; row-gap: 0.3rem; }
+  .hm-ncat { grid-column: 2; justify-self: start; }
+  .hm-nt { grid-column: 2; }
+  .hm-nchev { grid-column: 3; grid-row: 1; }
+  .hm-nc { padding-left: 0; }
 }
-@media (prefers-reduced-motion: reduce) { .hm-fact::after, .hm-links a { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .hm-fact::after, .hm-links a, .hm-sp-logo, .hm-sp-cap, .hm-nchev { transition: none; } }
 </style>
 
 <script>
@@ -180,12 +237,78 @@ layout: default
   topics.forEach(function (t) { t.addEventListener('click', function () { show(t); }); });
   if (topics.length) show(topics[0]);
 
-  var more = root.querySelector('.hm-more');
-  if (more) more.addEventListener('click', function () {
-    var open = more.getAttribute('aria-expanded') === 'true';
-    root.querySelectorAll('.hm-ni.is-extra').forEach(function (li) { li.hidden = open; });
-    more.setAttribute('aria-expanded', !open);
-    more.textContent = open ? 'Show ' + more.dataset.n + ' earlier updates' : 'Show fewer updates';
+  // ---- At-a-glance numbers count up once on load
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  root.querySelectorAll('.hm-fn').forEach(function (el) {
+    var m = el.textContent.trim().match(/^(\D*)(\d+)(.*)$/); if (!m || reduce) return;
+    var end = +m[2], t0 = null;
+    function step(ts) { if (!t0) t0 = ts; var p = Math.min(1, (ts - t0) / 1100), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = m[1] + Math.round(end * e) + m[3]; if (p < 1) requestAnimationFrame(step); }
+    el.textContent = m[1] + '0' + m[3]; requestAnimationFrame(step);
   });
+
+  // ---- News: categorise, give each item a headline, filter, expand
+  var tl = root.querySelector('.hm-tl'); if (!tl) return;
+  var items = Array.prototype.slice.call(tl.querySelectorAll('.hm-ni'));
+  var LABEL = { paper: 'Paper', grant: 'Grant / award', talk: 'Talk / media', service: 'Service', update: 'Update' };
+  function category(t) {
+    t = t.toLowerCase();
+    if (/reviewer|review panel|program committee|guest editor|served on|served as|panelist|session chair|organizing committee/.test(t)) return 'service';
+    if (/grant|award|awarded|funded|fellow|top 2%|scholarship|honou?red|recogni[sz]ed/.test(t)) return 'grant';
+    if (/invited talk|keynote|talk|presented|presentation|interview|featured|news feature|joined/.test(t)) return 'talk';
+    if (/accepted|published|paper|journal|conference/.test(t)) return 'paper';
+    return 'update';
+  }
+  function headline(c) {
+    var first = c.querySelector('strong, b, span[style*="font-weight:8"], span[style*="font-weight: 8"]');
+    var txt = (c.textContent || '').replace(/\s+/g, ' ').trim();
+    var h = first ? first.textContent.replace(/\s+/g, ' ').trim() : '';
+    if (h.length < 18 || h.length > 160 || txt.indexOf(h) > 40) {
+      var mm = txt.match(/^(.{25,170}?[.!?])(\s|$)/); h = mm ? mm[1] : txt.slice(0, 150) + (txt.length > 150 ? '…' : '');
+    }
+    return h.replace(/^[^\w“"(]+/, '');
+  }
+  var counts = { all: items.length, paper: 0, grant: 0, talk: 0, service: 0 };
+  items.forEach(function (it) {
+    var c = it.querySelector('.hm-nc'), cat = category(c.textContent);
+    it.dataset.c = cat; if (counts[cat] !== undefined) counts[cat]++;
+    var tag = it.querySelector('.hm-ncat'); tag.textContent = LABEL[cat]; tag.dataset.c = cat;
+    it.querySelector('.hm-nt').textContent = headline(c);
+    var btn = it.querySelector('.hm-nh');
+    btn.addEventListener('click', function () {
+      var open = it.classList.toggle('is-open'); c.hidden = !open; btn.setAttribute('aria-expanded', open);
+    });
+  });
+  root.querySelectorAll('.hm-nfb').forEach(function (b) { b.querySelector('span').textContent = counts[b.dataset.c] || 0; if (!counts[b.dataset.c]) b.hidden = true; });
+
+  var LIMIT = 8, expanded = false, filter = 'all', more = root.querySelector('.hm-more');
+  function render() {
+    tl.querySelectorAll('.hm-yr').forEach(function (y) { y.remove(); });
+    var match = items.filter(function (it) { return filter === 'all' || it.dataset.c === filter; });
+    items.forEach(function (it) { it.hidden = true; });
+    var lastYear = null;
+    match.forEach(function (it, i) {
+      if (!expanded && i >= LIMIT) return;
+      it.hidden = false;
+      if (it.dataset.year !== lastYear) {
+        var y = document.createElement('div'); y.className = 'hm-yr'; y.textContent = it.dataset.year;
+        tl.insertBefore(y, it); lastYear = it.dataset.year;
+      }
+    });
+    var rest = match.length - LIMIT;
+    more.hidden = rest <= 0;
+    more.textContent = expanded ? 'Show fewer updates' : 'Show ' + rest + ' earlier update' + (rest === 1 ? '' : 's');
+  }
+  root.querySelectorAll('.hm-nfb').forEach(function (b) {
+    b.addEventListener('click', function () {
+      filter = b.dataset.c; expanded = false;
+      root.querySelectorAll('.hm-nfb').forEach(function (x) { var on = x === b; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', on); });
+      render();
+    });
+  });
+  more.addEventListener('click', function () { expanded = !expanded; render(); });
+  // open the most recent item so visitors see what an expanded entry looks like
+  if (items[0]) items[0].querySelector('.hm-nh').click();
+  render();
 })();
 </script>

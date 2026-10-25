@@ -105,6 +105,7 @@ description: ""
 </div>
 
 <style>
+.mt [hidden] { display: none !important; }
 .mt { max-width: 980px; margin: 0 auto; }
 .mt-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 

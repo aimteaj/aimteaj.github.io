@@ -37,6 +37,7 @@ nav_order: 2
 <p class="pb-empty" hidden>No publications match these filters.</p>
 
 <style>
+.pb-tools [hidden], .pb-empty[hidden], .publications [hidden] { display: none !important; }
 .pb-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
 /* Type filters, with counts */

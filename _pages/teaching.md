@@ -64,6 +64,7 @@ description: ""
 </div>
 
 <style>
+.tc [hidden] { display: none !important; }
 .tc { max-width: 980px; margin: 0 auto; }
 
 .tc-courses { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 2px solid var(--global-text-color); border-bottom: 1px solid var(--global-divider-color); }
