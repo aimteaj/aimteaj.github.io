@@ -39,7 +39,7 @@ layout: default
     <p class="hm-hl-sub">
       <span class="hm-hl-big">{{ hl.size }}</span>
       <span class="hm-hl-line"><strong>SPEED Lab papers in 2026</strong>, {{ n_astar }} of them at <strong class="hm-hl-astar">CORE A*</strong> venues and {{ n_q1 }} in <strong class="hm-hl-q1">Q1 journals</strong>, across
-        {% for v in hl_venues %}{% if v != "arXiv" %}<span class="hm-hl-vn" data-v="{{ v }}">{{ v | remove: " 2026" }}</span> {% endif %}{% endfor %}</span>
+        <span class="hm-hl-vlist">{% for v in hl_venues %}{% if v != "arXiv" %}<span class="hm-hl-vn" data-v="{{ v }}">{{ v | remove: " 2026" }}</span> {% endif %}{% endfor %}</span></span>
     </p>
     <div class="hm-hl-filters" role="group" aria-label="Filter highlights by venue">
       <button class="hm-hlf is-on" data-v="all" aria-pressed="true">All</button>
@@ -204,6 +204,7 @@ html[data-theme="dark"] .hm-hl-big { background-image: linear-gradient(135deg, #
 .hm-hl-astar { color: var(--global-theme-color); }
 .hm-hl-q1 { color: #15803d; }
 html[data-theme="dark"] .hm-hl-q1 { color: #86efac; }
+.hm-hl-vlist { display: block; }
 .hm-hl-vn { font-weight: 700; color: var(--vc); white-space: nowrap; }
 .hm-hl-vn:not(:last-of-type)::after { content: "·"; color: var(--global-text-color-light); font-weight: 400; margin: 0 0.4rem; }
 .hm-hl-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.1rem; }
