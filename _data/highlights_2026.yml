@@ -1,87 +1,123 @@
-# "2026 at top AI venues" on the home page. Locations and dates are taken from the
-# official conference sites (checked October 2026). `key` links to the paper's entry
-# on the Publications page.
-- venue: "NeurIPS 2026"
-  track: "Main Conference"
-  where: "Sydney, Atlanta and Paris"
-  when: "December 6–13, 2026"
-  title: "Do Robust LVLMs Hallucinate More? Uncovering Robustness-Induced Hallucination in Large Vision-Language Models"
-  key: "hossain2026hals"
-  color: "#7c3aed"
-- venue: "EMNLP 2026"
-  track: "Main Conference"
-  where: "Budapest, Hungary"
-  when: "October 24–29, 2026"
-  title: "Do LVLMs Know When They Are Wrong? Trajectory-Based Correctness Estimation from a Single Forward Pass"
-  key: "fime2026trajectory"
-  color: "#dc2626"
-- venue: "EMNLP 2026"
-  track: "Main Conference"
-  where: "Budapest, Hungary"
-  when: "October 24–29, 2026"
-  title: "Edits in the Wild: A Multilingual Benchmark for Localizing On-Device Generative Image Edits on Consumer Platforms"
-  key: "soumik2026editswild"
-  color: "#dc2626"
-- venue: "EMNLP 2026"
-  track: "Industry Track"
-  where: "Budapest, Hungary"
-  when: "October 24–29, 2026"
-  title: "From Benchmarks to Real-World Use: Evaluating the Robustness of Vision-Language Models for Chart Understanding"
-  key: "fime2026chartrobust"
-  color: "#dc2626"
-- venue: "CVPR 2026"
-  track: "Main Conference (Findings)"
-  where: "Denver, Colorado"
-  when: "June 3–7, 2026"
-  title: "When Data is Scarce, Learn to Adapt: Robust Federated Learning via Adversarial Meta-Optimization"
-  key: "hossain2026FAML"
-  color: "#2563eb"
-- venue: "CVPR 2026"
-  track: "Workshop"
-  where: "Denver, Colorado"
-  when: "June 3–7, 2026"
-  title: "Breaking Sensor-Text Alignment: Cross-Modal Attack on Contrastive Multimodal Human Activity Recognition"
-  key: "malithi"
-  color: "#2563eb"
-- venue: "ACL 2026"
-  track: "Industry Track"
-  where: "San Diego, California"
-  when: "July 2–7, 2026"
-  title: "No Innocence in Styling: Discovery of Privacy Protection Capabilities and Security Risks in Consumer Generative AI Writing Assistants"
-  key: "soumikacl2026"
-  color: "#ea580c"
-- venue: "IJCNN 2026"
-  track: "Main Conference"
-  where: "Maastricht, the Netherlands"
-  when: "June 21–26, 2026"
-  title: "Sim-CLIP: Unsupervised Siamese Adversarial Fine-Tuning for Robust and Semantically-Rich Vision-Language Models"
-  key: "hossain2024sim"
-  color: "#0891b2"
-- venue: "ICTAI 2026"
-  track: "Main Conference"
-  where: "Boca Raton, Florida"
-  when: "November 2–4, 2026"
-  title: "When Quantum Entanglement Meets Transformer Attention: A Systematic Study of Quantum Attention Heads"
-  key: "soumik2026quantumattn"
-  color: "#db2777"
-- venue: "Scientific Reports"
-  track: "Journal"
-  where: "Nature Portfolio"
-  when: "2026"
-  title: "Secure Yet Fragile: Adversarial Vulnerabilities of Federated Vision–Language Models in Medical AI"
-  key: "fime2026secureyetfragile"
-  color: "#16a34a"
-- venue: "IEEE TSC"
-  track: "Journal"
-  where: "IEEE Transactions on Sustainable Computing"
-  when: "Vol. 11, 2026"
-  title: "Quantifying Robustness and Sustainability Trade-off in Federated Adversarial Learning for Cyber-Physical Systems"
-  key: "hasan2025sustainability"
-  color: "#4f46e5"
-- venue: "arXiv"
-  track: "Preprint"
-  where: "Under review, ACM Transactions on Quantum Computing"
-  when: "October 2026"
-  title: "Q-Capsule: A Localized Capsule-Based Quantum Neural Architecture for Barren Plateau Mitigation"
-  key: "fime2026qcapsule"
-  color: "#b91c1c"
+# "2026 at top AI venues" on the home page. Locations and dates come from the
+# official conference sites. `key` links to the paper on the Publications page;
+# authors, image and rank are copied from _bibliography/papers.bib.
+- venue: NeurIPS 2026
+  track: Main Conference
+  where: Sydney, Atlanta and Paris
+  when: December 6–13, 2026
+  title: Do Robust LVLMs Hallucinate More? Uncovering Robustness-Induced Hallucination in Large Vision-Language Models
+  key: hossain2026hals
+  authors: Md Zarif Hossain, Awal Ahmed Fime and Ahmed Imteaj
+  image: hals-neurips2026.png
+  rank: CORE A*
+  kind: conference
+- venue: EMNLP 2026
+  track: Main Conference
+  where: Budapest, Hungary
+  when: October 24–29, 2026
+  title: Do LVLMs Know When They Are Wrong? Trajectory-Based Correctness Estimation from a Single Forward Pass
+  key: fime2026trajectory
+  authors: Awal Ahmed Fime, Md Zarif Hossain and Ahmed Imteaj
+  image: emnlp-trajectory.png.gif
+  rank: CORE A*
+  kind: conference
+- venue: EMNLP 2026
+  track: Main Conference
+  where: Budapest, Hungary
+  when: October 24–29, 2026
+  title: 'Edits in the Wild: A Multilingual Benchmark for Localizing On-Device Generative Image Edits on Consumer Platforms'
+  key: soumik2026editswild
+  authors: Mohd. Farhan Israk Soumik, Awal Ahmed Fime, Malithi Mithsara and 5 more
+  image: edits-wild-2026.jpg
+  rank: CORE A*
+  kind: conference
+- venue: EMNLP 2026
+  track: Industry Track
+  where: Budapest, Hungary
+  when: October 24–29, 2026
+  title: 'From Benchmarks to Real-World Use: Evaluating the Robustness of Vision-Language Models for Chart Understanding'
+  key: fime2026chartrobust
+  authors: Awal Ahmed Fime, Mohammed Saidul Islam, Md Tahmid Rahman Laskar and 6 more
+  image: robustchart360-2026.jpg
+  rank: CORE A*
+  kind: conference
+- venue: CVPR 2026
+  track: Main Conference (Findings)
+  where: Denver, Colorado
+  when: June 3–7, 2026
+  title: 'When Data is Scarce, Learn to Adapt: Robust Federated Learning via Adversarial Meta-Optimization'
+  key: hossain2026FAML
+  authors: Md Zarif Hossain, Awal Ahmed Fime and Ahmed Imteaj
+  image: faml-2026.gif
+  rank: CORE A*
+  kind: conference
+- venue: CVPR 2026
+  track: Workshop
+  where: Denver, Colorado
+  when: June 3–7, 2026
+  title: 'Breaking Sensor-Text Alignment: Cross-Modal Attack on Contrastive Multimodal Human Activity Recognition'
+  key: malithi
+  authors: WKM Malithi, Ning Yang, Ahmed Imteaj and Abdur R Shahid
+  image: sos.gif
+  rank: CORE A*
+  kind: conference
+- venue: ACL 2026
+  track: Industry Track
+  where: San Diego, California
+  when: July 2–7, 2026
+  title: 'No Innocence in Styling: Discovery of Privacy Protection Capabilities and Security Risks in Consumer Generative AI Writing Assistants'
+  key: soumikacl2026
+  authors: MFI Soumik, SM Hasan, WKM Mithsara and 2 more
+  image: acl-2026.gif
+  rank: CORE A*
+  kind: conference
+- venue: IJCNN 2026
+  track: Main Conference
+  where: Maastricht, the Netherlands
+  when: June 21–26, 2026
+  title: 'Sim-CLIP: Unsupervised Siamese Adversarial Fine-Tuning for Robust and Semantically-Rich Vision-Language Models'
+  key: hossain2024sim
+  authors: Md Zarif Hossain and Ahmed Imteaj
+  image: simclip.gif
+  rank: ''
+  kind: conference
+- venue: ICTAI 2026
+  track: Main Conference
+  where: Boca Raton, Florida
+  when: November 2–4, 2026
+  title: 'When Quantum Entanglement Meets Transformer Attention: A Systematic Study of Quantum Attention Heads'
+  key: soumik2026quantumattn
+  authors: Mohd. Farhan Israk Soumik, Arun Babu Aryal, H. Zangoti and 2 more
+  image: cover-soumik2026quantumattn.jpg
+  rank: ''
+  kind: conference
+- venue: Scientific Reports
+  track: Journal
+  where: Nature Portfolio
+  when: '2026'
+  title: 'Secure Yet Fragile: Adversarial Vulnerabilities of Federated Vision–Language Models in Medical AI'
+  key: fime2026secureyetfragile
+  authors: Awal Ahmed Fime, Tasfia Zaman Samiha, Md Zarif Hossain and 5 more
+  image: nature-vlm.gif
+  rank: ''
+  kind: journal
+- venue: IEEE TSC
+  track: Journal
+  where: IEEE Transactions on Sustainable Computing
+  when: Vol. 11, 2026
+  title: Quantifying Robustness and Sustainability Trade-off in Federated Adversarial Learning for Cyber-Physical Systems
+  key: hasan2025sustainability
+  authors: Syed Mhamudul Hasan, Ahmed Imteaj and Abdur R. Shahid
+  image: fal-sust2.gif
+  rank: ''
+  kind: journal
+- venue: arXiv
+  track: Preprint
+  where: Under review, ACM Transactions on Quantum Computing
+  when: October 2026
+  title: 'Q-Capsule: A Localized Capsule-Based Quantum Neural Architecture for Barren Plateau Mitigation'
+  key: fime2026qcapsule
+  authors: Awal Ahmed Fime, Tasfia Zaman Samiha, Saika Zaman and 4 more
+  image: cover-fime2026qcapsule.jpg
+  rank: ''
+  kind: preprint

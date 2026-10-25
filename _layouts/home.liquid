@@ -31,29 +31,53 @@ layout: default
 
   <!-- 2026 highlights -->
   {% assign hl = site.data.highlights_2026 %}
+  {% assign n_conf = hl | where: "kind", "conference" | size %}
+  {% assign n_jour = hl | where: "kind", "journal" | size %}
+  {% assign n_pre = hl | where: "kind", "preprint" | size %}
   <section class="hm-sec hm-hl">
-    <div class="hm-hl-head">
+    <div class="hm-hl-bar">
       <h2 class="hm-h2">2026 at top AI venues</h2>
-      <p class="hm-hl-sub">{{ hl.size }} SPEED Lab papers this year at leading AI conferences and journals.</p>
+      <div class="hm-hl-seg" role="group" aria-label="Filter 2026 papers by type">
+        <button class="is-on" data-k="all" aria-pressed="true">All <b>{{ hl.size }}</b></button>
+        <button data-k="conference" aria-pressed="false">Conferences <b>{{ n_conf }}</b></button>
+        <button data-k="journal" aria-pressed="false">Journals <b>{{ n_jour }}</b></button>
+        {% if n_pre > 0 %}<button data-k="preprint" aria-pressed="false">Preprints <b>{{ n_pre }}</b></button>{% endif %}
+      </div>
     </div>
-    <div class="hm-hl-filters" role="group" aria-label="Filter highlights by venue">
-      <button class="hm-hlf is-on" data-v="all" aria-pressed="true">All</button>
-      {% assign venues = hl | map: "venue" | uniq %}
-      {% for v in venues %}<button class="hm-hlf" data-v="{{ v }}" aria-pressed="false">{{ v }}</button>{% endfor %}
+
+    <div class="hm-hl-wrap">
+      <ol class="hm-hl-list" role="tablist" aria-orientation="vertical" aria-label="2026 papers">
+        {% for h in hl %}
+        <li role="presentation" data-k="{{ h.kind }}">
+          <button class="hm-hl-item{% if forloop.first %} is-on{% endif %}" role="tab" id="hl-tab-{{ forloop.index0 }}" aria-controls="hl-panel" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}" tabindex="{% if forloop.first %}0{% else %}-1{% endif %}" data-i="{{ forloop.index0 }}">
+            <span class="hm-hl-v">{{ h.venue }}</span>
+            <span class="hm-hl-t">{{ h.title }}</span>
+          </button>
+        </li>
+        {% endfor %}
+      </ol>
+
+      {% assign f = hl[0] %}
+      <article class="hm-hl-panel" id="hl-panel" role="tabpanel" aria-labelledby="hl-tab-0" aria-live="polite">
+        <a class="hm-hl-img" href="{{ '/publications/' | relative_url }}#{{ f.key }}" tabindex="-1" aria-hidden="true">
+          <img src="{{ '/assets/img/publication_preview/' | append: f.image | relative_url }}" alt="" loading="lazy">
+        </a>
+        <div class="hm-hl-body">
+          <div class="hm-hl-tags"><span class="hm-hl-venue">{{ f.venue }}</span><span class="hm-hl-track">{{ f.track }}</span><span class="hm-hl-rank"{% if f.rank == "" %} hidden{% endif %}>{{ f.rank }}</span></div>
+          <h3 class="hm-hl-title">{{ f.title }}</h3>
+          <p class="hm-hl-authors">{{ f.authors }}</p>
+          <dl class="hm-hl-facts">
+            <div><dt>Where</dt><dd class="hm-hl-where">{{ f.where }}</dd></div>
+            <div><dt>When</dt><dd class="hm-hl-when">{{ f.when }}</dd></div>
+          </dl>
+          <div class="hm-hl-nav">
+            <a class="hm-hl-go" href="{{ '/publications/' | relative_url }}#{{ f.key }}">View publication</a>
+            <span class="hm-hl-pos"><button class="hm-hl-prev" type="button" aria-label="Previous paper"></button><span class="hm-hl-count">1 / {{ hl.size }}</span><button class="hm-hl-next" type="button" aria-label="Next paper"></button></span>
+          </div>
+        </div>
+      </article>
     </div>
-    <div class="hm-hl-grid">
-      {% for h in hl %}
-      <a class="hm-hl-card" data-v="{{ h.venue }}" href="{{ '/publications/' | relative_url }}#{{ h.key }}" style="--vc: {{ h.color }}">
-        <span class="hm-hl-top">
-          <span class="hm-hl-venue">{{ h.venue }}</span>
-          <span class="hm-hl-track">{{ h.track }}</span>
-        </span>
-        <span class="hm-hl-meta"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>{{ h.where }}</span>
-        <span class="hm-hl-meta"><i class="fa-regular fa-calendar" aria-hidden="true"></i>{{ h.when }}</span>
-        <span class="hm-hl-title">{{ h.title }}</span>
-      </a>
-      {% endfor %}
-    </div>
+    <script type="application/json" id="hl-data">{{ hl | jsonify }}</script>
   </section>
 
   <!-- Research interests explorer -->
@@ -169,25 +193,50 @@ layout: default
 .hm-pnone { color: var(--global-text-color-light); padding: 0.8rem 0; }
 .hm-pall { display: inline-block; margin-top: 0.9rem; font-size: 0.9rem; font-weight: 600; color: var(--global-theme-color) !important; text-decoration: underline !important; text-underline-offset: 3px; }
 
-/* 2026 highlights */
-.hm-hl-head { display: block; }
-.hm-hl-sub { margin: -0.4rem 0 1rem; color: var(--global-text-color-light); font-size: 0.95rem; }
-.hm-hl-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1rem; }
-.hm-hlf { all: unset; cursor: pointer; font-size: 0.85rem; font-weight: 600; padding: 0.3rem 0.75rem; border: 1px solid var(--global-divider-color); border-radius: 999px; color: var(--global-text-color); }
-.hm-hlf:hover { border-color: var(--global-theme-color); }
-.hm-hlf.is-on { background: var(--global-text-color); border-color: var(--global-text-color); color: var(--global-bg-color); }
-.hm-hlf:focus-visible, .hm-hl-card:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 2px; }
-.hm-hl-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.9rem; }
-.hm-hl-card { display: flex; flex-direction: column; gap: 0.3rem; padding: 1rem 1.1rem 1.15rem; border: 1px solid var(--global-divider-color); border-top: 4px solid var(--vc); border-radius: 8px; background: var(--global-card-bg-color); color: var(--global-text-color); transition: transform 0.18s ease, box-shadow 0.18s ease; }
-.hm-hl-card:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15,23,42,0.1); }
-.hm-hl-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.35rem 0.5rem; margin-bottom: 0.35rem; }
-.hm-hl-venue { white-space: nowrap; font-size: 1.15rem; font-weight: 800; color: var(--vc); letter-spacing: -0.01em; }
-html[data-theme="dark"] .hm-hl-venue { filter: brightness(1.45); }
-.hm-hl-track { font-size: 0.7rem; font-weight: 700; color: #fff; background: var(--vc); border-radius: 4px; padding: 0.15rem 0.45rem; white-space: nowrap; }
-.hm-hl-meta { font-size: 0.8rem; color: var(--global-text-color-light); display: flex; align-items: center; gap: 0.45rem; }
-.hm-hl-meta i { width: 0.9rem; text-align: center; opacity: 0.8; }
-.hm-hl-title { margin-top: 0.55rem; padding-top: 0.6rem; border-top: 1px solid var(--global-divider-color); font-size: 0.92rem; font-weight: 600; line-height: 1.45; }
-.hm-hl-card:hover .hm-hl-title { color: var(--global-theme-color); }
+/* 2026 highlights: list + featured panel */
+.hm-hl-bar { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 0.6rem 1rem; border-bottom: 1px solid var(--global-text-color); margin-bottom: 1.2rem; }
+.hm-hl-bar .hm-h2 { border: 0; margin: 0; padding-bottom: 0.7rem; }
+.hm-hl-seg { display: inline-flex; margin-bottom: 0.6rem; border: 1px solid var(--global-divider-color); border-radius: 8px; padding: 3px; gap: 2px; }
+.hm-hl-seg button { all: unset; cursor: pointer; font-size: 0.84rem; font-weight: 600; padding: 0.35rem 0.75rem; border-radius: 6px; color: var(--global-text-color-light); }
+.hm-hl-seg button b { font-weight: 700; margin-left: 0.25rem; font-variant-numeric: tabular-nums; color: var(--global-text-color); }
+.hm-hl-seg button:hover { color: var(--global-text-color); }
+.hm-hl-seg button.is-on { background: var(--global-text-color); color: var(--global-bg-color); }
+.hm-hl-seg button.is-on b { color: var(--global-bg-color); }
+
+.hm-hl-wrap { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.25fr); gap: 1.8rem; align-items: start; }
+.hm-hl-list { list-style: none; margin: 0; padding: 0; max-height: 560px; overflow-y: auto; border-left: 1px solid var(--global-divider-color); scrollbar-width: thin; }
+.hm-hl-list li { margin: 0; }
+.hm-hl-item { all: unset; box-sizing: border-box; cursor: pointer; display: block; width: 100%; padding: 0.7rem 0.9rem 0.7rem 1rem; margin-left: -1px; border-left: 3px solid transparent; }
+.hm-hl-item:hover { background: rgba(127,127,127,0.06); }
+.hm-hl-item.is-on { border-left-color: var(--global-theme-color); background: rgba(127,127,127,0.08); }
+.hm-hl-item:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: -2px; }
+.hm-hl-v { display: block; font-size: 0.76rem; font-weight: 700; color: var(--global-text-color-light); font-variant-numeric: tabular-nums; margin-bottom: 0.15rem; }
+.hm-hl-item.is-on .hm-hl-v { color: var(--global-theme-color); }
+.hm-hl-t { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 0.9rem; font-weight: 600; line-height: 1.4; color: var(--global-text-color); }
+
+.hm-hl-panel { position: sticky; top: 76px; border: 1px solid var(--global-divider-color); border-radius: 10px; overflow: hidden; background: var(--global-card-bg-color); }
+.hm-hl-img { display: block; aspect-ratio: 16 / 9; background: #0b1020; overflow: hidden; }
+.hm-hl-img img { width: 100%; height: 100%; object-fit: cover; display: block; transition: opacity 0.25s ease; }
+.hm-hl-panel.is-swapping .hm-hl-img img, .hm-hl-panel.is-swapping .hm-hl-body { opacity: 0; }
+.hm-hl-body { padding: 1.1rem 1.3rem 1.2rem; transition: opacity 0.2s ease; }
+.hm-hl-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; align-items: center; margin-bottom: 0.6rem; }
+.hm-hl-venue { font-weight: 800; font-size: 1.02rem; color: var(--global-text-color); margin-right: 0.2rem; }
+.hm-hl-track, .hm-hl-rank { font-size: 0.74rem; font-weight: 700; padding: 0.12rem 0.5rem; border-radius: 4px; border: 1px solid var(--global-divider-color); color: var(--global-text-color-light); }
+.hm-hl-rank { border-color: var(--global-theme-color); color: var(--global-theme-color); }
+.hm-hl-title { font-size: 1.12rem; font-weight: 700; line-height: 1.4; margin: 0 0 0.45rem; color: var(--global-text-color); }
+.hm-hl-authors { font-size: 0.9rem; color: var(--global-text-color-light); margin: 0 0 0.9rem; line-height: 1.5; }
+.hm-hl-facts { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 0 0 1rem; padding: 0.75rem 0; border-top: 1px solid var(--global-divider-color); border-bottom: 1px solid var(--global-divider-color); }
+.hm-hl-facts dt { font-size: 0.74rem; font-weight: 700; color: var(--global-text-color-light); margin: 0; }
+.hm-hl-facts dd { font-size: 0.9rem; margin: 0.1rem 0 0; color: var(--global-text-color); line-height: 1.4; }
+.hm-hl-nav { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.hm-hl-go { font-size: 0.9rem; font-weight: 700; color: #fff !important; background: var(--global-theme-color); padding: 0.5rem 1rem; border-radius: 6px; }
+.hm-hl-go:hover { filter: brightness(1.08); }
+.hm-hl-go:focus-visible, .hm-hl-pos button:focus-visible, .hm-hl-seg button:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 2px; }
+.hm-hl-pos { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 600; color: var(--global-text-color-light); font-variant-numeric: tabular-nums; }
+.hm-hl-pos button { all: unset; cursor: pointer; width: 30px; height: 30px; border: 1px solid var(--global-divider-color); border-radius: 50%; display: grid; place-items: center; }
+.hm-hl-pos button:hover { border-color: var(--global-theme-color); }
+.hm-hl-pos button::before { content: ""; width: 7px; height: 7px; border-left: 2px solid var(--global-text-color); border-bottom: 2px solid var(--global-text-color); transform: translateX(1px) rotate(45deg); }
+.hm-hl-next::before { transform: translateX(-1px) rotate(-135deg) !important; }
 
 /* Research support: logo wall; hover or focus shows what each sponsor funds */
 .hm-sponsors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.9rem; }
@@ -250,7 +299,11 @@ html[data-theme="dark"] .hm-ncat[data-c="paper"] { color: #93c5fd; } html[data-t
   .hm-topic.is-on { border-bottom-color: var(--global-theme-color); }
   .hm-paper { grid-template-columns: 76px minmax(0, 1fr); gap: 0.7rem; }
   .hm-sponsors { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .hm-hl-grid { grid-template-columns: 1fr; }
+  .hm-hl-wrap { grid-template-columns: 1fr; gap: 1rem; }
+  .hm-hl-panel { position: static; order: -1; }
+  .hm-hl-list { max-height: 320px; }
+  .hm-hl-bar { align-items: flex-start; }
+  .hm-hl-seg { flex-wrap: wrap; }
   .hm-sp { height: 96px; }
   .hm-nh { grid-template-columns: 50px minmax(0, 1fr) 14px; row-gap: 0.3rem; }
   .hm-ncat { grid-column: 2; justify-self: start; }
@@ -258,7 +311,7 @@ html[data-theme="dark"] .hm-ncat[data-c="paper"] { color: #93c5fd; } html[data-t
   .hm-nchev { grid-column: 3; grid-row: 1; }
   .hm-nc { padding-left: 0; }
 }
-@media (prefers-reduced-motion: reduce) { .hm-hl-card, .hm-links a, .hm-sp-logo, .hm-sp-cap, .hm-nchev { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .hm-hl-img img, .hm-hl-body, .hm-links a, .hm-sp-logo, .hm-sp-cap, .hm-nchev { transition: none; } }
 </style>
 
 <script>
@@ -279,14 +332,58 @@ html[data-theme="dark"] .hm-ncat[data-c="paper"] { color: #93c5fd; } html[data-t
   topics.forEach(function (t) { t.addEventListener('click', function () { show(t); }); });
   if (topics.length) show(topics[0]);
 
-  // ---- 2026 highlights: venue filter
-  var hlf = root.querySelectorAll('.hm-hlf');
-  hlf.forEach(function (b) {
-    b.addEventListener('click', function () {
-      hlf.forEach(function (x) { var on = x === b; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', on); });
-      root.querySelectorAll('.hm-hl-card').forEach(function (c) { c.hidden = !(b.dataset.v === 'all' || c.dataset.v === b.dataset.v); });
+  // ---- 2026 highlights: pick a paper from the list to feature it
+  (function () {
+    var dataEl = root.querySelector('#hl-data'); if (!dataEl) return;
+    var data = JSON.parse(dataEl.textContent), base = root.querySelector('.hm-hl-go').getAttribute('href').split('#')[0];
+    var imgBase = root.querySelector('.hm-hl-img img').getAttribute('src').replace(/[^/]*$/, '');
+    var panel = root.querySelector('.hm-hl-panel'), tabs = Array.prototype.slice.call(root.querySelectorAll('.hm-hl-item'));
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches, cur = 0;
+    function visible() { return tabs.filter(function (t) { return !t.parentNode.hidden; }); }
+    function fill(i) {
+      var h = data[i], q = function (s) { return panel.querySelector(s); };
+      q('.hm-hl-img img').src = imgBase + h.image;
+      q('.hm-hl-img').href = q('.hm-hl-go').href = base + '#' + h.key;
+      q('.hm-hl-venue').textContent = h.venue; q('.hm-hl-track').textContent = h.track;
+      q('.hm-hl-rank').textContent = h.rank || ''; q('.hm-hl-rank').hidden = !h.rank;
+      q('.hm-hl-title').textContent = h.title; q('.hm-hl-authors').textContent = h.authors;
+      q('.hm-hl-where').textContent = h.where; q('.hm-hl-when').textContent = h.when;
+      var vis = visible(), pos = vis.indexOf(tabs[i]);
+      q('.hm-hl-count').textContent = (pos + 1) + ' / ' + vis.length;
+      panel.setAttribute('aria-labelledby', tabs[i].id);
+    }
+    function select(i, focus) {
+      if (i === cur && panel.dataset.ready) { if (focus) tabs[i].focus(); return; }
+      tabs.forEach(function (t, k) { var on = k === i; t.classList.toggle('is-on', on); t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1; });
+      cur = i; panel.dataset.ready = '1';
+      if (reduce) fill(i); else { panel.classList.add('is-swapping'); setTimeout(function () { fill(i); panel.classList.remove('is-swapping'); }, 160); }
+      if (focus) tabs[i].focus();
+      var list = tabs[i].closest('ol'), r = tabs[i].getBoundingClientRect(), lr = list.getBoundingClientRect();
+      if (r.top < lr.top || r.bottom > lr.bottom) list.scrollTop += r.top - lr.top - 8;
+    }
+    function step(d) { var vis = visible(), p = vis.indexOf(tabs[cur]); if (p < 0) p = 0; var n = vis[(p + d + vis.length) % vis.length]; select(tabs.indexOf(n), false); }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(i, false); });
+      t.addEventListener('keydown', function (e) {
+        var vis = visible(), p = vis.indexOf(t), n = null;
+        if (e.key === 'ArrowDown') n = vis[(p + 1) % vis.length];
+        else if (e.key === 'ArrowUp') n = vis[(p - 1 + vis.length) % vis.length];
+        else if (e.key === 'Home') n = vis[0]; else if (e.key === 'End') n = vis[vis.length - 1];
+        if (n) { e.preventDefault(); select(tabs.indexOf(n), true); }
+      });
     });
-  });
+    panel.querySelector('.hm-hl-prev').addEventListener('click', function () { step(-1); });
+    panel.querySelector('.hm-hl-next').addEventListener('click', function () { step(1); });
+    root.querySelectorAll('.hm-hl-seg button').forEach(function (b) {
+      b.addEventListener('click', function () {
+        root.querySelectorAll('.hm-hl-seg button').forEach(function (x) { var on = x === b; x.classList.toggle('is-on', on); x.setAttribute('aria-pressed', on); });
+        tabs.forEach(function (t) { t.parentNode.hidden = !(b.dataset.k === 'all' || t.parentNode.dataset.k === b.dataset.k); });
+        var vis = visible(); panel.dataset.ready = '';
+        select(tabs.indexOf(vis.indexOf(tabs[cur]) > -1 ? tabs[cur] : vis[0]), false);
+      });
+    });
+    fill(0); panel.dataset.ready = '1';
+  })();
 
   // ---- News: categorise, give each item a headline, filter, expand
   var tl = root.querySelector('.hm-tl'); if (!tl) return;
