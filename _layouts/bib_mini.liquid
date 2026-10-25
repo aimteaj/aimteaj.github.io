@@ -1,0 +1,6 @@
+---
+---
+<a class="hm-paper" href="{{ '/publications/' | relative_url }}#{{ entry.key }}" data-sel="{% if entry.selected == 'true' or entry.selected == true %}1{% else %}0{% endif %}" data-text="{{ entry.title | downcase | escape }} {{ entry.booktitle | downcase | escape }} {{ entry.journal | downcase | escape }}">
+  <span class="hm-pv">{% if entry.abbr %}{{ entry.abbr }}{% else %}{{ entry.year }}{% endif %}</span>
+  <span class="hm-pt">{{ entry.title }}</span>
+</a>

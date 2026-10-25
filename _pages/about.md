@@ -1,5 +1,5 @@
 ---
-layout: about
+layout: home
 title: Home
 permalink: /
 subtitle: Assistant Professor, I-SENSE Fellow and Director of SPEED Lab
@@ -26,26 +26,7 @@ announcements:
 #   scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
 #   limit: 3 # leave blank to include all the blog posts
 ---
-I am a Tenure-track Assistant Professor in the Department of Electrical Engineering and Computer Science at [Florida Atlantic University, Boca Raton](https://www.fau.edu/). I serve as a Faculty Fellow at the Institute for Sensing and Embedded Network Systems Engineering [[I-SENSE]](https://www.fau.edu/isense/leadership/) and am a senior member of the Center for Connected Autonomy and Artificial Intelligence [[CA-AI]](https://www.fau.edu/engineering/research/c2a2/people/) at FAU. In addition, I am the Founding Director of the Secure Prediction, Edge AI and Multimodal LLM Lab [[SPEED Lab]](https://www.speedlab.network).
 
-My research focuses on building **robust, secure, efficient, and trustworthy AI systems**, with an emphasis on large vision-language models, agentic AI, federated learning, multimodal LLMs, and edge intelligence. I am particularly interested in control-theory of LLMs and distributed intelligence, and practical deployment in autonomous transportation, smart city, surveillance, operational intelligence for mission critical situations, underwater robot, agriculture and healthcare applications.
+I am a tenure-track Assistant Professor in the Department of Electrical Engineering and Computer Science at [Florida Atlantic University](https://www.fau.edu/), Boca Raton. I serve as a Faculty Fellow at the Institute for Sensing and Embedded Network Systems Engineering ([I-SENSE](https://www.fau.edu/isense/leadership/)), am a senior member of the Center for Connected Autonomy and Artificial Intelligence ([CA-AI](https://www.fau.edu/engineering/research/c2a2/people/)), and founded and direct the Secure Prediction, Edge AI and Multimodal LLM Lab ([SPEED Lab](https://www.speedlab.network)).
 
-Our research has been supported by
-<span style="color:#0d47a1; font-weight:700;">National Science Foundation (NSF)</span>, 
-<span style="color:#1b5e20; font-weight:700;">U.S. Department of Homeland Security (DHS)</span>, 
-<span style="color:#6a1b9a; font-weight:700;">National Artificial Intelligence Research Resource (NAIRR) Pilot</span>, 
-<span style="color:#c62828; font-weight:700;">Computing Research Association (CRA)</span>, 
-<span style="color:#ef6c00; font-weight:700;">ORAU Research Innovation Partnership Grant</span>, and 
-<span style="color:#00838f; font-weight:700;">FAU Vertically Integrated Projects (VIP) Program</span>. Our research has been published in leading venues including NeurIPS, CVPR, ACL, EMNLP, ICCV, AAAI, BigData, ICDCS, SenSys, Mobiquitous, ICMLA, COMPSAC, Nature, IEEE Transactions, etc.
-
-## Research Interests
-
-- Large Vision-Language Models and Multimodal LLMs
-- Federated Learning (FL) for Edge-Devices
-- Trustworthy AI, Agentic AI and Cybersecurity
-- Robustness and Security of VLMs and FL
-- Quantum AI and Post-Quantum Security
-- Computer Vision, 3D Models and Digital Twin
-- Applications in Surveillance, Autonomous Vehicles and Transportation, Ocean Research, Healthcare, and Agriculture.
-
-
+My research focuses on building **robust, secure, efficient, and trustworthy AI systems**, with an emphasis on large vision-language models, agentic AI, federated learning, multimodal LLMs, and edge intelligence. I am particularly interested in the control theory of LLMs and distributed intelligence, and in practical deployment for autonomous transportation, smart cities, surveillance, operational intelligence for mission-critical situations, underwater robotics, agriculture and healthcare. Our work appears in leading venues including NeurIPS, CVPR, ACL, EMNLP, ICCV, AAAI, IEEE BigData, ICDCS, Nature Scientific Reports and IEEE Transactions.

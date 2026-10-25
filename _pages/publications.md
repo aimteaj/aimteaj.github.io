@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /publications/
-title: Publications
+title: Recent Publications
 description: ""
 nav: true
 nav_order: 2
@@ -18,7 +18,6 @@ nav_order: 2
 
   <div class="pb-row">
     <div class="pb-years" role="group" aria-label="Filter by year"></div>
-    <label class="pb-sel"><input type="checkbox" id="pb-selected"> Selected only</label>
   </div>
 
   <div class="pb-row">
@@ -73,7 +72,8 @@ nav_order: 2
 .publications .title { font-size: 1.04rem; line-height: 1.45; margin-bottom: 0.25rem; }
 .publications .author { font-size: 0.93rem; line-height: 1.5; color: var(--global-text-color); }
 .publications .periodical { font-size: 0.9rem; color: var(--global-text-color-light); line-height: 1.5; }
-.publications .pub-note { display: inline-block; margin-top: 0.35rem; font-size: 0.78rem; font-weight: 700; color: var(--global-theme-color); border: 1px solid var(--global-theme-color); border-radius: 4px; padding: 0.05rem 0.45rem; }
+.publications .pub-notes { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.4rem; }
+.publications .pub-note { font-size: 0.78rem; font-weight: 700; color: var(--global-theme-color); border: 1px solid var(--global-theme-color); border-radius: 4px; padding: 0.05rem 0.45rem; }
 .publications .links { margin-top: 0.55rem; }
 .publications .links .btn { font-size: 0.78rem; font-weight: 600; padding: 0.2rem 0.65rem; border-radius: 4px; }
 .publications abbr.badge { font-size: 0.74rem; font-weight: 700; padding: 0.3rem 0.35rem; border-radius: 4px !important; }
@@ -122,7 +122,6 @@ html[data-theme="dark"] .pub-sel-flag { color: #facc15; }
 
   // mark selected papers
   items.forEach(function (li) {
-    if (selOf(li)) { var t = li.querySelector('.title'); if (t) { var f = document.createElement('span'); f.className = 'pub-sel-flag'; f.textContent = 'Selected'; t.appendChild(f); } }
     li.querySelectorAll('.title, .author, .periodical').forEach(function (el) { el.dataset.orig = el.innerHTML; });
   });
 
@@ -164,11 +163,10 @@ html[data-theme="dark"] .pub-sel-flag { color: #facc15; }
     yBox.querySelectorAll('.pb-year').forEach(function (x) { x.setAttribute('aria-pressed', x.dataset.y === state.year); });
     apply();
   });
-  tools.querySelector('#pb-selected').addEventListener('change', function (e) { state.sel = e.target.checked; apply(); });
   tools.querySelector('#pb-q').addEventListener('input', function (e) { state.q = e.target.value.trim(); apply(); });
   reset.addEventListener('click', function () {
     state = { kind: 'all', year: '', sel: false, q: '' };
-    tools.querySelector('#pb-q').value = ''; tools.querySelector('#pb-selected').checked = false;
+    tools.querySelector('#pb-q').value = '';
     tools.querySelector('.pb-kind[data-k="all"]').click();
     yBox.querySelectorAll('.pb-year').forEach(function (x) { x.setAttribute('aria-pressed', 'false'); });
     apply();

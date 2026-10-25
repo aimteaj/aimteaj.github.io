@@ -1,0 +1,191 @@
+---
+layout: default
+---
+{% assign m = site.data.mentorship %}
+<div class="hm">
+
+  <!-- Header -->
+  <header class="hm-head">
+    <div class="hm-photo">
+      {% assign profile_image_path = page.profile.image | prepend: 'assets/img/' %}
+      {% include figure.liquid loading="eager" path=profile_image_path class="img-fluid" sizes="260px" alt="Ahmed Imteaj" cache_bust=true %}
+    </div>
+    <div class="hm-id">
+      <h1 class="hm-name">{{ site.first_name }} {{ site.last_name }}</h1>
+      <p class="hm-role">Assistant Professor of Electrical Engineering and Computer Science<br><a href="https://www.fau.edu/" target="_blank" rel="noopener">Florida Atlantic University</a>, Boca Raton</p>
+      <ul class="hm-aff">
+        <li>Founding Director, <a href="https://www.speedlab.network" target="_blank" rel="noopener">SPEED Lab</a></li>
+        <li>Faculty Fellow, <a href="https://www.fau.edu/isense/leadership/" target="_blank" rel="noopener">I-SENSE</a></li>
+        <li>Senior Member, <a href="https://www.fau.edu/engineering/research/c2a2/people/" target="_blank" rel="noopener">CA-AI</a></li>
+      </ul>
+      <nav class="hm-links" aria-label="Contact and profiles">
+        <a href="mailto:aimteaj@fau.edu"><i class="fa-solid fa-envelope" aria-hidden="true"></i>Email</a>
+        <a href="https://scholar.google.com/citations?user=I5IZ4GQAAAAJ" target="_blank" rel="noopener"><i class="ai ai-google-scholar" aria-hidden="true"></i>Google Scholar</a>
+        <a href="https://www.linkedin.com/in/ahmed-imteaj-a13343a3" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i>LinkedIn</a>
+        <a href="https://orcid.org/0000-0002-6975-3997" target="_blank" rel="noopener"><i class="ai ai-orcid" aria-hidden="true"></i>ORCID</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hm-bio">{{ content }}</div>
+
+  <!-- At a glance: each fact opens its page -->
+  <div class="hm-facts">
+    <a class="hm-fact" href="{{ '/publications/' | relative_url }}"><span class="hm-fn">{% bibliography_count %}</span><span class="hm-fl">Publications since 2023</span></a>
+    <a class="hm-fact" href="{{ '/mentorship/' | relative_url }}"><span class="hm-fn">{{ m.phd.size }}</span><span class="hm-fl">Ph.D. students advised</span></a>
+    <a class="hm-fact" href="{{ '/grants-awards/' | relative_url }}"><span class="hm-fn">6</span><span class="hm-fl">Research grants, incl. NSF CRII as sole PI</span></a>
+    <a class="hm-fact" href="{{ '/grants-awards/' | relative_url }}"><span class="hm-fn">Top 2%</span><span class="hm-fl">Stanford–Elsevier world scientist list</span></a>
+  </div>
+
+  <!-- Research interests explorer -->
+  <section class="hm-sec">
+    <h2 class="hm-h2">Research</h2>
+    <div class="hm-explore">
+      <div class="hm-topics" role="tablist" aria-label="Research interests">
+        <button class="hm-topic is-on" role="tab" aria-selected="true" data-sel="1">Selected publications</button>
+        <button class="hm-topic" role="tab" aria-selected="false" data-re="vision-language|vlm|lvlm|multimodal|clip|language model|llm">Vision-language models and multimodal LLMs</button>
+        <button class="hm-topic" role="tab" aria-selected="false" data-re="federated">Federated learning for edge devices</button>
+        <button class="hm-topic" role="tab" aria-selected="false" data-re="secur|privacy|trust|attack|poison|jailbreak|intrusion|exploit">Trustworthy AI, agentic AI and cybersecurity</button>
+        <button class="hm-topic" role="tab" aria-selected="false" data-re="robust|adversarial|hallucinat">Robustness of VLMs and FL</button>
+        <button class="hm-topic" role="tab" aria-selected="false" data-re="quantum">Quantum AI and post-quantum security</button>
+        <button class="hm-topic" role="tab" aria-selected="false" data-re="image|video|uav|drone|pose|skeleton|land cover|chart|scene">Computer vision, 3D models and digital twins</button>
+        <button class="hm-topic" role="tab" aria-selected="false" data-re="vehicle|driver|road|traffic|medical|health|wearable|stress|crime|surveillance|power|disaster|land cover">Applications: transportation, health, surveillance, infrastructure</button>
+      </div>
+      <div class="hm-papers" role="tabpanel" aria-live="polite">
+        <div class="hm-plist">{% bibliography --template bib_mini --group_by none %}</div>
+        <p class="hm-pnone" hidden>Ongoing work in the SPEED Lab. Publications in this area are on the way.</p>
+        <a class="hm-pall" href="{{ '/publications/' | relative_url }}">See all publications</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  {% assign news = site.news | reverse %}
+  {% assign news_size = news | size %}
+  <section class="hm-sec">
+    <h2 class="hm-h2">News</h2>
+    <ol class="hm-news">
+      {% for item in news %}
+      <li class="hm-ni{% if forloop.index > 5 %} is-extra{% endif %}"{% if forloop.index > 5 %} hidden{% endif %}>
+        <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%b %Y' }}</time>
+        <div class="hm-nc">{% if item.inline %}{{ item.content | remove: '<p>' | remove: '</p>' | emojify }}{% else %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</div>
+      </li>
+      {% endfor %}
+    </ol>
+    {% if news_size > 5 %}
+    <button class="hm-more" type="button" aria-expanded="false" data-n="{{ news_size | minus: 5 }}">Show {{ news_size | minus: 5 }} earlier updates</button>
+    {% endif %}
+  </section>
+
+  <section class="hm-sec hm-support">
+    <h2 class="hm-h2">Research support</h2>
+    <p>National Science Foundation (NSF), U.S. Department of Homeland Security (DHS), NSF National Artificial Intelligence Research Resource (NAIRR) Pilot, Computing Research Association (CRA), Oak Ridge Associated Universities (ORAU), and the FAU Vertically Integrated Projects (VIP) Program.</p>
+  </section>
+</div>
+
+<style>
+.hm { max-width: 980px; margin: 0 auto; }
+.hm a { text-decoration: none; }
+
+.hm-head { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 2.4rem; align-items: start; padding-top: 0.5rem; }
+.hm-photo img { width: 100%; border-radius: 8px; display: block; }
+.hm-name { font-size: 2.6rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 0.6rem; color: var(--global-text-color); }
+.hm-role { font-size: 1.05rem; line-height: 1.5; margin: 0 0 0.9rem; color: var(--global-text-color); }
+.hm-role a, .hm-aff a { color: var(--global-theme-color); font-weight: 600; }
+.hm-aff { list-style: none; padding: 0; margin: 0 0 1.2rem; font-size: 0.95rem; color: var(--global-text-color-light); line-height: 1.7; }
+.hm-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.hm-links a { display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.88rem; font-weight: 600; padding: 0.42rem 0.85rem; border: 1px solid var(--global-divider-color); border-radius: 6px; color: var(--global-text-color); transition: border-color 0.15s ease, color 0.15s ease; }
+.hm-links a:hover { border-color: var(--global-theme-color); color: var(--global-theme-color); }
+.hm-links i { font-size: 1rem; }
+.hm-links a:focus-visible, .hm-fact:focus-visible, .hm-topic:focus-visible, .hm-more:focus-visible, .hm-paper:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 2px; }
+
+.hm-bio { margin-top: 2rem; font-size: 1.02rem; line-height: 1.75; color: var(--global-text-color); max-width: 74ch; }
+.hm-bio p { margin-bottom: 1rem; }
+.hm-bio a { color: var(--global-theme-color); font-weight: 600; }
+
+.hm-facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid var(--global-text-color); border-bottom: 1px solid var(--global-divider-color); margin-top: 1.8rem; }
+.hm-fact { display: flex; flex-direction: column; gap: 0.2rem; padding: 1.1rem 1rem 1rem; border-right: 1px solid var(--global-divider-color); position: relative; }
+.hm-fact:last-child { border-right: 0; }
+.hm-fn { font-size: 2rem; font-weight: 700; line-height: 1.1; color: var(--global-text-color); font-variant-numeric: tabular-nums; }
+.hm-fl { font-size: 0.86rem; font-weight: 600; color: var(--global-text-color-light); line-height: 1.35; }
+.hm-fact::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: var(--global-theme-color); transform: scaleX(0); transform-origin: left; transition: transform 0.2s ease; }
+.hm-fact:hover::after { transform: scaleX(1); }
+.hm-fact:hover .hm-fn { color: var(--global-theme-color); }
+
+.hm-sec { padding-top: 2.6rem; }
+.hm-h2 { font-size: 1.35rem; font-weight: 700; margin: 0 0 1.1rem; padding-bottom: 0.7rem; border-bottom: 1px solid var(--global-text-color); }
+
+.hm-explore { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 2rem; align-items: start; }
+.hm-topics { display: flex; flex-direction: column; border-left: 1px solid var(--global-divider-color); }
+.hm-topic { all: unset; cursor: pointer; padding: 0.6rem 0 0.6rem 1rem; margin-left: -1px; border-left: 3px solid transparent; font-size: 0.95rem; font-weight: 600; line-height: 1.35; color: var(--global-text-color-light); }
+.hm-topic:hover { color: var(--global-text-color); }
+.hm-topic.is-on { color: var(--global-theme-color); border-left-color: var(--global-theme-color); }
+.hm-plist { display: flex; flex-direction: column; }
+.hm-plist ol, .hm-plist ul { list-style: none; padding: 0; margin: 0; }
+.hm-plist li { margin: 0; padding: 0; }
+.hm-plist h2 { display: none; }
+.hm-paper { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 1rem; padding: 0.7rem 0; border-bottom: 1px solid var(--global-divider-color); color: var(--global-text-color); }
+.hm-paper:hover .hm-pt { color: var(--global-theme-color); }
+.hm-pv { font-size: 0.78rem; font-weight: 700; color: var(--global-theme-color); padding-top: 0.15rem; font-variant-numeric: tabular-nums; }
+.hm-pt { font-size: 0.95rem; line-height: 1.45; font-weight: 500; }
+.hm-pnone { color: var(--global-text-color-light); padding: 0.8rem 0; }
+.hm-pall { display: inline-block; margin-top: 0.9rem; font-size: 0.9rem; font-weight: 600; color: var(--global-theme-color) !important; text-decoration: underline !important; text-underline-offset: 3px; }
+
+/* News: tone down the colourful inline styling of individual items */
+.hm-news { list-style: none; padding: 0; margin: 0; }
+.hm-ni { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 1rem; padding: 0.95rem 0; border-bottom: 1px solid var(--global-divider-color); }
+.hm-ni time { font-size: 0.85rem; font-weight: 700; color: var(--global-text-color-light); padding-top: 0.15rem; font-variant-numeric: tabular-nums; }
+.hm-nc { font-size: 0.95rem; line-height: 1.6; color: var(--global-text-color); }
+.hm-nc [style] { background: none !important; border: 0 !important; padding: 0 !important; box-shadow: none !important; border-radius: 0 !important; font-size: inherit !important; }
+.hm-nc span[style], .hm-nc strong[style] { color: inherit !important; }
+.hm-nc br + br { display: none; }
+.hm-nc a { color: var(--global-theme-color); font-weight: 600; }
+.hm-nc a span[style] { color: inherit !important; }
+.hm-more { all: unset; cursor: pointer; margin-top: 1rem; font-size: 0.9rem; font-weight: 600; color: var(--global-theme-color); padding: 0.45rem 0.9rem; border: 1px solid var(--global-theme-color); border-radius: 6px; }
+.hm-more:hover { background: var(--global-theme-color); color: #fff; }
+
+.hm-support p { color: var(--global-text-color); line-height: 1.7; max-width: 74ch; }
+
+@media (max-width: 760px) {
+  .hm-head { grid-template-columns: 1fr; gap: 1.2rem; }
+  .hm-photo { max-width: 200px; }
+  .hm-name { font-size: 2.1rem; }
+  .hm-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .hm-fact:nth-child(2n) { border-right: 0; }
+  .hm-fact:nth-child(-n+2) { border-bottom: 1px solid var(--global-divider-color); }
+  .hm-explore { grid-template-columns: 1fr; gap: 1rem; }
+  .hm-topics { flex-direction: row; overflow-x: auto; border-left: 0; border-bottom: 1px solid var(--global-divider-color); gap: 0.2rem; scrollbar-width: thin; }
+  .hm-topic { white-space: nowrap; padding: 0.55rem 0.8rem; margin: 0 0 -1px; border-left: 0; border-bottom: 3px solid transparent; }
+  .hm-topic.is-on { border-bottom-color: var(--global-theme-color); }
+  .hm-paper, .hm-ni { grid-template-columns: 76px minmax(0, 1fr); gap: 0.7rem; }
+}
+@media (prefers-reduced-motion: reduce) { .hm-fact::after, .hm-links a { transition: none; } }
+</style>
+
+<script>
+(function () {
+  var root = document.querySelector('.hm'); if (!root) return;
+  var papers = Array.prototype.slice.call(root.querySelectorAll('.hm-paper'));
+  var none = root.querySelector('.hm-pnone'), topics = root.querySelectorAll('.hm-topic');
+  function show(btn) {
+    topics.forEach(function (t) { var on = t === btn; t.classList.toggle('is-on', on); t.setAttribute('aria-selected', on); });
+    var re = btn.dataset.re ? new RegExp(btn.dataset.re, 'i') : null, n = 0, cap = 8;
+    papers.forEach(function (p) {
+      var hit = re ? re.test(p.dataset.text) : p.dataset.sel === '1';
+      var vis = hit && n < cap; if (vis) n++;
+      (p.closest('li') || p).hidden = !vis;
+    });
+    none.hidden = n > 0;
+  }
+  topics.forEach(function (t) { t.addEventListener('click', function () { show(t); }); });
+  if (topics.length) show(topics[0]);
+
+  var more = root.querySelector('.hm-more');
+  if (more) more.addEventListener('click', function () {
+    var open = more.getAttribute('aria-expanded') === 'true';
+    root.querySelectorAll('.hm-ni.is-extra').forEach(function (li) { li.hidden = open; });
+    more.setAttribute('aria-expanded', !open);
+    more.textContent = open ? 'Show ' + more.dataset.n + ' earlier updates' : 'Show fewer updates';
+  });
+})();
+</script>

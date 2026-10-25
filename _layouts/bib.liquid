@@ -193,9 +193,7 @@
     </div>
     {% assign entry_note = entry.note | strip %}
     {% if entry_note != "" %}
-    <div class="periodical pub-note">
-      {{ entry_note }}
-    </div>
+    <div class="pub-notes">{% assign note_parts = entry_note | split: ";" %}{% for n in note_parts %}{% assign nn = n | strip %}{% if nn != "" %}<span class="pub-note">{{ nn }}</span>{% endif %}{% endfor %}</div>
     {% endif %}
 
     <!-- Links/Buttons -->
