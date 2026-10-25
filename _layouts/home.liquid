@@ -38,7 +38,7 @@ layout: default
     <p class="hm-hl-sub">
       <span class="hm-hl-big">{{ hl.size }}</span>
       <span class="hm-hl-line"><strong>SPEED Lab papers in 2026</strong>, {{ n_astar }} of them at <strong class="hm-hl-astar">CORE A*</strong> venues, across
-        {% for v in hl_venues %}{% if v != "arXiv" %}<span class="hm-hl-vn" data-v="{{ v }}">{{ v | remove: " 2026" }}</span>{% endif %}{% endfor %}</span>
+        {% for v in hl_venues %}{% if v != "arXiv" %}<span class="hm-hl-vn" data-v="{{ v }}">{{ v | remove: " 2026" }}</span> {% endif %}{% endfor %}</span>
     </p>
     <div class="hm-hl-filters" role="group" aria-label="Filter highlights by venue">
       <button class="hm-hlf is-on" data-v="all" aria-pressed="true">All</button>
@@ -177,10 +177,10 @@ layout: default
 .hm-hl-sub { display: flex; align-items: center; gap: 1rem; margin: -0.2rem 0 1.2rem; padding: 0.9rem 1.1rem; border-radius: 10px; background: linear-gradient(100deg, rgba(109,40,217,0.07), rgba(29,78,216,0.06) 45%, rgba(190,24,93,0.06)); }
 .hm-hl-big { flex: none; font-size: 3rem; font-weight: 800; line-height: 1; letter-spacing: -0.03em; background: linear-gradient(135deg, #6d28d9, #1d4ed8 45%, #be185d); -webkit-background-clip: text; background-clip: text; color: transparent; font-variant-numeric: tabular-nums; }
 html[data-theme="dark"] .hm-hl-big { background-image: linear-gradient(135deg, #c4b5fd, #93c5fd 45%, #f9a8d4); }
-.hm-hl-line { font-size: 1rem; line-height: 1.7; color: var(--global-text-color); }
+.hm-hl-line { min-width: 0; font-size: 1rem; line-height: 1.7; color: var(--global-text-color); }
 .hm-hl-astar { color: var(--global-theme-color); }
 .hm-hl-vn { font-weight: 700; color: var(--vc); white-space: nowrap; }
-.hm-hl-vn:not(:last-child)::after { content: "·"; color: var(--global-text-color-light); font-weight: 400; margin: 0 0.4rem; }
+.hm-hl-vn:not(:last-of-type)::after { content: "·"; color: var(--global-text-color-light); font-weight: 400; margin: 0 0.4rem; }
 .hm-hl-filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.1rem; }
 .hm-hlf { all: unset; cursor: pointer; font-size: 0.85rem; font-weight: 600; padding: 0.3rem 0.75rem; border: 1px solid var(--global-divider-color); border-radius: 999px; color: var(--global-text-color); }
 .hm-hlf:hover { border-color: var(--global-text-color-light); }
