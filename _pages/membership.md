@@ -9,6 +9,7 @@ description: ""
 
 {% assign m = site.data.mentorship %}
 {% assign sd_students = 0 %}{% for p in m.senior_design %}{% assign sd_students = sd_students | plus: p.students.size %}{% endfor %}
+{% assign n_honors = 0 %}{% for p in m.phd %}{% if p.honors %}{% assign n_honors = n_honors | plus: p.honors.size %}{% endif %}{% endfor %}
 {% assign prog_people = 0 %}{% for p in m.programs %}{% if p.people %}{% assign prog_people = prog_people | plus: p.people.size %}{% endif %}{% endfor %}
 
 <div class="mt">
@@ -19,6 +20,7 @@ description: ""
     <button class="mt-tab" role="tab" aria-selected="false" data-f="senior"><span class="mt-n">{{ sd_students }}</span><span class="mt-l">Senior Design</span></button>
     <button class="mt-tab" role="tab" aria-selected="false" data-f="ms"><span class="mt-n">{{ m.masters.size }}</span><span class="mt-l">Master's</span></button>
     <button class="mt-tab" role="tab" aria-selected="false" data-f="ug"><span class="mt-n">{{ m.undergrad.size }}</span><span class="mt-l">Undergraduate</span></button>
+    <button class="mt-tab" role="tab" aria-selected="false" data-f="honors"><span class="mt-n">{{ n_honors }}</span><span class="mt-l">Student honors</span></button>
     <button class="mt-tab" role="tab" aria-selected="false" data-f="prog"><span class="mt-n">{{ prog_people }}</span><span class="mt-l">REU / RET</span></button>
   </div>
 
@@ -38,10 +40,29 @@ description: ""
           <div class="mt-name">{{ p.name }}</div>
           <div class="mt-sub">{{ p.role }}</div>
           <div class="mt-sub2">{{ p.place }}</div>
+          {% if p.honors %}<a class="mt-hbadge" href="#honors-{{ forloop.index }}">{{ p.honors.size }} honors and awards</a>{% endif %}
         </div>
       </div>
       {% endfor %}
     </div>
+  </section>
+
+  <section class="mt-sec" data-g="honors">
+    <h2 class="mt-h2">Student honors and awards</h2>
+    {% for p in m.phd %}{% if p.honors %}
+    {% assign hs = p.honors | sort: "year" | reverse %}
+    <details class="mt-honors mt-item" id="honors-{{ forloop.index }}" open>
+      <summary><span class="mt-name">{{ p.name }}</span><span class="mt-hcount">{{ p.honors.size }} honors</span></summary>
+      <ol class="mt-hlist">
+        {% for h in hs %}{% if h.kind != "Leadership" %}
+        <li><span class="mt-hy">{{ h.year }}</span><div><span class="mt-hk">{{ h.kind }}</span><div class="mt-ht">{{ h.title }}</div><div class="mt-hd">{{ h.detail }}</div></div></li>
+        {% endif %}{% endfor %}
+        {% for h in hs %}{% if h.kind == "Leadership" %}
+        <li><span class="mt-hy">{{ h.year }}</span><div><span class="mt-hk mt-hk--lead">{{ h.kind }}</span><div class="mt-ht">{{ h.title }}</div><div class="mt-hd">{{ h.detail }}</div></div></li>
+        {% endif %}{% endfor %}
+      </ol>
+    </details>
+    {% endif %}{% endfor %}
   </section>
 
   <section class="mt-sec" data-g="senior">
@@ -110,7 +131,7 @@ description: ""
 .mt-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 
 /* Group counts that double as filters */
-.mt-tabs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border-top: 2px solid var(--global-text-color); border-bottom: 1px solid var(--global-divider-color); margin-bottom: 1.25rem; }
+.mt-tabs { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 2px solid var(--global-text-color); border-bottom: 1px solid var(--global-divider-color); margin-bottom: 1.25rem; }
 .mt-tab { all: unset; cursor: pointer; padding: 1rem 0.8rem 0.9rem; display: flex; flex-direction: column; gap: 0.15rem; border-right: 1px solid var(--global-divider-color); position: relative; }
 .mt-tab:last-child { border-right: 0; }
 .mt-tab .mt-n { font-size: 1.9rem; font-weight: 700; line-height: 1.1; color: var(--global-text-color); font-variant-numeric: tabular-nums; }
@@ -132,6 +153,25 @@ description: ""
 .mt-sub { font-size: 0.9rem; color: var(--global-theme-color); font-weight: 600; }
 .mt-sub2 { font-size: 0.85rem; color: var(--global-text-color-light); }
 
+.mt-hbadge { display: inline-block; margin-top: 0.45rem; font-size: 0.78rem; font-weight: 700; color: #a16207 !important; background: rgba(234,179,8,0.13); border: 1px solid rgba(202,138,4,0.35); border-radius: 999px; padding: 0.12rem 0.6rem; }
+.mt-hbadge::before { content: "★ "; }
+html[data-theme="dark"] .mt-hbadge { color: #facc15 !important; }
+.mt-honors { border-bottom: 1px solid var(--global-divider-color); padding: 0.4rem 0 0.8rem; }
+.mt-honors summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 0.7rem; padding: 0.7rem 0; }
+.mt-honors summary::-webkit-details-marker { display: none; }
+.mt-honors summary::before { content: ""; align-self: center; width: 0.45rem; height: 0.45rem; border-right: 2px solid var(--global-theme-color); border-bottom: 2px solid var(--global-theme-color); transform: rotate(-45deg); transition: transform 0.2s ease; }
+.mt-honors[open] summary::before { transform: rotate(45deg); }
+.mt-honors summary:focus-visible, .mt-hbadge:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; border-radius: 2px; }
+.mt-hcount { font-size: 0.82rem; font-weight: 700; color: var(--global-text-color-light); }
+.mt-hlist { list-style: none; padding: 0; margin: 0 0 0 1.15rem; border-left: 2px solid var(--global-divider-color); }
+.mt-hlist li { position: relative; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 0.9rem; padding: 0.7rem 0 0.7rem 1.1rem; }
+.mt-hlist li::before { content: ""; position: absolute; left: -6px; top: 1.05rem; width: 10px; height: 10px; border-radius: 50%; background: #eab308; border: 2px solid var(--global-bg-color); }
+.mt-hy { font-weight: 700; color: var(--global-theme-color); font-variant-numeric: tabular-nums; padding-top: 0.1rem; }
+.mt-hk { display: inline-block; font-size: 0.72rem; font-weight: 700; color: #a16207; border: 1px solid rgba(202,138,4,0.45); border-radius: 4px; padding: 0.02rem 0.45rem; margin-bottom: 0.3rem; }
+.mt-hk--lead { color: var(--global-text-color-light); border-color: var(--global-divider-color); }
+html[data-theme="dark"] .mt-hk:not(.mt-hk--lead) { color: #facc15; }
+.mt-ht { font-weight: 700; color: var(--global-text-color); line-height: 1.4; }
+.mt-hd { font-size: 0.92rem; color: var(--global-text-color); line-height: 1.55; margin-top: 0.15rem; max-width: 70ch; }
 .mt-people { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; }
 .mt-person { display: flex; gap: 0.9rem; align-items: flex-start; padding: 1.1rem 0; border-bottom: 1px solid var(--global-divider-color); }
 .mt-person:nth-child(odd) { padding-right: 1.5rem; }
@@ -166,7 +206,7 @@ html[data-theme="dark"] .mt-award { color: #facc15; }
 @media (max-width: 760px) {
   .mt-tabs { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .mt-tab:nth-child(3n) { border-right: 0; }
-  .mt-tab:nth-child(-n+3) { border-bottom: 1px solid var(--global-divider-color); }
+  .mt-tab { border-bottom: 1px solid var(--global-divider-color); }
   .mt-tab .mt-n { font-size: 1.5rem; }
   .mt-people { grid-template-columns: 1fr; }
   .mt-person:nth-child(odd) { padding-right: 0; }
@@ -216,6 +256,13 @@ html[data-theme="dark"] .mt-award { color: #facc15; }
     });
   });
   q.addEventListener('input', apply);
+  root.querySelectorAll('.mt-hbadge').forEach(function (b) {
+    b.addEventListener('click', function (e) {
+      e.preventDefault();
+      var t = root.querySelector('.mt-tab[data-f="honors"]'); if (t) t.click();
+      var d = root.querySelector(b.getAttribute('href')); if (d) { d.open = true; d.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
   var h = location.hash.slice(1);
   var start = Array.prototype.find.call(tabs, function (t) { return t.dataset.f === h; });
   if (start) start.click();
