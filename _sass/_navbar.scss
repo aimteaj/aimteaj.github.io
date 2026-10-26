@@ -188,3 +188,19 @@
     color: var(--global-hover-color);
   }
 }
+
+// Keep all top-level tabs on one line on desktop
+@media (min-width: 576px) {
+  .navbar .navbar-nav .nav-item .nav-link {
+    white-space: nowrap;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+@media (min-width: 576px) and (max-width: 1199.98px) {
+  .navbar .navbar-nav .nav-item .nav-link {
+    font-size: 0.92rem;
+    padding-left: 0.35rem;
+    padding-right: 0.35rem;
+  }
+}
