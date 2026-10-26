@@ -44,6 +44,13 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/mentorship/";
           },
+        },{id: "nav-talks-and-service",
+          title: "Talks and Service",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/talks-service/";
+          },
         },{id: "news-our-paper-titled-securing-privacy-in-cloud-based-whiteboard-services-against-health-attribute-inference-attacks-has-been-published-in-ieee-transactions-on-artificial-intelligence",
           title: 'Our paper, titled “Securing Privacy in Cloud-Based Whiteboard Services Against Health Attribute Inference...',
           description: "",
@@ -160,6 +167,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-awarded-an-nsf-nairr-pilot-classroom-allocation-the-project-hands-on-ai-fundamentals-and-modern-generative-ai-education-using-classroom-scale-gpu-and-llm-resources-gives-about-95-students-in-cap-4630-introduction-to-artificial-intelligence-a-shared-gpu-environment-on-the-prototype-national-research-platform-in-spring-2027-for-hands-on-work-with-deep-learning-llms-and-vision-language-models-the-proposal-was-rated-excellent-and-approved-in-full",
           title: 'Awarded an NSF NAIRR Pilot Classroom allocation! The project, “Hands-on AI Fundamentals and...',
+          description: "",
+          section: "News",},{id: "news-serving-as-a-reviewer-for-the-ieee-international-conference-on-robotics-and-automation-icra-2026",
+          title: 'Serving as a Reviewer for the IEEE International Conference on Robotics and Automation...',
           description: "",
           section: "News",},{id: "projects-project-2",
           title: 'project 2',
