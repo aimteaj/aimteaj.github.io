@@ -13,6 +13,17 @@ latest:
     video: "HALS_NeurIPS2026_teaser.mp4"
     poster: "HALS_NeurIPS2026_teaser_poster.jpg"
     link: "https://speedlab-git.github.io/HALS-Website/"
+  - id: slade
+    short: "SLADE"
+    venue: "CVPR 2025 · Main Conference"
+    title: "SLADE"
+    subtitle: "Shielding against dual exploits in large vision-language models"
+    description: "Unsupervised adversarial fine-tuning with dual-level (patch and global) contrastive learning that defends LVLMs against both gradient-based and jailbreak attacks while preserving fine-grained semantic detail."
+    tags: ["LVLM Security", "Jailbreak Defense", "Robust CLIP"]
+    video: "SLADE_CVPR2025_teaser.mp4"
+    poster: "SLADE_CVPR2025_teaser_poster.jpg"
+    link: "https://openaccess.thecvf.com/content/CVPR2025/papers/Hossain_SLADE_Shielding_against_Dual_Exploits_in_Large_Vision-Language_Models_CVPR_2025_paper.pdf"
+    link_label: "Paper"
   - id: faml
     short: "FAML"
     venue: "CVPR 2026 · Main Conference (Findings)"
@@ -73,17 +84,6 @@ latest:
     video: "SecureYetFragile_SciRep2026_teaser.mp4"
     poster: "SecureYetFragile_SciRep2026_teaser_poster.jpg"
     link: "https://doi.org/10.1038/s41598-026-48102-4"
-    link_label: "Paper"
-  - id: slade
-    short: "SLADE"
-    venue: "CVPR 2025 · Main Conference"
-    title: "SLADE"
-    subtitle: "Shielding against dual exploits in large vision-language models"
-    description: "Unsupervised adversarial fine-tuning with dual-level (patch and global) contrastive learning that defends LVLMs against both gradient-based and jailbreak attacks while preserving fine-grained semantic detail."
-    tags: ["LVLM Security", "Jailbreak Defense", "Robust CLIP"]
-    video: "SLADE_CVPR2025_teaser.mp4"
-    poster: "SLADE_CVPR2025_teaser_poster.jpg"
-    link: "https://openaccess.thecvf.com/content/CVPR2025/papers/Hossain_SLADE_Shielding_against_Dual_Exploits_in_Large_Vision-Language_Models_CVPR_2025_paper.pdf"
     link_label: "Paper"
   - id: pose-to-protect
     short: "Pose to Protect"
