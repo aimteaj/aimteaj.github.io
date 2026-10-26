@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Talks and Service
+nav_title: "Talks & Service"
 permalink: /talks-service/
 nav: true
 nav_order: 7

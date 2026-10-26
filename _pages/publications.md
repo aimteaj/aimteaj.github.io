@@ -2,6 +2,7 @@
 layout: page
 permalink: /publications/
 title: Recent Publications
+nav_title: "Publications"
 description: ""
 nav: true
 nav_order: 3
