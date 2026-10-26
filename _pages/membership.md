@@ -50,7 +50,7 @@ description: ""
   <section class="mt-sec" data-g="honors">
     <h2 class="mt-h2">Student honors and awards</h2>
     {% for p in m.phd %}{% if p.honors %}
-    {% assign hs = p.honors | sort: "year" | reverse %}
+    {% assign hs = p.honors %}
     <details class="mt-honors mt-item" id="honors-{{ forloop.index }}" open>
       <summary><span class="mt-name">{{ p.name }}</span><span class="mt-hcount">{{ p.honors.size }} honors</span></summary>
       <ol class="mt-hlist">
@@ -156,6 +156,7 @@ description: ""
 .mt-hbadge { display: inline-block; margin-top: 0.45rem; font-size: 0.78rem; font-weight: 700; color: #a16207 !important; background: rgba(234,179,8,0.13); border: 1px solid rgba(202,138,4,0.35); border-radius: 999px; padding: 0.12rem 0.6rem; }
 .mt-hbadge::before { content: "★ "; }
 html[data-theme="dark"] .mt-hbadge { color: #facc15 !important; }
+.mt-honors, .mt-sec { scroll-margin-top: 80px; }
 .mt-honors { border-bottom: 1px solid var(--global-divider-color); padding: 0.4rem 0 0.8rem; }
 .mt-honors summary { cursor: pointer; list-style: none; display: flex; align-items: baseline; gap: 0.7rem; padding: 0.7rem 0; }
 .mt-honors summary::-webkit-details-marker { display: none; }
@@ -260,7 +261,7 @@ html[data-theme="dark"] .mt-award { color: #facc15; }
     b.addEventListener('click', function (e) {
       e.preventDefault();
       var t = root.querySelector('.mt-tab[data-f="honors"]'); if (t) t.click();
-      var d = root.querySelector(b.getAttribute('href')); if (d) { d.open = true; d.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      var d = root.querySelector(b.getAttribute('href')); if (d) { d.open = true; (d.closest('.mt-sec') || d).scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
   });
   var h = location.hash.slice(1);
