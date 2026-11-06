@@ -598,18 +598,38 @@ html[data-theme="dark"] .status-pill { color: #86efac; }
 </style>
 
 <script>
-  // Play teaser videos (muted) only while on screen, so the page stays light.
+  // Only the first teaser plays on its own (muted, while on screen). Every other
+  // video waits for the visitor to press play, and starting one pauses the rest,
+  // so at most one video decodes at a time.
   (function () {
-    var vids = document.querySelectorAll(".teaser-video");
+    var vids = Array.prototype.slice.call(document.querySelectorAll(".teaser-video"));
+    if (!vids.length) return;
+    vids.forEach(function (v) { v.removeAttribute("autoplay"); v.preload = "none"; });
+
+    // one video at a time
+    vids.forEach(function (v) {
+      v.addEventListener("play", function () {
+        vids.forEach(function (o) { if (o !== v && !o.paused) o.pause(); });
+      });
+    });
+
+    var first = vids[0], userPaused = false, userPlayedOther = false;
+    first.addEventListener("pause", function () { if (first._auto !== true) userPaused = true; first._auto = false; });
+    vids.slice(1).forEach(function (v) { v.addEventListener("play", function () { userPlayedOther = true; }); });
+
     var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduce || !("IntersectionObserver" in window)) return;
-    var io = new IntersectionObserver(function (entries) {
+    first.preload = "metadata";
+    new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
-        var v = e.target;
-        if (e.isIntersecting) { v.preload = "auto"; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
-        else if (!v.paused) { v.pause(); }
+        if (e.isIntersecting) {
+          if (userPaused || userPlayedOther) return;
+          first.muted = true;
+          var p = first.play(); if (p && p.catch) p.catch(function () {});
+        } else if (!first.paused) {
+          first._auto = true; first.pause();
+        }
       });
-    }, { threshold: 0.35 });
-    vids.forEach(function (v) { io.observe(v); });
+    }, { threshold: 0.35 }).observe(first);
   })();
 </script>
